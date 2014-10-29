@@ -7,52 +7,29 @@
 
 <body ng-app="">
 <div class="container">
-    <div class="page-header">
-        <h1>1991
-            <small>Best songs</small>
+    <div class="page-header text-center">
+        <h1>I'm "{{fruit.name}}"
+            <small>please buy me!</small>
         </h1>
     </div>
-    <div class="well col-md-4">
-        <div>
-            <label>First place </label>
-            <input type="text" class="form-control" placeholder="active">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="form-group">
+            <label for="seller">Seller </label>
+            <input type="text" id="seller" class="form-control">
         </div>
-        <div>
-            <label>Second place</label>
-            <input type="text" class="form-control" placeholder="success">
+        <div class="form-group">
+            <label for="name">Name </label>
+            <input type="text" id="name" class="form-control">
         </div>
-        <div>
-            <label>Third place</label>
-            <input type="text" class="form-control" placeholder="warning">
+        <div class="form-group">
+            <label for="count">Count</label>
+            <input type="text" id="count" class="form-control">
         </div>
-    </div>
-    <div class="col-md-8">
-        <table class="table table-condensed">
-            <thead>
-            <tr>
-                <th> Position</th>
-                <th> Artist</th>
-                <th> Song</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bryan Adams</td>
-                <td>(Everything I Do) I Do It for You</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Color Me Badd</td>
-                <td>I Wanna Sex You Up</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>C+C Music Factory</td>
-                <td>Gonna Make You Sweat (Everybody Dance Now)</td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="well">
+            <h3>Good morning "seller"!</h3>
+
+            <p> I want to buy one "name" times "count"</p>
+        </div>
     </div>
 </div>
 <script src="../bower_components/angular/angular.js"></script>
