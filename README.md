@@ -1,17 +1,18 @@
-##Exercise 1 : Binding
+##Exercise 2 : Controller
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest wykorzystanie kontrolera **FruitCtrl** do połączenia danych z polami teksowymi a następnie ich wyswietlenia 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które pomogą w kolorowaniu komórek tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* materiałem filmowym: [angularjs-controller](https://egghead.io/lessons/angularjs-controller)
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
+1. Utwórz nowy plik ```FruitCtrl.js```
+2. Wewnątrz ```FruitCtrl.js``` utwórz funkcję ```FruitCtrl``` przyjmującą jako argument ```$scope``` 
+3. W kontrolerze umieść obiekt ```fruit``` o atrybutach ```seller, name, count``` i zainicjalizuj je (np. wartościami ```seller: John Seller, name: "Apple", count: 5```)
+4. W pliku ```index.html``` dodaj ```<script src="FruitCtrl.js"></script>```
+5. W tagu ```<div class = "container">``` dodaj kontroler ```FruitCtrl```
+5. Wykorzystaj dyrektywę ```ng-model``` do połączenia inputów z danymi umieszonymi w kontrolerze.
+6. Uaktualnij ```seller, name, count ```znajdujące się wewnątrz ```<div class="well"``` tak aby wyświetlały się dane z kontrolera
 
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
+Powodzenia!
