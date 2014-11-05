@@ -1,19 +1,21 @@
-##Exercise 1 : Binding
+##Exercise 4 : defining-a-method-on-the-scope
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest wykorzystanie metody zdefiniowanej na $scope zamieniającej podane słowo w tekście na nowe. 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które pomogą w kolorowaniu komórek tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* materiałem filmowym: [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
+
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
-
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
+1. Za pomocą dyrektywy ```ng-model``` połącz  textarea z tekstem piosenki umieszczonym w ```mySong.factory``` (atrybut ```song```)
+2. Utwórz w kontrolerze ```NewWordCtrl``` metodę o nazwie ```replaceWord()``` jej zadaniem jest zamiana wybranego słowa na nowe. Metoda przyjmuje trzy argumenty:
+* tekst z pola ```textarea```
+* słowo, które będzie zamieniane na inne,
+* nowe słowo
+3. Zamianę wybranego słowa można uzyskać przykładowo w poniższy sposób
+``` textIn.split(oldWord).join(newWord)``` 
+4. Podobnie jak w punkcie 1 połącz pole tekstowe o id ```word``` z przykładowym nowym słowem umieszczonym w ```mySong.factory``` (atrybut ```newWord```)
+5. Wykorzystaj funckję ```replaceWord()``` (z odpowiednimi argumentami aby zastępić słowo ```purr``` na nowe, podane w polu tekstowym) do wyświelenia zmienionego tekstu nagłówku ```<h3>```
 
 Powodzenia!
