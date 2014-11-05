@@ -1,19 +1,25 @@
-##Exercise 1 : Binding
+##Exercise 5 : angularjs-filters
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest napisanie oraz wykorzystanie prostych filtrów. 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które pomogą w kolorowaniu komórek tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* [angularjs-filters](https://egghead.io/lessons/angularjs-filters)
+* [wyrażeniami regularnymi](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
+1.   Uzupełnij filtr ```quote``` tak by umieszczał tekst w cudzysłowie.
+2.   Użyj go na atrybucie ```citation``` i wyświetl wynik w odpowiednim miejscu tabeli.
+3.   Utwórz filtr o nazwie ```withoutH```, który usunie wszystkie litery "H" oraz "h" z tekstu. (Wskazówka: spróbuj wykorzystać metodę z poprzedniego ćwiczenia) a następnie użyj go na atrybucie ```title```
+4.   Przeanalizuj poniższy kod a w szczególności wyrażenie regularne a następnie uzupełnij filtr ```firstLetterUp```, którego zadaniem jest zamiana pierwszej litery słowa na dużą
+```
+return text.replace(/([^\W_]+[^\s-]*) */g, function (text)
+        {
+            return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+        }); </code></p>
+```
 
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
-
-Powodzenia!
+5. Aby użyć ```firstLetterUp``` dla każdego słowa w ```someText```, przy wywołaniu filtra należy dodać wartość true ```data.someText | firstLetterUp : true``` 
+6. Wyświel zawartość pola tekstowego w znaczniku ```<h3> Input </h3>``` i użyj na nim gotowy filtr ```uppercase```
+ 
+Powodzenia
