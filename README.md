@@ -1,19 +1,18 @@
-##Exercise 1 : Binding
+##Exercise 6: angularjs-ngrepeat-and-filtering-data
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest napisanie oraz wykorzystanie prostych filtrów. 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które pomogą w kolorowaniu komórek tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
+1.   W pliku ```StudentCtrl.js``` utwórz pusty obiekt ```Students```.
+2.   Dodaj do niego atrybut ```list``` i przypisz do niego dane umieszczone w pliku ```student.json```
+3.   Zaktualizuj kontroler przypisując do zmiennej ```students``` na ```$scope``` informacje o studentach.
+4.   Wykorzystaj dyrektywę ```ng-repeat``` aby wypełnić tabelę danymi z  ```students.list``` - zwróć uwagę na nagłówki.
+5.   Dodaj do dyrektywy ```ng-repeat``` filtr ```searchStudent``` a następnie zmodfikuj wszystkie inputy z nagłówków, tak aby wyszukiwały przez pryzmat swojej kategori. 
+6.   Główny input wyszukuje po wszystkich kategoriach.
 
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
-
+ 
 Powodzenia!
