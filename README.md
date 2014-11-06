@@ -1,19 +1,15 @@
-##Exercise 1 : Binding
+##Exercise 7 : angularjs-built-in-filters
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest wykorzystanie gotowych opcji filtrujących
 
 ###Zanim zaczniesz, zapoznaj się z:
-* [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które wypełnią kolorem komóreki tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* [angularjs-built-in-filters](https://egghead.io/lessons/angularjs-built-in-filters)
+
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
-
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
+1. Wypróbuj działanie filtrów ```orderBy``` oraz ```limitTo``` (wg wybranego przez Ciebie atrybutu) oraz ```lowercase``` oraz ```uppercase```. 
+2. Wykorzystaj ```choice``` (wykorzystuje go dyrektywa ```ng-click``` jako argument ```orderBy```, który umożliwi sortowanie wg kolumn
+3. Podobnie wykorzystaj model```limit``` jako argumet ```limitTo``` do ograniczenia wyświetlania przez "radio choice".
 
 Powodzenia!
