@@ -3,7 +3,7 @@
 Celem ćwicznia jest wykorzystanie kontrolera **FruitCtrl** do połączenia danych z polami teksowymi a następnie ich wyswietlenia 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-controller](https://egghead.io/lessons/angularjs-controller)
+* [angularjs-controller](https://egghead.io/lessons/angularjs-controller)
 
 ###Ćwiczenie
 
