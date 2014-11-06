@@ -1,19 +1,48 @@
-##Exercise 1 : Binding
+##Exercise 8 : angularjs-first-directive
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
+Celem ćwicznia jest wykonanie prostych dyrektyw
 
 ###Zanim zaczniesz, zapoznaj się z:
-* [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które wypełnią kolorem komóreki tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* [angularjs-first-directive](https://egghead.io/lessons/angularjs-first-directive)
+* [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
+
 
 ###Ćwiczenie
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
+1. W pliku ```RadioCtrl``` dodaj moduł o nazwie ```myRadio``` 
+2. Utwórz dyrektywę ```radioBlock``` której atrybut ```restrict``` jest ustawiony na wartosc E ( w pliku .html dyrektywa będzie używana za pomocą formy ```<my-directive></my-directive>```)
+3. Dodaj do dyrektywy atrybut ```template```z zawartocią poniżej (radio choice block)
 
+```
+template: ' <div>' +
+                '<div class="radio"> ' +
+                '<label> <input type="radio" name="fruitsRadios" value="apple" checked> apple </label> </div>' +
+                '<div class="radio"> ' +
+                '<label> <input type="radio" name="fruitsRadios" value="banana"> banana </label> </div>' +
+                '</div>'
+```
+4. Utwórz dyrektywę ```radioInline``` tak jak ```radioBlock```, ze zmienioną zawartość atrybutu ```template```
 
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
+```
+        template: '<div> ' +
+                '<label class="radio-inline"> ' +
+                '<input type="radio" name="vegetablesRadio" value="tomato"> tomato ' +
+                '</label> ' +
+                '<label class="radio-inline">' +
+                '<input type="radio" name="vegetablesRadio" value="cucumber" checked> cucumber</label> ' +
+                '</div>'
+    }
+    ```
+    
+5. Pod nagłówkiem ```Choose fruit``` dodaj dyrektywę ```radioBlock``` a poniżej  ``` Choose vegetable``` dyrektywę ```radioInline```
+
+6. Dodaj dwa razy dyrektywę ```onlyToPracticeDirective``` poniżej ```<h3>Small test directive</h3>``` pamiętając, by każdą umieścić w znaczniku ```<div>```
+7. Dodaj do drugiej dyrektywy atrybut ```message="I'm from attirbute"```
+8. W pliku ```RadioCtrl.js``` zaktualizuj dyrektywę  ```onlyToPracticeDirective```  tak aby wyświetlała zawartość zmiennej ```information``` utowrzonej na $scopie oraz zawartość atrybutu dodanego w pliku index.html
+
+```
+        show.text(scope.radioCtrl.information);
+        show.text(attribute.message);
+        ```
 
 Powodzenia!
