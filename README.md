@@ -14,12 +14,15 @@ Celem ćwicznia jest zaprezentowanie wymiany danych między kontrolerami.
 ``` 
 var bind = angular.module('bind', []);
 ```
+
 4. Utwórz ```factory``` zwracający zmianną ```direction``
+
 ```
 bind.factory('Direction', function() {
     return {direction: "Direction? Left and right!"}
 });
 ```
+
 5. Opierając się na ```angularjs-sharing-data-between-controllers``` zedytuj kontrolery ```LeftCtrl``` oraz ```RightCtrl```
 
 Powodzenia!
