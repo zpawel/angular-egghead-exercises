@@ -3,7 +3,7 @@
 Celem ćwicznia jest wykorzystanie metody zdefiniowanej na $scope zamieniającej podane słowo w tekście na nowe. 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
+* [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
 
 
 ###Ćwiczenie
