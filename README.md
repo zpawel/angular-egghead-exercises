@@ -3,8 +3,8 @@
 Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
 
 ###Zanim zaczniesz, zapoznaj się z:
-* materiałem filmowym: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które pomogą w kolorowaniu komórek tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
+* klasami bootstrapa, które wypełnią kolorem komóreki tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
 
 ###Ćwiczenie
 
