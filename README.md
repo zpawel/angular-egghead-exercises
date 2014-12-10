@@ -1,4 +1,4 @@
-##Exercise 5 : angularjs-filters
+##Exercise 5 : Angular filters
 
 The goal of this exercise is the creation and use simple filters.
 
