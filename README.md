@@ -1,28 +1,25 @@
-##Exercise 3 : sharing data between controllers
+##Exercise 3 : Sharing data between controllers
 
-Celem ćwicznia jest zaprezentowanie wymiany danych między kontrolerami. 
+The goal of this exercise is to present the data exchange between controllers.
 
-###Zanim zaczniesz, zapoznaj się z:
-* [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot) oraz [angularjs-sharing-data-between-controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers)
+###Before you start, please refer to:
+* [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
+* [angularjs-sharing-data-between-controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers)
 
 
-###Ćwiczenie
-
-1. Opierając się na filmiku```angularjs-the-dot``` dokonaj zmian w pliku ```index.html```  tak aby połączyć (zbindować) ze sobą wszystkie trzy inputy.
-2. Zakomentuj div  ```CENTER``` w pliku ```index.html```, co spowoduje, że wpisując tekst do pola  ```left``` nie będzie się wyświetlał w ```right```; 
-3. W pliku ```controllers.js``` dodaj moduł ```bind```  
+###Exercise
+1. Based on the video **angularjs-the-dot** make changes to the **index.html** file to connect (bind) each other, all three inputs.
+2. Comment out the div **CENTER** in **index.html**, which will make, typing text into the **left** input will not display a **right** 
+3. In **controllers.js** add a **bind** module 
 ``` 
 var bind = angular.module('bind', []);
 ```
-
-4. Utwórz ```factory``` zwracający zmianną ```direction``
-
+4. Create a **factory** that returns variable **direction**
 ```
 bind.factory('Direction', function() {
     return {direction: "Direction? Left and right!"}
 });
 ```
+5. Based on the video **angularjs-sharing-data-between-controllers** edit controllers **LeftCtrl** and **RightCtrl**
 
-5. Opierając się na ```angularjs-sharing-data-between-controllers``` zedytuj kontrolery ```LeftCtrl``` oraz ```RightCtrl```
-
-Powodzenia!
+Good luck!
