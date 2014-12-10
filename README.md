@@ -1,19 +1,16 @@
 ##Exercise 1 : Binding
+The goal of this exercise is use **angular binding** to connect the text field and row of the table.
 
-Celem ćwicznia jest wykorzystanie **angular binding** do połączenia pola tekstowego oraz wiersza tabeli. 
-
-###Zanim zaczniesz, zapoznaj się z:
+###Before you start, please refer to:
 * [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* klasami bootstrapa, które wypełnią kolorem komóreki tabeli: [contextual classes](http://getbootstrap.com/css/#tables)
+* **bootstrap classes** that will be used for coloring table cells [contextual classes](http://getbootstrap.com/css/#tables)
 
-###Ćwiczenie
+###Exercise
+1. Use **ng-model** directive in input fields ( ```first, second, third```) 
+2. To each row of the table add **class**  attribute and connect them with the relevant inputs.
+3. Check that the rows change color by typing in the name of **bootstrap classes** - you can find examples in the field **placeholder** (```active, success, warning```)
 
-1. Wykorzystaj dyrektywę **ng-model** w trzech inputach ( ```first, second, third```) 
-2. Dodaj do każdego wiersza tabeli atrybut ```class``` i powiąż je z odpowiednimi inputami.
-3. Sprawdź czy wiersze tabeli zmieniają kolory wpisując w inputy nazwy bootstapowych klas (przykłady podane w polu ```placeholder``` : ```active, success, warning```)
+### + Bonus task
+Try to connect input fields with columns of the table.
 
-
-###+ Zadanie dodatkowe
-Spróbuj połączyć inputy z kolumnami tabeli.
-
-Powodzenia!
+Good luck!
