@@ -1,20 +1,23 @@
-##Exercise 4 : defining-a-method-on-the-scope
+##Exercise 4 : Defining a method on the scope
 
-Celem ćwicznia jest wykorzystanie metody zdefiniowanej na $scope zamieniającej podane słowo w tekście na nowe. 
+The goal of this exercise is use the method defined at **$scope** for replacing a given word in the text with new ones.
 
-###Zanim zaczniesz, zapoznaj się z:
+###Before you start, please refer to:
 * [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
 
 
-###Ćwiczenie
+###Exercise
+1. Use **ng-model** directive  to connect  **textarea** with songs lyrics placed in **mySong.factory** (**song** attribute)
+2. Create in **NewWordCtrl**, function called **replaceWord()** to change the words on the new ones. This method takes three arguments:
+* text from **textarea**,
+* word, which will be replaced,
+* new word
 
-1. Za pomocą dyrektywy ```ng-model``` połącz  textarea z tekstem piosenki umieszczonym w ```mySong.factory``` (atrybut ```song```)
-2. Utwórz w kontrolerze ```NewWordCtrl``` metodę o nazwie ```replaceWord()``` jej zadaniem jest zamiana wybranego słowa na nowe. Metoda przyjmuje trzy argumenty:
-* tekst z pola ```textarea```
-* słowo, które będzie zamieniane na inne,
-* nowe słowo
-3. Zamianę wybranego słowa można uzyskać przykładowo tak: ``` textIn.split(oldWord).join(newWord)``` 
-4. Podobnie jak w punkcie 1 połącz pole tekstowe o id ```word``` z przykładowym nowym słowem umieszczonym w ```mySong.factory``` (atrybut ```newWord```)
-5. Wykorzystaj funckję ```replaceWord()``` (z odpowiednimi argumentami aby zastępić słowo ```purr``` na nowe, podane w polu tekstowym) do wyświelenia zmienionego tekstu nagłówku ```<h3>```
+3. Replacement of the word can be achieved, for example, like this: 
+```
+textIn.split(oldWord).join(newWord)
+``` 
+4. As in step 1, conntect the textbox with id **word** with the sample new word in **mySong.factory** (**newWord**)
+5. Use ```replaceWord()``` (with appropriate arguments  to replece the word ```purr``` for new, given in the textbox) to displaying the amended text of the heading ```<h3>```
 
-Powodzenia!
+Good luck!
