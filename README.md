@@ -14,11 +14,9 @@ The goal of this exercise is use the method defined at **$scope** for replacing 
   * new word
   
 3. Replacement of the word can be achieved, for example, like this: 
-```
-textIn.split(oldWord).join(newWord)
-``` 
-4.As in step 1, conntect the textbox with id **word** with the sample new word in **mySong.factory** (**newWord**)
+``` textIn.split(oldWord).join(newWord) ``` 
+4. As in step 1, conntect the textbox with id **word** with the sample new word in **mySong.factory** (**newWord**)
 
-5.Use ```replaceWord()``` (with appropriate arguments  to replece the word ```purr``` for new, given in the textbox) to displaying the amended text of the heading ```<h3>```
+5. Use ```replaceWord()``` (with appropriate arguments  to replece the word ```purr``` for new, given in the textbox) to displaying the amended text of the heading ```<h3>```
 
 Good luck!
