@@ -1,18 +1,17 @@
-##Exercise 6: angularjs-ngrepeat-and-filtering-data
+##Exercise 6: Angular ngrepeat and filtering data
 
-Celem ćwicznia jest napisanie oraz wykorzystanie prostych filtrów. 
+The goal of this exercise is the creation simple filters.
 
-###Zanim zaczniesz, zapoznaj się z:
+###Before you start, please refer to:
 * [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
 
-###Ćwiczenie
+###Exercise
 
-1.   W pliku ```StudentCtrl.js``` utwórz pusty obiekt ```Students```.
-2.   Dodaj do niego atrybut ```list``` i przypisz do niego dane umieszczone w pliku ```student.json```
-3.   Zaktualizuj kontroler przypisując do zmiennej ```students``` na ```$scope``` informacje o studentach.
-4.   Wykorzystaj dyrektywę ```ng-repeat``` aby wypełnić tabelę danymi z  ```students.list``` - zwróć uwagę na nagłówki.
-5.   Dodaj do dyrektywy ```ng-repeat``` filtr ```searchStudent``` a następnie zmodfikuj wszystkie inputy z nagłówków, tak aby wyszukiwały przez pryzmat swojej kategori. 
-6.   Główny input wyszukuje po wszystkich kategoriach.
+1. In **StudentCtrl.js**  create an empty object called **Students**
+2. Add **list** attribute and assign to it the data in the **student.json** file.
+3. Update controller, assigning to a variable **students** on **$scope**  information about students.
+4. Use the **ng-repeat** directive to fill the table with data from **student.list** (pay attention to the headlines).
+5. Add **searchStudent** filter to **ng-repeat** directive, then modify all inputs from headers, that search by category.
+6. The main input searches  all categories.
 
- 
-Powodzenia!
+Good luck!
