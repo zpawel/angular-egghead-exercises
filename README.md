@@ -1,4 +1,10 @@
 # angular-egghead
+## To run the project you need
+* install npm [(How to install npm)](http://blog.npmjs.org/post/85484771375/how-to-install-npm) 
+* install bower
+<pre><code>npm install -g bower</pre><c/ode>
+* Install packages with **bower install**. Bower installs packages to **bower_components/**.
+<pre><code>bower install</code></pre>
 
 ##Table of contents
 #### [Exercise 1 : Binding](https://github.com/aniaw/angular-egghead/tree/exercise1)
