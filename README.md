@@ -24,7 +24,6 @@ These restrictions can all be combined as needed:
         {
             alert("Restrict M: <!-- directive: restrictM -->")
         }
-```
+```4. Verify that each directive was called.
 
-4. Verify that each directive was called.
 Good luck!
