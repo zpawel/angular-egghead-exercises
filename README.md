@@ -3,6 +3,8 @@ The goal of this exercise is create directive which has its own scope.
 
 ###Before you start, please refer to:
 * [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
+* [angularjs-isolate-scope-expression-binding](https://egghead.io/lessons/angularjs-isolate-scope-expression-binding)
+
 
 ###Exercise
 * Add to ```Shop.js``` file ```shoppingTime``` directive.
