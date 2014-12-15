@@ -3,25 +3,28 @@
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body ng-app="myApp">
+<body ng-app="shopApp">
 <div class="container">
     <div class="page-header">
-        <h1>Directive
-            <small>restriction</small>
+        <h1>Products
+            <small>you can buy everything you want!</small>
         </h1>
     </div>
-    <div class="text-center">
-        <div class="row alert-success form-control" ng-controller="restrictECtrl"></div>
-        <div class="row alert-danger form-control" ng-controller="restrictACtrl"></div>
-        <div class="row alert-info form-control" ng-controller="restrictCCtrl"></div>
-        <div class="row"></div>
+    <div class="col-md-6" ng-controller="ShopCtrl">
+        <!--here call the directive-->
+        <div class="panel-footer">
+            <p><strong>Purchased products:</strong></p>
+            <ul>
+                <li ng-repeat="product in products">{{product.name}}</li>
+            </ul>
+        </div>
     </div>
+    <!-- here copy component-->
 </div>
 
 <script src="../bower_components/angular/angular.js"></script>
-<script src="RestrictCtrl.js"></script>
+<script src="Shop.js"></script>
 </body>
 </html>

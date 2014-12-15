@@ -1,30 +1,40 @@
-##Exercise 10 : Directive restrictions
-The goal of this exercise is familiarize yourself with directive restriction.
+##Exercise 11 : Understanding Isolate Scope
+The goal of this exercise is create directive which has its own scope.
 
 ###Before you start, please refer to:
-* [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
-
-###Hint
-The restrict option is typically set to:
-'A' - attribute
-'E' - element
-'C' - class
-'M' - comment
-
-These restrictions can all be combined as needed:
-'AEC' - matches either attribute or element or class name
-
+* [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
 
 ###Exercise
-1. Inside div with ```restrictECtrl``` controller use ```restrict-e``` directive
-2. Based on ```restrictE``` directive in ```RestrictCtrl``` file, create ```restrictA```, ```restrictC``` directives, then call them in div with their controllers.
-3. Create ```restrictM``` directive with ```link``` attribute like below:
-```
-     link: function ()
-        {
-            alert("Restrict M: <!-- directive: restrictM -->")
-        }
-```
 
-4. Verify that each directive was called.
+Good luck!
+1. Add to ```Shop.js``` file ```shoppingTime``` directive.
+2. Add to **return** : 
+* ```restrict``` with **E** value,
+* ```template``` like below:
+```
+'<div class="panel panel-success text-center">' +
+                '<p class="panel-heading"><strong>I want to buy:</strong></p>' +
+                '<div class="panel-body"><input type="text" class="form-control form-group">' +
+                ' <div class="btn btn-success">Buy!</div></div></div>'
+```
+* ```scope``` with ```{buy: "&" }```
+3. Add to **input** in ```template``` attribute, **ng-model** directive  ```ng-model="product"```
+4. Add to **div** with button properties, **ng-click** directive ```ng-click="buy({newProduct:product})"```using the value of **ng-model** directive (product)
+5. Add to **ShopCtrl** ```$scope.shopping``` function:
+```
+ $scope.shopping = function (product)
+    {
+        console.log(product);
+        if (product === undefined || product == '') {
+            alert("Not entered product");
+        } else {
+            $scope.products.push({name: product});
+            alert("You just buy: '" + product + "' !");
+        }
+    }
+ ```
+6. In ````index.html``` file insert the appropriate form of the directive with **buy** attribute calling **shoping** function
+``` buy="shopping(newProduct)"```
+7. Copy all ```<div class="col-md-6" ng-controller="ShopCtrl">...</div>``` below and verify that the components are independent of each other.
+
 Good luck!
