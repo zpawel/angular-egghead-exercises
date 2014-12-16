@@ -29,4 +29,8 @@ Video lesson: [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-b
 Video lesson: [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
 #### [Exercise 11 : Understanding isolate scope](https://github.com/aniaw/angular-egghead/tree/exercise11)
 Video lesson: [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
+#### [Exercise 12 : Isolate Scope "@", "="](https://github.com/aniaw/angular-egghead/tree/exercise12)
+Video lesson: [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding),[angularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
+#### [Exercise 13 : Directives talking to controllers](https://github.com/aniaw/angular-egghead/tree/exercise13)
+Video lesson:  [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
