@@ -3,7 +3,7 @@ The goal of this exercise is create directive which has its own scope (attribute
 
 ###Before you start, please refer to:
 * [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
-* [ngularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
+* [angularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
 
 ###Exercise
 * Add to ```Proverb.js``` file ```proverbOne``` directive with:
