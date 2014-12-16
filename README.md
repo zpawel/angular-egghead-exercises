@@ -1,27 +1,26 @@
-##Exercise 12 : Isolate Scope "@", "="
-The goal of this exercise is create directive which has its own scope (attribute and two-way binding).
+##Exercise 13 : Directives talking to controllers
+The goal of this exercise is show how to share information between controllers and directives
 
 ###Before you start, please refer to:
-* [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
-* [ngularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
+* [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
 ###Exercise
-* Add to ```Proverb.js``` file ```proverbOne``` directive with:
- * restrict **A**
- * scope with ```sentence: '@'```
- * template **div** with **sentence** angular expression
-* In ```index.html``` add to **h3** tag ```proverb-one``` directive with **sentence** set to **sentenceCtrl**
-```sentence={{sentenceCtrl}}``` and check the effect.
+* add to ```Snow``` file ```enter``` directive, like in video (in the link above), which bind jQuery event with directive
 
-* Add to ```Proverb.js``` file ```proverbTwo``` directive with:
- * restrict **E**
- * scope with ```eyefor: '='```
- * template 
-``` template: '<div class="col-md-3 row"><input type="text" class="form-control"></div>' +
-                    '<h3>An <strong>{{eyefor}}</strong> for an <strong>{{eyefor}}</strong> and a tooth for a tooth.</h3>'
 ```
-* Add to template's input **ng-model** directive with **eyefor** value
-* In ```index.html``` add ```proverb-two``` directive (remember that, you set restrict to **E**) with **eyefor** set to **eyeForCtrl**
-```eyefor="eyeForCtrl"``` and check the effect.
+element.bind("mouseenter", function ()
+        {
+            scope.$apply(attrs.enter)
+        })
+ ```
+ 
+* add to ```SnowCtrl``` :
+ * **snow** array
+ * **addPetal** function, which push 'petal' to the **snow** array ``` $scope.snow.push({petal: '*'})```
+ * **removePetal** function, which pop 'petal' from the **snow** array (if snow array length is different than 0)
+
+* add to green square **enter** directive with ```addPetal()``` function
+* add to red square **enter** directive with ```removeetal()``` function
+* enjoy with star snow :)
 
 Good luck!

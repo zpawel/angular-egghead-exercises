@@ -3,27 +3,41 @@
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body ng-app="proverbApp">
-<div class="container" ng-controller="ProverbCtrl">
+<body ng-app="snowApp">
+<div class="container" ng-controller="SnowCtrl">
     <div class="page-header">
-        <h1>No gain
-            <small>without pain!</small>
+        <h1>Circle
+            <small>and square
+                <small>v2</small>
+            </small>
         </h1>
     </div>
-    <div class="col-md-4 text-center panel-default">
-        <h2 class="panel-heading text-center">@</h2>
+    <div class="row">
 
-        <h3><!--proverb-one--></h3>
+        <div class="col-md-4 text-center">
+            <p class="label-success">Add petal</p>
+
+            <div class="square bg-success center-block"></div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <p class="label-danger">Remove petal</p>
+
+            <div class="square bg-danger center-block"></div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <p class="label-info">Let it snow!</p>
+            <span class="glyphicon glyphicon-star" ng-repeat="s in snow" aria-hidden="true">...</span>
+        </div>
     </div>
-    <div class="col-md-8 text-center panel-default">
-        <h2 class="panel-heading">=</h2>
-        <!--proverb-two-->
-    </div>
+
 </div>
 
 <script src="../bower_components/angular/angular.js"></script>
-<script src="Proverb.js"></script>
+<script src="Snow.js"></script>
 </body>
 </html>
