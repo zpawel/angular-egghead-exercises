@@ -17,9 +17,11 @@ The goal of this exercise is create directive which has its own scope (attribute
  * restrict **E**
  * scope with ```eyefor: '='```
  * template 
-``` template: '<div class="col-md-3 row"><input type="text" class="form-control"></div>' +
-                    '<h3>An <strong>{{eyefor}}</strong> for an <strong>{{eyefor}}</strong> and a tooth for a tooth.</h3>'
+``` 
+'<div class="col-md-3 row"><input type="text" class="form-control"></div>' +
+ '<h3>An <strong>{{eyefor}}</strong> for an <strong>{{eyefor}}</strong> and a tooth for a tooth.</h3>'
 ```
+
 * Add to template's input **ng-model** directive with **eyefor** value
 * In ```index.html``` add ```proverb-two``` directive (remember that, you set restrict to **E**) with **eyefor** set to **eyeForCtrl**
 ```eyefor="eyeForCtrl"``` and check the effect.
