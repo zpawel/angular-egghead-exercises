@@ -1,26 +1,29 @@
-##Exercise 13 : Directives talking to controllers
-The goal of this exercise is show how to share information between controllers and directives
+##Exercise 14 : Directive to Directive Communication
+The goal of this exercise is show how to share information between directives
 
 ###Before you start, please refer to:
-* [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
+* [angularjs-directive-to-directive-communication](https://egghead.io/lessons/angularjs-directive-to-directive-communication)
 
 ###Exercise
-* add to ```Snow``` file ```enter``` directive, like in video (in the link above), which bind jQuery event with directive
+* add to ```Alarm.js``` file ```alarm``` directive, which return 
+    * restrict A,
+    * empty scope object,
+    * controller function, with tree function: ```addRed```, ```addYellow```, ```addGreen```, inside each place alert with proper color, like ```alert("Red alarm!")```
+    
+* below, create ``red`` directive, which require **alarm** directive,
+* add **link** function, which bind **click** event with ```red``` directive
 
 ```
-element.bind("mouseenter", function ()
+link: function (scope, element, attrs, alarmCtrl)
         {
-            scope.$apply(attrs.enter)
-        })
- ```
- 
-* add to ```SnowCtrl``` :
- * **snow** array
- * **addPetal** function, which push 'petal' to the **snow** array ``` $scope.snow.push({petal: '*'})```
- * **removePetal** function, which pop 'petal' from the **snow** array (if snow array length is different than 0)
-
-* add to green square **enter** directive with ```addPetal()``` function
-* add to red square **enter** directive with ```removeetal()``` function
-* enjoy with star snow :)
+            element.bind("click", function ()
+            {
+                alarmCtrl.addRed();
+            })
+        }
+```
+* use ```red``` directive in first div (remember that requires **alarm** directive)
+* based on ```red``` directive, create ```yellow``` and ```green``` directives (with **dbclick** and **mouseenter** event) and use them in the next divs
+    
 
 Good luck!
