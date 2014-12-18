@@ -17,11 +17,11 @@ The goal of this exercise is summary on isolate scope
                 '<div class="form-group"> <label for="name" class="label label-default">Name</label> ' +
                 '<input type="text" id="name" class="form-control"></div>' +
                 '<div class="form-group"> <label for="color" class="label label-default">Color</label>' +
-                '<select id="color" ng-model="color" ng-options="color.name for color in colors" class="form-control"></select></div>' +
+                '<select id="color" class="form-control"></select></div>' +
                 '<label for="size" class="label label-default">Size</label>' +
-                '<h3 id="size">{{size}}</h3>' +
-                '<div class="btn btn-default" ng-click="open({size: size, message: name, color: color.name})">Tell me about yourself!</div></div></div></div>',
-                ```
+                '<div class="btn btn-default" >Tell me about yourself!</div></div></div></div>',
+```
+ 
 * add **link** function
 ```
  link: function (scope)
