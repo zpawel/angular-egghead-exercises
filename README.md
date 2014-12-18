@@ -1,29 +1,47 @@
-##Exercise 14 : Directive to Directive Communication
-The goal of this exercise is show how to share information between directives
+##Exercise 15 : Isolate Scope Review
+The goal of this exercise is summary on isolate scope
 
 ###Before you start, please refer to:
-* [angularjs-directive-to-directive-communication](https://egghead.io/lessons/angularjs-directive-to-directive-communication)
+* [angularjs-isolate-scope-review](https://egghead.io/lessons/angularjs-isolate-scope-review)
 
 ###Exercise
-* add to ```Alarm.js``` file ```alarm``` directive, which return 
-    * restrict A,
-    * empty scope object,
-    * controller function, with tree function: ```addRed```, ```addYellow```, ```addGreen```, inside each place alert with proper color, like ```alert("Red alarm!")```
-    
-* below, create ``red`` directive, which require **alarm** directive,
-* add **link** function, which bind **click** event with ```red``` directive
-
+* add to ```Box.js``` file ```box``` directive with  **E** restriction,
+* add three types of isolate scope binding methods
+    * ```size: "@"```
+    * ```color: "="```
+    * ```open: "&"```
+* add to directive **template**
 ```
-link: function (scope, element, attrs, alarmCtrl)
+'<div class="col-md-4"><div class="panel panel-default"><div class="panel-heading">{{name}}</div>' +
+                '<div class="panel-body">' +
+                '<div class="form-group"> <label for="name" class="label label-default">Name</label> ' +
+                '<input type="text" id="name" class="form-control"></div>' +
+                '<div class="form-group"> <label for="color" class="label label-default">Color</label>' +
+                '<select id="color" ng-model="color" ng-options="color.name for color in colors" class="form-control"></select></div>' +
+                '<label for="size" class="label label-default">Size</label>' +
+                '<h3 id="size">{{size}}</h3>' +
+                '<div class="btn btn-default" ng-click="open({size: size, message: name, color: color.name})">Tell me about yourself!</div></div></div></div>',
+                ```
+* add **link** function
+```
+ link: function (scope)
         {
-            element.bind("click", function ()
-            {
-                alarmCtrl.addRed();
-            })
+            scope.name = "Box";
+            scope.colors = [
+                {id: 1, name: "red", hex: "#FA8072"},
+                {id: 2, name: "green", hex: "#98FB98"},
+                {id: 3, name: "blue", hex: "#B0C4DE"}
+            ];
+            scope.color = scope.colors[0];
         }
 ```
-* use ```red``` directive in first div (remember that requires **alarm** directive)
-* based on ```red``` directive, create ```yellow``` and ```green``` directives (with **dbclick** and **mouseenter** event) and use them in the next divs
-    
+
+* complete **template** with elements
+    * add to input **ng-model** directive set to **name**
+    * add to select **ng-model** directive set to **color** and ```ng-options="color.name for color in colors"```
+    * add below **label for="size"**, ``` size``` angular-expression in **h3** tag
+    * add to last div **ng-click** directive and call **open** with argument ```size: size, message: name, color: color.name}```
+
+* in ```index.html``` add three ```box``` directives with  ```size```: **small**, **medium**, **big** (one box - one size), ```color``` set to **color** and ```open``` with  **showInside** function (remember about arguments)
 
 Good luck!
