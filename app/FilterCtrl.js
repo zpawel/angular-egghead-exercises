@@ -9,7 +9,7 @@ myApp.filter('quote', function ()
 
 myApp.filter('firstLetterUpp', function ()
 {
-    return function (text, all)
+    return function (text)
     {
 
     }
