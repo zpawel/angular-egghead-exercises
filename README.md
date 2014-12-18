@@ -3,7 +3,7 @@
 The goal of this exercise is use **FruitCtrl** controller to connect data from text fields and display them.
 
 ###Before you start, please refer to:
-* [angularjs-controller](https://egghead.io/lessons/angularjs-controller)
+* [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
 
 ###Exercise
 
