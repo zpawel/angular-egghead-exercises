@@ -7,7 +7,7 @@ The goal of this exercise is the creation simple filters.
 
 ###Exercise
 
-* In **StudentCtrl.js**  create an empty object called **Students**
+* In **StudentCtrl.js** file create an empty object called **Students**
 * Add **list** attribute and assign to it the data in the **student.json** file.
 * Update controller, assigning to a variable **students** on **$scope**  information about students.
 * Use the **ng-repeat** directive to fill the table with data from **student.list** (pay attention to the headlines).
