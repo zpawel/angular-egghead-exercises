@@ -33,4 +33,9 @@ Video lesson: [angularjs-understanding-isolate-scope](https://egghead.io/lessons
 Video lesson: [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding),[angularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
 #### [Exercise 13 : Directives talking to controllers](https://github.com/aniaw/angular-egghead/tree/exercise13)
 Video lesson:  [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
+#### [Exercise 14 : Directive to directive communication](https://github.com/aniaw/angular-egghead/tree/exercise14)
+Video lesson: 
+#### [Exercise 15 : Isolate scope review](https://github.com/aniaw/angular-egghead/tree/exercise15)
+Video lesson: 
+
 
