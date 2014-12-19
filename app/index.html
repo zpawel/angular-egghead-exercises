@@ -5,31 +5,29 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="calcApp">
+<body ng-app="moneyApp">
 <div class="container">
     <div class="page-header">
-        <h1>Simple
-            <small>calculations <small>v2</small></small>
+        <h1>I am a rich man.
+            <small>Mainly in the experiment.
+            </small>
         </h1>
     </div>
-    <div class="text-center">
-        <div class="col-md-3" ng-controller="SumCtrl">
-            <div class="btn btn-success" ng-click="SumCtrl.addition(2,3)">Sum</div>
-        </div>
-        <div class="col-md-3" ng-controller="SubCtrl">
-            <div class="btn btn-danger" ng-click="SubCtrl.subtraction(5,4)">Subtract</div>
-        </div>
-        <div class="col-md-3" ng-controller="MultiCtrl">
-            <multi solve="multiplication(4,5)"></multi>
-        </div>
-        <div class="col-md-3" ng-controller="DivideCtrl">
-            <div divide solve="divide(10,5)"></div>
-        </div>
+    <div class="col-md-offset-4 col-md-4">
+        <label for="name" class="label label-default">Name</label>
+        <input type="text" class="form-control" id="name">
+
+        <label for="forWhat" class="label label-default">For what</label>
+        <input type="text" class="form-control" id="forWhat" placeholder="For poor pets">
+
+        <money how-many="proposal" for-what="{{forWhat}}">
+            <!-- add here h3 tag-->
+            <p>I want to devote: {{proposal | currency}}</p>
+        </money>
     </div>
 </div>
 
-
 <script src="../bower_components/angular/angular.js"></script>
-<script src="Calc.js"></script>
+<script src="Money.js"></script>
 </body>
 </html>
