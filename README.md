@@ -1,19 +1,15 @@
-##Exercise 16 : Transclusion basics
-The goal of this exercise is familiarize yourself with ng-tranclusion directive
+##Exercise 17 : An alternative approach to controllers
+The goal of this exercise is familiarize yourself with alternative approach to controllers
 
 ###Before you start, please refer to:
-* [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
+* [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
 ###Exercise
-* add to ```Animal.js``` file ```animal``` directive with return properties:
-    * restriction **E**, 
-    * scope with **name** set to '@'
-    * and template ```'<h3>{{name}}</h3>' + '<div> I am not a button :( </div>'```
-    
-* add to ```index.html``` three **animal** directive with name attribute set consecutively on **Dog**, **Cat** and **Pig**
-* inside each directives add button ```<div class="btn btn-default" >Hau!</div>``` (change buton descripion to "Miau!" and "Quiq" for Cat and Pig :) )
-* check the effect of ```index.html``` view
-* add to ```animal``` directive **transclude** property set to **true**
-* add to div with description "I am not a button"  ```ng-transclude``` and check the effect
+* add to "Calc.js" file ```SumCtrl``` and ```SubCtrl``` controllers
+* inside **SumCtrl** add  simple ```addition``` function which which adds two numbers and analogously to ```SubCtrl``` add ```subtraction``` function
+* inside each controllers add return **$scope.ctrlName** set to **this**;
+* add to first div ```SumCtrl``` and to second ```SubCtrl```
+* add to buttons appropriate function with **ng-click** directive and giv him two number as an argument
+* add to **h3** angular expression with result (remember about controller!)
 
 Good luck!

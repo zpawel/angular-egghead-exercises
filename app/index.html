@@ -5,22 +5,29 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="animalApp">
+<body ng-app="calcApp">
 <div class="container">
     <div class="page-header">
-        <h1>Animals
-            <small>Planet</small>
+        <h1>Simple
+            <small>calculations</small>
         </h1>
     </div>
     <div class="text-center">
-        <!---add animal dog directive-->
-        <!---add animal cat directive-->
-        <!---add animal pig directive-->
+        <!-- add SumCtrl -->
+        <div class="col-md-6" ng-controller="SumCtrl">
+            <div class="btn btn-success">Sum</div>
+            <h3> a + b = {{}}</h3>
+        </div>
+        <!-- add SubCtrl -->
+        <div class="col-md-6" ng-controller="SubCtrl">
+            <div class="btn btn-danger">Substraction</div>
+            <h3> a - b = {{}}</h3>
+
+        </div>
     </div>
 </div>
 
-
 <script src="../bower_components/angular/angular.js"></script>
-<script src="Animal.js"></script>
+<script src="Calc.js"></script>
 </body>
 </html>
