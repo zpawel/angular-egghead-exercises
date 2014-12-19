@@ -1,47 +1,19 @@
-##Exercise 15 : Isolate Scope Review
-The goal of this exercise is summary on isolate scope
+##Exercise 16 : Transclusion basics
+The goal of this exercise is familiarize yourself with ng-tranclusion directive
 
 ###Before you start, please refer to:
-* [angularjs-isolate-scope-review](https://egghead.io/lessons/angularjs-isolate-scope-review)
+* [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
 
 ###Exercise
-* add to ```Box.js``` file ```box``` directive with  **E** restriction,
-* add three types of isolate scope binding methods
-    * ```size: "@"```
-    * ```color: "="```
-    * ```open: "&"```
-* add to directive **template**
-```
-'<div class="col-md-4"><div class="panel panel-default"><div class="panel-heading">{{name}}</div>' +
-                '<div class="panel-body">' +
-                '<div class="form-group"> <label for="name" class="label label-default">Name</label> ' +
-                '<input type="text" id="name" class="form-control"></div>' +
-                '<div class="form-group"> <label for="color" class="label label-default">Color</label>' +
-                '<select id="color" class="form-control"></select></div>' +
-                '<label for="size" class="label label-default">Size</label>' +
-                '<div class="btn btn-default" >Tell me about yourself!</div></div></div></div>',
-```
- 
-* add **link** function
-```
- link: function (scope)
-        {
-            scope.name = "Box";
-            scope.colors = [
-                {id: 1, name: "red", hex: "#FA8072"},
-                {id: 2, name: "green", hex: "#98FB98"},
-                {id: 3, name: "blue", hex: "#B0C4DE"}
-            ];
-            scope.color = scope.colors[0];
-        }
-```
-
-* complete **template** with elements
-    * add to input **ng-model** directive set to **name**
-    * add to select **ng-model** directive set to **color** and ```ng-options="color.name for color in colors"```
-    * add below **label for="size"**, ``` size``` angular-expression in **h3** tag
-    * add to last div **ng-click** directive and call **open** with argument ```size: size, message: name, color: color.name}```
-
-* in ```index.html``` add three ```box``` directives with  ```size```: **small**, **medium**, **big** (one box - one size), ```color``` set to **color** and ```open``` with  **showInside** function (remember about arguments)
+* add to ```Animal.js``` file ```animal``` directive with return properties:
+    * restriction **E**, 
+    * scope with **name** set to '@'
+    * and template ```'<h3>{{name}}</h3>' + '<div> I am not a button :( </div>'```
+    
+* add to ```index.html``` three **animal** directive with name attribute set consecutively on **Dog**, **Cat** and **Pig**
+* inside each directives add button ```<div class="btn btn-default" >Hau!</div>``` (change buton descripion to "Miau!" and "Quiq" for Cat and Pig :) )
+* check the effect of ```index.html``` view
+* add to ```animal``` directive **transclude** property set to **true**
+* add to div with description "I am not a button"  ```ng-transclude``` and check the effect
 
 Good luck!
