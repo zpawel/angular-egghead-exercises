@@ -9,23 +9,25 @@
 <div class="container">
     <div class="page-header">
         <h1>Simple
-            <small>calculations</small>
+            <small>calculations <small>v2</small></small>
         </h1>
     </div>
     <div class="text-center">
-        <!-- add SumCtrl -->
-        <div class="col-md-6" ng-controller="SumCtrl">
-            <div class="btn btn-success">Sum</div>
-            <h3> a + b = {{}}</h3>
+        <div class="col-md-3" ng-controller="SumCtrl">
+            <div class="btn btn-success" ng-click="SumCtrl.addition(2,3)">Sum</div>
         </div>
-        <!-- add SubCtrl -->
-        <div class="col-md-6" ng-controller="SubCtrl">
-            <div class="btn btn-danger">Substraction</div>
-            <h3> a - b = {{}}</h3>
-
+        <div class="col-md-3" ng-controller="SubCtrl">
+            <div class="btn btn-danger" ng-click="SubCtrl.subtraction(5,4)">Subtract</div>
+        </div>
+        <div class="col-md-3" ng-controller="MultiCtrl">
+            <multi solve="multiplication(4,5)"></multi>
+        </div>
+        <div class="col-md-3" ng-controller="DivideCtrl">
+            <div divide solve="divide(10,5)"></div>
         </div>
     </div>
 </div>
+
 
 <script src="../bower_components/angular/angular.js"></script>
 <script src="Calc.js"></script>

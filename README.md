@@ -1,15 +1,16 @@
-##Exercise 17 : An alternative approach to controllers
-The goal of this exercise is familiarize yourself with alternative approach to controllers
+##Exercise 18 : Thinking differently about organization
+The goal of this exercise is organizing controllers and directives by collecting them into objects 
 
 ###Before you start, please refer to:
-* [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
+* [angularjs-thinking-differently-about-organization](https://egghead.io/lessons/angularjs-thinking-differently-about-organization)
 
 ###Exercise
-* add to "Calc.js" file ```SumCtrl``` and ```SubCtrl``` controllers
-* inside **SumCtrl** add  simple ```addition``` function which which adds two numbers and analogously to ```SubCtrl``` add ```subtraction``` function
-* inside each controllers add return **$scope.ctrlName** set to **this**;
-* add to first div ```SumCtrl``` and to second ```SubCtrl```
-* add to buttons appropriate function with **ng-click** directive and giv him two number as an argument
-* add to **h3** angular expression with result (remember about controller!)
+* check how the application work before changes
+* add to ```Calc.js``` **calcAppElements** object, which will be a container of our controllers and directives
+* add to ```calcAppElements``` empty **controllers ** and **directives** object
+* switch controllers and directors form as it was presented in the video
+* at the end, add directives to ```calcApp.directive``` like this ```calcApp.directive(calcAppElements.directives);```
+* do the same with controllers
+* check how the application work after changes
 
 Good luck!
