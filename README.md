@@ -20,7 +20,7 @@ element.bind("mouseenter", function ()
  * **removePetal** function, which pop 'petal' from the **snow** array (if snow array length is different than 0)
 
 * add to green square **enter** directive with ```addPetal()``` function
-* add to red square **enter** directive with ```removeetal()``` function
+* add to red square **enter** directive with ```removePetal()``` function
 * enjoy with star snow :)
 
 Good luck!
