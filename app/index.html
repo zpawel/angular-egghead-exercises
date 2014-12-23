@@ -6,12 +6,12 @@
 </head>
 
 <body ng-app="provider">
-<div class="container">
+<div class="container" ng-controller="catchErrorCtrl">
     <div class="page-header">
         <h1 class="text-left">Exercise promise.</h1>
     </div>
-    <div>
-        <div class="text-danger">Wrong page</div>
+    <div ng-view="">
+        <div class="text-danger"><h1>You don't use <strong>ng-view</strong></h1></div>
     </div>
 </div>
 <script src="../bower_components/angular/angular.js"></script>
