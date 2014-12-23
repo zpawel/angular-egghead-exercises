@@ -7,7 +7,7 @@ The goal of this exercise is to use ready-made filter options.
 ###Exercise
 
 * Test **orderBy**, **limitTo** filters (according to the attribute your chosen) and **lowercase**, **uppercase** filters. 
-* Use **choice** (it uses by **ng-click** directive with **orderBy** as an orgument, which allows you to sort by column)
+* Use **choice** (it uses by **ng-click** directive with **orderBy** as an argument, which allows you to sort by column)
 * Similarly use **limit** model as argumet **limitTo** to restrict the display of the radio choice.
 
 Good luck!
