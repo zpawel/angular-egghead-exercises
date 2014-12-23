@@ -8,7 +8,7 @@ The goal of this exercise is to present the data exchange between controllers.
 
 
 ###Exercise
-* Based on the video **angularjs-the-dot** make changes to the **index.html** file to connect (bind) each other, all three inputs.
+* Based on the video **angularjs-the-dot** make changes to the **index.html** file to connect (bind) all three inputs to each other.
 * Comment out the div **CENTER** in **index.html**, which will make, typing text into the **left** input will not display a **right** 
 * In **controllers.js** add a **bind** module 
 ``` var bind = angular.module('bind', []);```
