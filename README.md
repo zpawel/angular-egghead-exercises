@@ -23,7 +23,7 @@ link: function (scope, element, attrs, alarmCtrl)
         }
 ```
 * use ```red``` directive in first div (remember that requires **alarm** directive)
-* based on ```red``` directive, create ```yellow``` and ```green``` directives (with **dbclick** and **mouseenter** event) and use them in the next divs
+* based on ```red``` directive, create ```yellow``` and ```green``` directives (with **dblclick** and **mouseenter** event) and use them in the next divs
     
 
 Good luck!
