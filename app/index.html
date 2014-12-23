@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="appScope">
+<div class="container">
+    <div class="page-header">
+        <h1>Scope vs $scope</h1>
+    </div>
+    <div class="container">
+        <div ng-controller="scopeCtrl as ctrl">
+            <label>Value from unit scope</label>
+
+            <unit-scope></unit-scope>
+            <div  class="btn btn-success" ng-click="ctrl.unitScope()">Bind value from unit scope</div>
+            <div class="text-success">{{ctrl.unitScopeValue}}</div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="scope.js"></script>
+</body>
+</html>
