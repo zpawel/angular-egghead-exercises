@@ -2,7 +2,7 @@
 The goal of this exercise is practise writing directive, factory and controllers
 
 ###Before you start, please refer to:
-* [https://egghead.io/lessons/angularjs-templateurl](https://egghead.io/lessons/angularjs-templateurl)
+* [https://egghead.io/lessons/angularjs-templatecache](https://egghead.io/lessons/angularjs-templatecache)
 
 ###Before you start, please read
 * [https://docs.angularjs.org/api/ng/directive/ngIf](https://docs.angularjs.org/api/ng/directive/ngIf)
