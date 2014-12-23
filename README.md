@@ -5,6 +5,10 @@
 <pre><code>npm install -g bower</pre><c/ode>
 * Install packages with **bower install**. Bower installs packages to **bower_components/**.
 <pre><code>bower install</code></pre>
+* Install packages with **npm install**. NodeJS installs packages to **node_modules**.
+<pre><code>npm install</code></pre>
+* run grunt:
+<pre><code>grunt serve</code></pre>
 
 ##Table of contents
 #### [Exercise 1 : Binding](https://github.com/aniaw/angular-egghead/tree/exercise1)
