@@ -17,7 +17,7 @@ These restrictions can all be combined as needed
 
 ###Exercise
 * Inside div with ```restrictECtrl``` controller use ```restrict-e``` directive
-* Based on ```restrictE``` directive in ```RestrictCtrl``` file, create ```restrictA```, ```restrictC``` directives, then call them in div with their controllers.
+* Based on ```restrictE``` directive in ```Restrict.js``` file, create ```restrictA```, ```restrictC``` directives, then call them in div with their controllers.
 * Create ```restrictM``` directive with ```link``` attribute like below:
 ```     
 link: function ()
