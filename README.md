@@ -22,8 +22,7 @@ The goal of this exercise is create directive which has its own scope.
 ```
  $scope.shopping = function (product)
     {
-        console.log(product);
-        if (product === undefined || product == '') {
+        if (product == undefined || product == '') {
             alert("Not entered product");
         } else {
             $scope.products.push({name: product});
