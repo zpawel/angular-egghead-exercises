@@ -1,13 +1,18 @@
-<div>
-    <div class="form-group">
-        <div><h3 class="text-left test-expected">Welcome to our shop:)</h3></div>
-        <label>Product name</label>
-        {{product.name}}
-    </div>
-    <div class="form-group">
-        <label>Total price</label>
-        {{product.cost}}
-    </div>
+<div class="col-md-offset-4 col-md-4">
     <!--add message-->
-    <a class="btn btn-warning" href="#"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+    <div class="panel panel-body panel-default">
+        <div class="form-group">
+            <label for="name" class="label label-default">Product</label>
+
+            <h3 id="name">{{product.name}}</h3>
+        </div>
+        <div class="form-group">
+            <label for="cost" class="label label-default">Total price</label>
+
+            <h3 id="cost">{{product.cost | currency}}</h3>
+        </div>
+        <div>
+            <a class="btn btn-warning" href="#"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+        </div>
+    </div>
 </div>

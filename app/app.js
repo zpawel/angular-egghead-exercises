@@ -1,18 +1,22 @@
-var provider = angular.module("provider", []);
+var provider = angular.module("provider", ['ngRoute']);
 
-provider.config(function ($routeProvider) {
+provider.config(function ($routeProvider)
+{
 
 });
 
 var productCatch;
-var appCtrl = provider.controller('appCtrl', function ($scope) {
+var appCtrl = provider.controller('appCtrl', function ($scope)
+{
 
 });
-provider.controller('catchErrorCtrl', function ($rootScope, $location, $scope) {
+provider.controller('catchErrorCtrl', function ($rootScope, $location, $scope)
+{
     $scope.product = {};
 
 });
 
-appCtrl.error = function ($q, $timeout) {
+appCtrl.error = function ($q, $timeout)
+{
 
 };
