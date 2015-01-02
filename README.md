@@ -15,7 +15,7 @@ The goal of this exercise is use the method defined at **$scope** for replacing 
   
 * Replacement of the word can be achieved, for example, like this: 
 ``` textIn.split(oldWord).join(newWord) ``` 
-* As in step 1, conntect the textbox with id **word** with the sample new word in **mySong.factory** (**newWord**)
-* Use ```replaceWord()``` (with appropriate arguments  to replece the word ```purr``` for new, given in the textbox) to displaying the amended text of the heading ```<h3>```
+* Just like in first step, connect the text input with id word to a sample new word in mySong.factory (**newWord**)
+* In header below use previously created replaceWord function (with appropriate arguments to replace the word **purr** for new one) to display refactored text ```<div class="well" ng-controller="NewWordCtrl"><h3></h3></div>```
 
 Good luck!
