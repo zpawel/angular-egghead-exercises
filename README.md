@@ -1,4 +1,4 @@
-##Exercise 6: Angular ngrepeat and filtering data
+##Exercise 6: Angular ng-repeat and filtering data
 
 The goal of this exercise is the creation simple filters.
 
@@ -12,7 +12,7 @@ The goal of this exercise is the creation simple filters.
 * Add **list** attribute and assign to it the data in the **student.json** file.
 * Update controller, assigning to a variable **students** on **$scope**  information about students.
 * Use the **ng-repeat** directive to fill the table with data from **student.list** (pay attention to the headlines).
-* Add **searchStudent** filter to **ng-repeat** directive, then modify all inputs from headers, that search by category.
-* The main input searches  all categories.
+* Add **searchStudent** filter to **ng-repeat** directive, then modify all inputs in table headers, that search by category.
+* The upper input field should search through all categories.
 
 Good luck!
