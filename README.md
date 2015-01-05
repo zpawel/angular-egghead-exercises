@@ -3,7 +3,7 @@
 * install npm [(How to install npm)](http://blog.npmjs.org/post/85484771375/how-to-install-npm) 
 * install bower
 <pre><code>npm install -g bower</pre><c/ode>
-* Install packages with **bower install**. Bower installs packages to **bower_components/**.
+* Install packages with **bower install**. Bower installs packages to **bower_components**.
 <pre><code>bower install</code></pre>
 * Install packages with **npm install**. NodeJS installs packages to **node_modules**.
 <pre><code>npm install</code></pre>
