@@ -13,5 +13,6 @@ The goal of this exercise is to use ready-made filter options.
 ###+Bonus task
 * Add to **UserCtrl** controller  ```reverseSort``` function that will sort the data ascending and descending
 * Use **reverseSort** function in **ng-click** directive
+* **Hint** : (orderBy)[https://docs.angularjs.org/api/ng/filter/orderBy]
 
 Good luck!
