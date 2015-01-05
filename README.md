@@ -7,7 +7,7 @@ The goal of this exercise is use the information about directives in conjunction
 * [jquery/bind](http://api.jquery.com/bind/)
 
 ###Exercise
-**Basic on ```enter``` and  ```leave``` directives (you'll find in this exercise):**
+Basic on ```enter``` and  ```leave``` **directives (you'll find in this exercise):**
 * write directives: ```clickOn``` - adding class, and ```dblClickOn``` -  removing class
 * use ```click``` and ```dblclick``` events
 * add both of the directives You have created to the **div** tag under ```Click / double click``` on paragraph
