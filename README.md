@@ -8,7 +8,7 @@ The goal of this exercise is use the information about directives in conjunction
 
 ###Exercise
 * Basic on ```enter``` and  ```leave``` directives,  write directives: ```clickOn``` - adding class, and ```dblClickOn``` -  removing class
-* Use events ```click``` and ```dblclick```
+* Use ```click``` and ```dblclick``` events
 * Add both of the directives You have created to the **div** tag under **Click / double click** on paragraph
 
 Good luck!
