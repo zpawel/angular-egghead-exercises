@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="journeyApp" ng-controller="JourneyCtrl">
+<div class="container">
+    <div class="page-header">
+        <h1>Choose your mission!
+            <small>Forest or Home?</small>
+        </h1>
+    </div>
+    <ng-view>
+    </ng-view>
+</div>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="journey.js"></script>
+</body>
+</html>

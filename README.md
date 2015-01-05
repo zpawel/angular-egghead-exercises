@@ -1,45 +1,29 @@
-# angular-egghead
-## To run the project you need
-* install npm [(How to install npm)](http://blog.npmjs.org/post/85484771375/how-to-install-npm) 
-* install bower
-<pre><code>npm install -g bower</pre><c/ode>
-* Install packages with **bower install**. Bower installs packages to **bower_components/**.
-<pre><code>bower install</code></pre>
-* Install packages with **npm install**. NodeJS installs packages to **node_modules**.
-<pre><code>npm install</code></pre>
-* run grunt:
-<pre><code>grunt serve</code></pre>
+##Exercise 29 : Directive for route handling
+The goal of this exercise is about route life cycle.
 
-##Table of contents
-#### [Exercise 1 : Binding](https://github.com/aniaw/angular-egghead/tree/exercise1)
-Video lesson: [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-#### [Exercise 2 : Controller](https://github.com/aniaw/angular-egghead/tree/exercise2)
-Video lesson: [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
-#### [Exercise 3 : Sharing data between controllers](https://github.com/aniaw/angular-egghead/tree/exercise3)
-Video lesson: [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot), [angularjs-sharing-data-between-controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers)
-#### [Exercise 4 : Defining a method on the scope](https://github.com/aniaw/angular-egghead/tree/exercise4)
-Video lesson: [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
-#### [Exercise 5 : Angular filters](https://github.com/aniaw/angular-egghead/tree/exercise5)
-Video lesson: [angularjs-filters](https://egghead.io/lessons/angularjs-filters)
-#### [Exercise 6: Angular ngrepeat and filtering data](https://github.com/aniaw/angular-egghead/tree/exercise6)
-Video lesson: [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
-#### [Exercise 7 : Angular built in filters](https://github.com/aniaw/angular-egghead/tree/exercise7)
-Video lesson: [angularjs-built-in-filters](https://egghead.io/lessons/angularjs-built-in-filters)
-#### [Exercise 8 : Angular first directive](https://github.com/aniaw/angular-egghead/tree/exercise8)
-Video lesson: [angularjs-first-directive](https://egghead.io/lessons/angularjs-first-directive), [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
-#### [Exercise 9 : Directives](https://github.com/aniaw/angular-egghead/tree/exercise9)
-Video lesson: [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors), [angularjs-first-directive](https://egghead.io/lessons/angularjs-useful-behaviors)
-#### [Exercise 10 : Directive restrictions](https://github.com/aniaw/angular-egghead/tree/exercise10)
-Video lesson: [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
-#### [Exercise 11 : Understanding isolate scope](https://github.com/aniaw/angular-egghead/tree/exercise11)
-Video lesson: [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
-#### [Exercise 12 : Isolate Scope "@", "="](https://github.com/aniaw/angular-egghead/tree/exercise12)
-Video lesson: [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding),[angularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
-#### [Exercise 13 : Directives talking to controllers](https://github.com/aniaw/angular-egghead/tree/exercise13)
-Video lesson:  [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
-#### [Exercise 14 : Directive to directive communication](https://github.com/aniaw/angular-egghead/tree/exercise14)
-Video lesson: 
-#### [Exercise 15 : Isolate scope review](https://github.com/aniaw/angular-egghead/tree/exercise15)
-Video lesson: 
+###Before you start, please refer to:
+* [angularjs-route-life-cycle](https://egghead.io/lessons/angularjs-route-life-cycle)
 
+###Exercise
+1. Before route change $scope:
+* add to **StartCtrl** ```goHome``` function, which
+    *set ```message``` variable on $scope to **I choose home!**
+    *use **$timeout** to delay load path **/home** about **2s**
+* add to **StartCtrl** ```goForest``` function, which
+    *set ```message``` variable on $scope to **I choose forest!!**
+    *use **$timeout** to delay load path **/forest** about **3s**    
+    
 
+2. When route start change $scope
+* add to **$rootScope.$on** variable **start** set on ```"The mission was started!"``
+
+3. When route change is success
+* add to **$rootScope.$on** condition: when **space** attribute, which received from promise is
+    * set to **Kitchen** *set ```mission``` variable on $scope to **to make dinner.**
+    * set to **Wood** *set ```mission``` variable on $scope to **light a campfire.**
+    * **hint** :  search **space** in **current.local...**
+    
+4. When the next controller takes control
+* add to **HomeCtrl** and **ForestCtrl** controllers **message** variable and set it to message from **loadData**
+
+Good luck!
