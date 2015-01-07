@@ -1,24 +1,26 @@
+var candyTemplateUrl = angular.module("templateUrl", []);
 
-var templateUrl = angular.module("templateUrl", []);
-
-templateUrl.run(function($templateCache){
-    $templateCache.put('urlTemplate.html','<div><h3 ng-click="content()" class="btn btn-info">{{title}}</h3><div ng-show="isContentVisible" ng-transclude></div></div>');
+candyTemplateUrl.run(function ($templateCache)
+{
+    $templateCache.put('urlTemplate.html', '<div><h3 ng-click="content()" class="btn btn-info" ng-if="isCandyVisible(title)">{{title}}</h3><div ng-show="isContentVisible" ng-transclude></div></div>');
 });
 
 
-templateUrl.directive("url", function() {
+candyTemplateUrl.directive("url", function ()
+{
     return {
-        restrict: "E",
-        transclude: true,
-        scope: {
+        restrict: "E", transclude: true, scope: {
             title: "@"
-        },
-        templateUrl: 'urlTemplate.html',
-        link: function(scope) {
+        }, templateUrl: 'urlTemplate.html', link: function (scope)
+        {
             scope.isContentVisible = false;
+            scope.isCandyVisible = function (value)
+            {
 
-            scope.content = function() {
-                scope.isContentVisible = !scope.isContentVisible;
+            };
+            scope.content = function ()
+            {
+
             }
         }
     }
