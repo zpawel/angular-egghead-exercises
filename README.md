@@ -28,7 +28,7 @@ Video lesson: [angularjs-built-in-filters](https://egghead.io/lessons/angularjs-
 #### [Exercise 8 : Angular first directive](https://github.com/aniaw/angular-egghead/tree/exercise8)
 Video lesson: [angularjs-first-directive](https://egghead.io/lessons/angularjs-first-directive), [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
 #### [Exercise 9 : Directives](https://github.com/aniaw/angular-egghead/tree/exercise9)
-Video lesson: [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors), [angularjs-first-directive](https://egghead.io/lessons/angularjs-useful-behaviors)
+Video lesson: [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors), [angularjs-useful-behaviors](https://egghead.io/lessons/angularjs-useful-behaviors)
 #### [Exercise 10 : Directive restrictions](https://github.com/aniaw/angular-egghead/tree/exercise10)
 Video lesson: [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
 #### [Exercise 11 : Understanding isolate scope](https://github.com/aniaw/angular-egghead/tree/exercise11)
