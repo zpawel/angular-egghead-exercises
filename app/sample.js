@@ -5,5 +5,8 @@ provider.config(function(){
 });
 
 provider.controller('appCtrl',function($scope){
-    $scope.message='I come from a controller:)';
+
+    this.display=function(){
+        this.message = 'I come from a controller:)';
+    };
 });
