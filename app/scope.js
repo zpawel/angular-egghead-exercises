@@ -11,6 +11,14 @@ appScope.controller("scopeCtrl", [function () {
 
 appScope.factory('otherSCopeFactory', function () {
     var valueFromScope;
+    return {
+        set: function (value) {
+
+        },
+        get: function () {
+
+        }
+    };
 });
 
 appScope.directive("unitScope", function () {

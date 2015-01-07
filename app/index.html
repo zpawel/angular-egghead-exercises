@@ -11,13 +11,20 @@
         <h1>Scope vs $scope</h1>
     </div>
     <div class="container">
-        <div ng-controller="scopeCtrl as ctrl">
-            <label>Value from unit scope</label>
+        <div ng-controller="scopeCtrl">
+            <div class="col-md-6">
+                <label>Value from unit scope</label>
+                <!--here add your directive-->
+                <div class="btn btn-success" ng-click="ctrl.unitScope()">Value from unit scope</div>
+                <div class="text-success">{{ctrl.unitScopeValue}}</div>
+            </div>
+            <div class="col-md-6">
+                <label>Value from separate scope</label>
+                <!--here add your directive-->
+                <div class="btn btn-success" ng-click="ctrl.separateScope()">Value from separate scope</div>
 
-            <unit-scope></unit-scope>
-            <div  class="btn btn-success" ng-click="ctrl.unitScope()">Bind value from unit scope</div>
-            <div class="text-success">{{ctrl.unitScopeValue}}</div>
-
+                <div class="text-danger">{{ctrl.otherScopeValue}}</div>
+            </div>
         </div>
     </div>
 </div>
