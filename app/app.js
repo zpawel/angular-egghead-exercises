@@ -4,9 +4,14 @@ provider.config(function ($routeProvider) {
 });
 
 provider.factory('exercisePromise', function () {
-    var promise = null;
+    var defer = null;
     return {
+        set: function () {
 
+        },
+        get: function () {
+
+        }
     }
 
 });
