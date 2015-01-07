@@ -2,8 +2,8 @@ var proverbApp = angular.module("proverbApp", []);
 
 proverbApp.controller("ProverbCtrl", function ($scope)
 {
-    $scope.eyeForCtrl = "eye";
-    $scope.sentenceCtrl = "It is never late to learn.";
+    $scope.eyeForFormCtrl = "eye";
+    $scope.sentenceFormCtrl = "It is never late to learn.";
 
 });
 
