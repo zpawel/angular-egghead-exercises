@@ -1,4 +1,4 @@
-var provider = angular.module("provider", ['ngRoute']);
+var provider = angular.module("provider", []);
 
 provider.config(function ($routeProvider)
 {
@@ -6,17 +6,17 @@ provider.config(function ($routeProvider)
 });
 
 var productCatch;
-var appCtrl = provider.controller('appCtrl', function ($scope)
+var appCtrl = provider.controller('catchErrorCtrl', function ($scope)
 {
 
 });
-provider.controller('catchErrorCtrl', function ($rootScope, $location, $scope)
+provider.controller('appCtrl', function ($rootScope, $location, $scope)
 {
-    $scope.product = {};
+    $scope.rejectProduct = {};
 
 });
 
-appCtrl.error = function ($q, $timeout)
+var error = function ($q, $timeout)
 {
 
 };
