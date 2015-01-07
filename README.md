@@ -3,7 +3,7 @@ The goal of this exercise is use the information about directives in conjunction
 
 ###Before you start, please refer to:
 * [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
-* [angularjs-first-directive](https://egghead.io/lessons/angularjs-useful-behaviors)
+* [angularjs-useful-behaviors](https://egghead.io/lessons/angularjs-useful-behaviors)
 * [jquery/bind](http://api.jquery.com/bind/)
 
 ###Exercise
