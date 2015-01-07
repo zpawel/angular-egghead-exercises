@@ -6,11 +6,13 @@ element.directive("findElement", function ()
 
     var link = function (scope)
     {
-
+    //  add watch
     };
 
     return {
-        restrict: "E", replace: true, template: '<div> <input class="form-control" type="text" ng-model="input"><div>', compile: function (templateElement)
+        restrict: "E",
+        replace: true,
+        compile: function (templateElement)
         {
             templateElement.append(element);
             return link;

@@ -6,6 +6,8 @@ The goal of this exercise is organizing directives by collecting them into objec
 
 ###Exercise
 * bind ```find-element```  in ```index.html``` using directive
+* add to directive ```template``` class ```form-control``` type ```text``` and ng-model ```input```
+
 * write in function ```link``` watch basic on the video and this example
 ```        scope.$watch("input", function (newValue)
            {
