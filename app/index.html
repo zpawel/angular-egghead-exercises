@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <title>AngularJS Tutorials</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="containerOrComponents">
+<div class="container">
+  <div class="page-header">
+    <h1>Container
+      <small>or simple components</small>
+    </h1>
+  </div>
+  <!--1-->
+  <h1 class="text-center text-danger" ng-if="!view">You wrong display page use <strong>ng-view</strong></h1>
+</div>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="componentsOrContainer.js"></script>
+</body>
+</html>
