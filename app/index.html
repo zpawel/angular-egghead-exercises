@@ -9,21 +9,62 @@
 <div class="container">
     <div class="page-header">
         <h1>Simple
-            <small>calculations <small>v2</small></small>
+            <small>calculations
+                <small>v2</small>
+            </small>
         </h1>
     </div>
     <div class="text-center">
         <div class="col-md-3" ng-controller="SumCtrl">
-            <div class="btn btn-success" ng-click="SumCtrl.addition(2,3)">Sum</div>
+            <div class="form-group col-md-6">
+                <label for="firstNumberSum" class="label label-success col-md-12">a</label>
+                <input id="firstNumberSum" type="number" class="form-control" ng-model="SumCtrl.firstNumberSum">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="secondNumberSum" class="label label-success col-md-12">b</label>
+                <input id="secondNumberSum" type="number" class="form-control" ng-model="SumCtrl.secondNumberSum">
+            </div>
+            <div class="btn btn-success" ng-click="SumCtrl.addition(SumCtrl.firstNumberSum,SumCtrl.secondNumberSum)">Sum</div>
+            <h3>{{SumCtrl.sum}}</h3>
         </div>
         <div class="col-md-3" ng-controller="SubCtrl">
-            <div class="btn btn-danger" ng-click="SubCtrl.subtraction(5,4)">Subtract</div>
+            <div class="form-group col-md-6">
+                <label for="firstNumberSub" class="label label-danger col-md-12">a</label>
+                <input id="firstNumberSub" type="number" class="form-control" ng-model="SubCtrl.firstNumberSub">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="secondNumberSub" class="label label-danger col-md-12">b</label>
+                <input id="secondNumberSub" type="number" class="form-control" ng-model="SubCtrl.secondNumberSub">
+            </div>
+            <div class="btn btn-danger" ng-click="SubCtrl.subtraction(SubCtrl.firstNumberSub,SubCtrl.secondNumberSub)">Subtract</div>
+            <h3>{{SubCtrl.sub}}</h3>
+
         </div>
         <div class="col-md-3" ng-controller="MultiCtrl">
-            <multi solve="multiplication(4,5)"></multi>
+            <div class="form-group col-md-6">
+                <label for="firstNumberMult" class="label label-info col-md-12">a</label>
+                <input id="firstNumberMult" type="number" class="form-control" ng-model="firstNumberMult">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="secondNumberMult" class="label label-info col-md-12">b</label>
+                <input id="secondNumberMult" type="number" class="form-control" ng-model="secondNumberMult">
+            </div>
+            <multi a="{{firstNumberMult}}" b="{{secondNumberMult}}" solve="multiplication(a,b)"></multi>
+            <h3>{{multi}}</h3>
+
         </div>
         <div class="col-md-3" ng-controller="DivideCtrl">
-            <div divide solve="divide(10,5)"></div>
+            <div class="form-group col-md-6">
+                <label for="firstNumberDiv" class="label label-default col-md-12">a</label>
+                <input id="firstNumberDiv" type="number" class="form-control" ng-model="firstNumberDiv">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="secondNumberDiv" class="label label-default col-md-12">b</label>
+                <input id="secondNumberDiv" type="number" class="form-control" ng-model="secondNumberDiv">
+            </div>
+            <div divide a="{{firstNumberDiv}}" b="{{secondNumberDiv}}" solve="divide(a,b)"></div>
+            <h3>{{divid}}</h3>
+
         </div>
     </div>
 </div>
