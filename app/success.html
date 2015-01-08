@@ -1,0 +1,14 @@
+<div class="text-center">
+  <div class="btn-group">
+    <a href="#/" class="btn btn-warning"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+
+    <div class="btn btn-success" ng-click="simple.get()"> Get success value</div>
+    <div class="btn btn-success" ng-click="simple.getUnSuccess()"> Get un success value</div>
+  </div>
+  <div ng-if="simple.success">
+    Your success value is: <span class="text-success">{{simple.success}}</span>
+  </div>
+  <div ng-if="simple.unSuccess">
+    Your un success value is: <span class="text-success">{{simple.unSuccess}}</span>
+  </div>
+</div>
