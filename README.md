@@ -10,10 +10,10 @@ The goal of this exercise is familiarize yourself with ng-tranclusion directive
     * scope with **name** set to '@'
     * and template ```'<h3>{{name}}</h3>' + '<div> I am not a button :( </div>'```
     
-* add to ```index.html``` three **animal** directive with name attribute set consecutively on **Dog**, **Cat** and **Pig**
-* inside each directives add button ```<div class="btn btn-default" >Hau!</div>``` (change buton descripion to "Miau!" and "Quiq" for Cat and Pig :) )
+* add to ```index.html``` three ```animal``` directives with a **name** attribute set consecutively on **Dog**, **Cat** and **Pig**"
+* inside each directive add button ```<div class="btn btn-default" >Hau!</div>``` (change button descripion to "Miau!" and "Quiq" for Cat and Pig :) ) 
 * check the effect of ```index.html``` view
 * add to ```animal``` directive **transclude** property set to **true**
-* add to div with description "I am not a button"  ```ng-transclude``` and check the effect
+* add ```ng-transclude``` to a div in directive template and check the effect
 
 Good luck!
