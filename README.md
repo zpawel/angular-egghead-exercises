@@ -1,4 +1,4 @@
-##Exercise 29 : Providers
+##Exercise 30 : Providers
 The goal of this exercise is dismantle factory to provider
 
 ###Before you start, please refer to:
