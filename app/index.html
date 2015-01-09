@@ -5,18 +5,20 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="journeyApp" ng-controller="JourneyCtrl">
+<body ng-app="homeApp" ng-controller="HomeCtrl">
 <div class="container">
     <div class="page-header">
-        <h1>Choose your mission!
-            <small>Forest or Home?</small>
+        <h1>Home.
+            <small>Sweet home.</small>
         </h1>
     </div>
-    <ng-view>
-    </ng-view>
+    <div class="col-md-offset-2 col-md-8 text-center">
+        <h3 class="alert alert-info ">My dream house is <strong>{{color}}</strong> and his number is
+            <strong>{{number}}.</strong></h3>
+    </div>
+
 </div>
 <script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
-<script src="journey.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
