@@ -5,20 +5,26 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="homeApp" ng-controller="HomeCtrl">
+<body ng-app="songApp" ng-controller="SongCtrl">
 <div class="container">
     <div class="page-header">
-        <h1>Home.
-            <small>Sweet home.</small>
+        <h1>Voice of
+            <small>UK</small>
         </h1>
     </div>
     <div class="col-md-offset-2 col-md-8 text-center">
-        <h3 class="alert alert-info ">My dream house is <strong>{{color}}</strong> and his number is
-            <strong>{{number}}.</strong></h3>
+        <h4 class="panel-heading"><strong>Author:</strong> {{author}}</h4>
+
+        <h4 class="panel-heading"><strong>Title:</strong> {{title}}</h4>
+
+        <button class="btn btn-default" ng-click="showSing=true; showFake=false">Sing</button>
+        <button class="btn btn-default" ng-click="showFake=true; showSing=false">Fake</button>
+        <h4 class="alert alert-success" ng-show="showSing">{{sing}}</h4>
+        <h4 class="alert alert-danger" ng-show="showFake">{{fake}}</h4>
     </div>
 
 </div>
 <script src="../bower_components/angular/angular.js"></script>
-<script src="home.js"></script>
+<script src="song.js"></script>
 </body>
 </html>
