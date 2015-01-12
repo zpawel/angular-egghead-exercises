@@ -1,8 +1,11 @@
-var element = angular.module("elementApp", []);
+(function(){
+    'use strict';
 
-element.directive("findElement", function ()
+var element = angular.module('elementApp', []);
+
+element.directive('findElement', function ()
 {
-    var element = angular.element("<h3></h3>");
+    var element = angular.element('<h3></h3>');
 
     var link = function (scope)
     {
@@ -10,12 +13,13 @@ element.directive("findElement", function ()
     };
 
     return {
-        restrict: "E",
+        restrict: 'E',
         replace: true,
         compile: function (templateElement)
         {
             templateElement.append(element);
             return link;
         }
-    }
+    };
 });
+})();
