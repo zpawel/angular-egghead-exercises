@@ -19,11 +19,11 @@
 
         <label for="forWhat" class="label label-default">For what</label>
         <input type="text" class="form-control" id="forWhat" placeholder="For poor pets">
+        <!--money-->
+        <!-- add here h3 tag-->
+        <p>I want to devote: {{proposal | currency}}</p>
+        <!--/money-->
 
-        <money how-many="proposal" for-what="{{forWhat}}">
-            <!-- add here h3 tag-->
-            <p>I want to devote: {{proposal | currency}}</p>
-        </money>
     </div>
 </div>
 
