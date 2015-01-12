@@ -20,3 +20,5 @@ The goal of this exercise is practise writing directive, factory and controllers
         (you don't use $watch complete function ```isTitleVisible```)
     * you must hide content with using ```ng-show``` ```<div ng-show="isContentVisible" ng-transclude></div>```
     * set correct properties in directive: scope,transclude and templateUrl.
+
+Good luck!
