@@ -1,4 +1,4 @@
-##Exercise 31 : Providers
+##Exercise 31 : Injectors
 The goal of this exercise is use injector in simple app.
 
 ###Before you start, please refer to:
