@@ -7,11 +7,24 @@ The goal of this exercise is practise writing directive, factory and controllers
 
 
 ###Exercise
-* with using ```ng-if``` in your script you display button that, when after clicked displays the content ```!(!value || 0 === value.length);```
-(you don't use $watch complete function ```isCandyVisible```)
-* you must set correct properties in directive
-* use directive```url``` to display ```order``` and ```quantity``` when quantity is less than 100 display ```You order: {{quantity}} candy.```, when  quantity is bigger display image and ```You ordered a lot of candy.```
-* in templateUrl you must hide ```quantity``` with using ```ng-show``` ```<div ng-show="isContentVisible" ng-transclude></div>```
+1. in **index.html**
+     * add you directive url with title on set to title from scope
+     * when quantity is greater than 100 you should display message You ordered a lot of candy. and image candy <div class="form-group">```here display image```</div>
+     * when is quantity is less display message You order: {{quantity}} candy.
+
+2. in templateUrl.js
+    * in **candyTemplateUrl.run **
+        * use **$templateCache.put** to add template ```'urlTemplate.html'```
+        * **'urlTemplate.html'** is ```'<div><h3 ng-click="content()" class="btn btn-info" ng-if="isCandyVisible(title)">{{title}}</h3><div ng-show="isContentVisible" ng-transclude></div></div>'```
+    * in directive **url**
+        * set restrict to E
+        * transclude to true
+        * isolate scope with property title on set to @
+        * and templateUrl set to urlTemplate.html
+        * complete function isCandyVisible (```!(!value || 0 === value.length);```) and function isContentVisible should toggle value  ```isContentVisible``` on scope
+
+
+
 
 
 Good luck!

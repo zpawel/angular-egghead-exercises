@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <title>AngularJS Tutorials</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body ng-app="templateUrl">
 <div class="container">
-    <div class="page-header">
-        <h1>TemplateUrl</h1>
-    </div>
-    <div>
-        <label>Title</label>
-        <input type="text" ng-model="title">
-        <label>Content</label>
-        <input type="text" ng-model="content">
-        <!--add you directive-->
+  <div class="page-header">
+    <h1>TemplateUrl</h1>
 
-    </div>
+    <div class="text-muted">Candies</div>
+  </div>
+  <div>
+    <label>Order:</label>
+    <input type="text" ng-model="title">
+    <label>Quantity</label>
+    <input type="number" ng-model="quantity">
+    <!--add you directive-->
+  </div>
 </div>
 
 
