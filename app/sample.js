@@ -1,12 +1,20 @@
-var provider = angular.module("provider", []);
+(function ()
+{
+  'use strict';
 
-provider.config(function(){
+  var provider = angular.module('provider', []);
 
-});
+  provider.config(function ()
+  {
 
-provider.controller('appCtrl',function($scope){
+  });
 
-    this.display=function(){
-        this.message = 'I come from a controller:)';
+  provider.controller('appCtrl', function ($scope)
+  {
+
+    this.display = function ()
+    {
+      this.message = this.message ? '' : 'I came from a controller';
     };
-});
+  });
+})();
