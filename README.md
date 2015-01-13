@@ -8,17 +8,25 @@ The goal of this exercise is practise writing directive, factory and controllers
 
 ###Exercise
 
-* in index.html
-    * use directive```<url title="{{title}}">The content is: {{content}}</url>``` and add when title  is **secret** display ```Good, work you display this secret```
-     when is other display ```The content is: {{content}}```
-* you must set correct properties in directive
-    * hint:transclude, templateUrl and scope.
+* In index.html
+    * Use url directive as follows:
+      ```<url title="{{title}}" data="{{content}}"></url>```
+      When title value equals string value "secret", directive should display ```"Good work, you've found a secret!"``` and otherwise just use the template above.
+* You should correctly set directive properties according to the expected results
+    * hint: templateUrl and scope.
 
-* in you script  **urlTemplate.html**
-    * use ```ng-transclude``` in your script
-    * with using ```ng-if``` in your script you display button that, when after clicked displays the **content** ```!(!value || 0 === value.length);```
-        (you don't use $watch complete function ```isTitleVisible```)
-    * you must hide content with using ```ng-show``` ```<div ng-show="isContentVisible" ng-transclude></div>```
-    * set correct properties in directive: scope,transclude and templateUrl.
+* In your script  **urlTemplate.html**
+    * Using ```ng-if``` You are supposed to display correct **div** element according to the title attribute(In your template You should create
+    structure as follows:
+    ```
+    <button ng-click="">(here display title)</button>
+    <div ng-show=""> hint:here you show content
+      <div ng-if=""></div>hint:here display data
+      <div ng-if="">Good work[...]</div>
+    </div>
+    ```
+    * Parent element should show along with children only when You click the button. The first children div should display the data, while the other one should display a secret in previously mentioned case.
+
+
 
 Good luck!
