@@ -8,20 +8,24 @@ The goal of this exercise is practise writing directive, factory and controllers
 
 ###Exercise
 1. in **index.html**
-     * add you directive url with title on set to title from scope
-     * when quantity is greater than 100 you should display message You ordered a lot of candy. and image candy <div class="form-group">```here display image```</div>
-     * when is quantity is less display message You order: {{quantity}} candy.
+     * add **url** directive with ```title``` on set to **title** input and ```quantity``` set to **quantity** input(number)
+
 
 2. in templateUrl.js
-    * in **candyTemplateUrl.run **
+    * in **candyTemplateUrl.run**
         * use **$templateCache.put** to add template ```'urlTemplate.html'```
-        * **'urlTemplate.html'** is ```'<div><h3 ng-click="content()" class="btn btn-info" ng-if="isCandyVisible(title)">{{title}}</h3><div ng-show="isContentVisible" ng-transclude></div></div>'```
+        * **'urlTemplate.html'** is ```'<div><h3 ng-click="content()" class="btn btn-info" ng-if="isCandyVisible(title)">{{title}}</h3><div ng-show="isContentVisible"></div></div>'```
+        * modify template to achieve following results:
+             * when quantity is greater than 100 you should display message ```You\'ve ordered a lot of {{title}}s!``` in tags **<span>**
+                * and the title is ```candy``` you should display image **Candy.jpg**
+             * when quantity is less than 100 and more than 1 you should display ```Your order: {{quantity}} {{title}}s```
+             * when quantity is equal 1 you should display ```Your order: {{quantity}} {{title}}```
     * in directive **url**
-        * set restrict to E
-        * transclude to true
-        * isolate scope with property title on set to @
-        * and templateUrl set to urlTemplate.html
-        * complete function isCandyVisible (```!(!value || 0 === value.length);```) and function isContentVisible should toggle value  ```isContentVisible``` on scope
+        * set restrict to **E**
+        * isolate **scope** with property **title** and **quantity** set to ```'@'```
+        * set **templateUrl** to ```urlTemplate.html```
+        * complete function **isCandyVisible** return (```!(!value || 0 === value.length);```)
+        * function **isContentVisible** should toggle value  ```isContentVisible``` on directive scope
 
 
 
