@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <title>AngularJS Tutorials</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="carService" ng-controller="carPartsCtrl">
+<div class="container">
+  <div class="page-header">
+    <h1>Car service.
+      <small>Cheap parts.</small>
+    </h1>
+  </div>
+  <!--1-->
+  <h1 class="text-center text-danger" ng-if="!view">You wrong display page use <strong>ng-view</strong></h1>
+</div>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="carService.js"></script>
+</body>
+</html>

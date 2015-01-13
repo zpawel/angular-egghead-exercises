@@ -1,0 +1,17 @@
+<div>
+  <p class="text-center"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    You need one parts choose one.</p>
+
+  <div class="radio col-md-offset-5">
+    <ul class="list-unstyled">
+      <li ng-repeat="list in lists">
+        <label>{{list.name}}
+          <input type="radio" ng-model="data.part" name="part" value="{{list.name}}" required/>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-default" ng-click="choose()">Choose</button>
+  </div>
+</div>
