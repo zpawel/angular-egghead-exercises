@@ -6,7 +6,7 @@ Create ***searchStudent*** filter allows to search the list of students by speci
 * you should be able to filter by multiple fields in the same time
 * the upper input field should search through all categories
  
-####Result
+####Result example
  * write **Warner** in **First Name**
 
 | firstName | lastName |age |email|phone|
