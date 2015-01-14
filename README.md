@@ -8,14 +8,15 @@ The goal of this exercise is use **FruitCtrl** controller to connect data from t
 ###Exercise
 
 1. Create a new file ***FruitCtrl.js***
-2. In ***FruitCtrl.js*** 
-    * create a controller ***FruitCtrl*** and inject into $scope
-    * add ***fruit*** object on ***$scope*** with attributes ***seller, name, count*** 
-    * initialize  attributes **seller, name, count** (example values *``` seller: John Seller, the name "Apple", count: 5 ```*)
-3. Add **FruitCtrl.js** script to **index.html**
-4. Set controller on ```<div class = "container">```
-5. Use relevant angular directive to connect inputs with the data in the controller.
-6. Update **seller, name, count**  inside **<div class =" well "** so it would display the data from the controller
+2. In ***FruitCtrl.js***:
+    * create a controller ***FruitCtrl*** and inject $scope
+    * Inside controller, place ***fruit*** object on ***$scope*** with attributes ***seller, name, count*** - then initialize them 
+    (example values *``` seller: John Seller, the name "Apple", count: 5 ```*)
+3. In **index.html**:
+    * Add **FruitCtrl.js** script
+    * Set controller on ```<div class = "container">```
+    * Use relevant angular directive to connect inputs with the data in the controller.
+    * Update **seller, name, count**  inside **<div class =" well "** so it would display the data from the controller
 
 ###Completion
 
