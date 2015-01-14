@@ -1,16 +1,8 @@
 var myApp = angular.module('myApp', []);
 
-myApp.filter('quote', function () {
-    return function (text) {
-    }
-});
-
-myApp.filter('firstLetterUpp', function () {
-    return function (text) {
-
-    }
-});
-
+<!--add quote filter-->
+<!--add withoutH filter-->
+<!--add firsLetterUp filter-->
 
 function FilterCtrl($scope) {
     $scope.data = {
