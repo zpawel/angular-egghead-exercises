@@ -15,10 +15,10 @@ Create ***searchStudent*** filter allows to search the list of students by speci
 
  * write **1** in **Age**
 
- | firstName | lastName |age |email|phone|
- |--------|--------|--------|--------|--------|
- | Warner  |Bridges| 18|warner.bridges@undefined.biz|+1 (914) 451-3055|
- | Gray  |Rose| 21|gray.rose@undefined.io|+1 (807) 582-3992|
+| firstName | lastName |age |email|phone|
+|--------|--------|--------|--------|--------|
+| Warner  |Bridges| 18|warner.bridges@undefined.biz|+1 (914) 451-3055|
+| Gray  |Rose| 21|gray.rose@undefined.io|+1 (807) 582-3992|
 
 
 ###Before you start, please refer to:
