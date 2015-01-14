@@ -1,9 +1,12 @@
 ##Exercise 5 : Angular filters
 
 The goal of this exercise is the creation three simple filters and use them in correct place:
-1. ***quote*** filter - places the text in quotes
-2. ***withoutH*** filter - removes all the letters H and h
-3. ***firstLetterUp*** filter - converts the first letter of the word to the large ones
+
+1.***quote*** filter - places the text in quotes
+
+2.***withoutH*** filter - removes all the letters H and h
+
+3.***firstLetterUp*** filter - converts the first letter of the word to the large ones
 
 Additionaly, you are supposed to use custom angular filter to display upper input value capitalised below the table.
 
