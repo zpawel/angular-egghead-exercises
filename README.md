@@ -12,8 +12,9 @@ The goal of this exercise is practise route life cycle.
     * add to **StartCtrl** ```goForest``` function, which
         * set ```message``` variable on $scope to ```I choose forest!!```
         * use ```$timeout``` to delay load path ```/forest``` about ```3s```
+        
 2. When route start change $scope
-    * add to **$rootScope.$on** variable **start** set on ```The mission was started!```
+    * add to **$rootScope.$on** variable **start**(on $scope) and set to ```The mission was started!```
 
 3. When route change is success
     * add to **$rootScope.$on** condition: when **space** attribute, which received from promise is
