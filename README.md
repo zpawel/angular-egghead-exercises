@@ -7,13 +7,13 @@ Create ***searchStudent*** filter allows to search the list of students by speci
 * the upper input field should search through all categories
  
 ####Result example
- * write **Warner** in **First Name**
+ * write **Warner** in **First Name** field
 
 | firstName | lastName |age |email|phone|
 |--------|--------|--------|--------|--------|
 | Warner  |Bridges| 18|warner.bridges@undefined.biz|+1 (914) 451-3055|
 
- * write **1** in **Age**
+ * write **1** in **Age** field
 
 | firstName | lastName |age |email|phone|
 |--------|--------|--------|--------|--------|
