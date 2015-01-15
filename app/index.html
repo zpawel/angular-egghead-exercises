@@ -8,14 +8,20 @@
 <body ng-app="animalApp">
 <div class="container">
     <div class="page-header">
-        <h1>Animals
+        <h1>Animal
             <small>Planet</small>
         </h1>
     </div>
     <div class="text-center">
-        <!---add animal dog directive-->
-        <!---add animal cat directive-->
-        <!---add animal pig directive-->
+        <animal name="dog">
+            <div class="btn btn-default" ><img src="animals/trueDog.png"></div>
+        </animal>
+        <animal name="cat">
+            <div class="btn btn-default"><img src="animals/trueCat.png"></div>
+        </animal>
+        <animal name="pig">
+            <div class="btn btn-default"><img src="animals/truePig.png"></div>
+        </animal>
     </div>
 </div>
 
