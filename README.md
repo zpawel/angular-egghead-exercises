@@ -1,26 +1,32 @@
 ##Exercise 25 : $routeProvider
-The goal of this exercise is practise writing directive, factory and controllers
+
+##The goal
+Application should displays inputs and their value. Views and controller are ready.
+
+####Requirements
+ * You need configure routing so as to a default page was **home.html**
+
+  ![Default view](images/defaultView.png)
+
+ * I must write some value to *```both inputs, only should become redirect```*
+ * And I click ```Next step``` should be redirect to **display.html**
+
+ ![Default view](images/displayValue.png)
+
+ * On this view you should display values from inputs.
+ * When I wrote in the *```some input secret I should redirect to secret page```*
+
+ ![Default view](images/writeSecret.png)
+ 
+ ![Default view](images/secretPage.png)
+
+ * You can NOT change views and controller.
 
 ###Before you start, please refer to:
-* [angularjs-routeprovider-api](https://egghead.io/lessons/angularjs-routeprovider-api)
-* [angularjs-routeparams](https://egghead.io/lessons/angularjs-routeparams)
-* [angularjs-redirectto](https://egghead.io/lessons/angularjs-redirectto)
+* [routeProvider api](https://egghead.io/lessons/angularjs-routeprovider-api)
+* [routeParams](https://egghead.io/lessons/angularjs-routeparams)
+* [redirectTo](https://egghead.io/lessons/angularjs-redirectto)
 * type ```bower install``` in console to download required dependencies
 
-###Exercise
-* In app.js:
-    * Add **ngRoute** dependency to your module
-    * Using ```$routeProvider```:
-        * When you enter **'/'** path you should display ```carDetails.html``` (and use appCtrl controller for all of the entries)
-        * When you enter **'/detail/```[...]```'** you should display ```display.html```.
-          Moreover, please modify the path so it would accept ```:brand``` and ```:capacity``` route params,
-          and bind their values the appCtrl $scope (according to the field names)
-        * When you enter **'/display/```[...]```'** you should display ```display.html```
-        * When you enter '/secret' you should display ```success.html```.
-        * when you enter ```secret``` in any ```input``` at '/' and click ```Next step``` you should be redirected to ```/secret```
-          ( *Hint* check ```Next step``` link and use redirectTo property to implement logic)
-    * in appCtrl:
-        * set *$scope.brand* to correct property from **$routeParams**
-        * set *$scope.capacity* to correct property from **$routeParams** (*hint*: values from path)
 
 Good luck!
