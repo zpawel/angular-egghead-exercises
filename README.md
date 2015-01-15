@@ -1,28 +1,18 @@
 ##Exercise 15 : Isolate Scope Review
-The goal of this exercise is summary on isolate scope
+Use the arcane knowledge of the isolate scope to successfully complete the task. Start your job in **box** directive. Inside is a ready template of the form about (surprise!) box.
+Implement directive that will allow to set size of box in each form, set color in all forms when you change it in one, display information about box. Use directive to create three forms with different box sizes (50px,70px,90px).
+
+###Requirements
+* use ***size***, ***color***, ***open*** as names of isolated scope properties 
+* color should be set using **<select>**
+* **Tell me about yourself!** button should call **showInside** function
+* display size of the box in correct place
+* the size of the displayed box should change - add appropriate attribute to ```ng-style="{\'background-color\':color}"``` 
+
+###Result
+![alt text](images/box.jpg "Box")
 
 ###Before you start, please refer to:
 * [angularjs-isolate-scope-review](https://egghead.io/lessons/angularjs-isolate-scope-review)
-
-###Exercise
-* add to ```box``` directive **E** restriction,
-* add three types of isolate scope binding methods
-    * ```size: "@"```
-    * ```color: "="```
-    * ```open: "&"```
-* complete **template** with elements
-   * add to input **ng-model** directive set to **name**
-   * add to select **ng-model** directive set to **color** and ```ng-options="color.name for color in colors"```
-   * below **for="size"** label add an **h3 tag** with an angular-expression containing size variable
-   * add to last div **ng-click** directive and call **open** with ```size: size, message: name, color: color``` object as an argument 
-* add **link** function
-```
-        link: function (scope) {
-            scope.name = "Box";
-            scope.colors = ["red", "green", "blue"];
-            scope.color = scope.colors[0];
-        }
-```
-* in ```index.html``` add three ```box``` directives with  ```size```: **small**, **medium**, **big** (one box - one size), ```color``` set to **color** and ```open``` with  **showInside** function (remember about arguments)
 
 Good luck!
