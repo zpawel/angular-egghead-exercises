@@ -1,28 +1,17 @@
 ##Exercise 14 : Directive to Directive Communication
-The goal of this exercise is show how to share information between directives
 
-###Before you start, please refer to:
-* [angularjs-directive-to-directive-communication](https://egghead.io/lessons/angularjs-directive-to-directive-communication)
+##The goal
+In this exercise, your challenge is to share information between directives. Implement functionality that will allow to call alert when you click on red circle, double click on yellow circle and when the mouse hovers over the green circle. You are supposed to create four directives:
+***alarm*** (main directive), ***red***, ***yellow***, ***green***
 
-###Exercise
-* add to ```Alarm.js``` file ```alarm``` directive, which return 
-    * restrict A,
-    * controller function, with tree functions: ```addRed```, ```addYellow```, ```addGreen```. Inside each of the functions place alert with proper color, like ```alert("<color> alarm!")```"
-    
-* below, create ``red`` directive, which **require** ```alarm``` directive,
-* add **link** function, which bind **click** event with ```red``` directive
+####Requirements
+* main directive should include controller with three function (with names like pattern **addColorName**)
+* the content of the alarms is a simple message ***"ColorName alarm!"***
+* use directive in prepared div elements (check comment)
+ 
+####Result example
+* when the mouse hovers over the green circle
 
-```
-link: function (scope, element, attrs, alarmCtrl)
-        {
-            element.bind("click", function ()
-            {
-                alarmCtrl.addRed();
-            })
-        }
-```
-* add ```red``` directive to the first indicated div(check comments in index.html and remember that it **requires** alarm directive)"
-* based on ```red``` directive, create ```yellow``` and ```green``` directives (with **dblclick** and **mouseenter** event) and use them in the next divs
-    
+![alt text](images/greenAlarm.jpg "Green Alarm")
 
 Good luck!
