@@ -1,14 +1,18 @@
 <div>
-    <div class="form-group">
-        <label>Car brand</label>
-        {{car.brand}}
+    <span class="text-warning">Your order:</span>
+    <table class="table table-bordered">
+        <tr class="alert-success">
+            <th>Item name:</th>
+            <th>Quantity</th>
+        </tr>
+        <tr ng-repeat="name in item.name track by $index">
+            <th> {{name}}</th>
+            <th> {{item.quantity[$index]}}</th>
+        </tr>
+    </table>
+    <div class="btn-group">
+        <a href="#/" class="btn btn-warning"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+        <button class="btn btn-success" ng-click="success()"><i class="glyphicon glyphicon-circle-arrow-down"></i> Resolve</button>
+        <button class="btn btn-danger" ng-click="display.clear()" ><i class="glyphicon glyphicon-remove-sign"></i> Remove all remaining records</button>
     </div>
-    <div class="form-group">
-        <label>Car capacity</label>
-        {{car.capacity}}
-    </div>
-    <button class="btn btn-success" ng-click="success()"><i class="glyphicon glyphicon-save"></i> Success resolve promise</button>
-    <button class="btn alert-warning" ng-click="catch()"><i class="glyphicon glyphicon-warning-sign"></i> Un success resolve promise</button>
-    <!--Extra-->
-    <a class="btn btn-warning" href="#"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
 </div>

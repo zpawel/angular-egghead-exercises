@@ -6,12 +6,16 @@
 </head>
 
 <body ng-app="provider">
-<div class="container" ng-controller="appCtrl">
+<div class="container">
     <div class="page-header">
-        <h1 class="text-left">Exercise promise.</h1>
+        <h1 class="text-left">
+            Exercise promise.
+            <small class="center-block">welcome to our shop.</small>
+        </h1>
     </div>
     <div>
-        <div class="text-danger">Bad redirect move to display page.</div>
+        <ng-view></ng-view>
+        <h1 class="text-danger text-center" ng-if="!error">Bad redirect move to display page.</h1>
     </div>
 </div>
 <script src="../bower_components/angular/angular.js"></script>
