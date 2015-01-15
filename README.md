@@ -2,7 +2,7 @@
 
 ###The goal
 In this exercise, your challenge is to share information between the controller and the directive. 
-Implement functionality to add (when the mouse hovers over the green square) and remove (when the mouse hovers over the green square) snowflake
+Implement functionality that will allow to add (when the mouse hovers over the green square) and remove (when the mouse hovers over the green square) snowflake
 
 ####Requirements
 * **Snow.js** file should contain ***enter*** directive which talks to controller ***SnowCtrl***
