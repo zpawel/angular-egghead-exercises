@@ -1,32 +1,18 @@
-##Exercise 20 : angular.element
-The goal of this exercise is organizing directives by collecting them into objects
+##The goal
+
+HTML elements often change their appearance. Write a directive which, depending on the entered values will change the class specified in directive input.
+
+####Requirements
+ * The directive should be restricted as element.
+ * When you display the page you should only be able to see template in code, not the directive element itself
+ * The directive should react to any change in inner **input**.
+ * When the **input** value is set to: *circle* or *square*, element class should be changed respectively on a ```circle``` or ```square```.
+ * In other cases, it should display a red message *```Not written a circle or square```* (using **text-danger** class).
+
 
 ###Before you start, please refer to:
-* [https://egghead.io/lessons/angularjs-angular-element](https://egghead.io/lessons/angularjs-angular-element)
+* [angular.element](https://egghead.io/lessons/angularjs-angular-element)
+* [scope.$watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
-###Exercise
-* in **element.js** complete directive  ```findElement```
-* write watch in function **link** basic on the video and this example
-```        scope.$watch("input", function (newValue)
-           {
-               if ((!newValue || 0 === newValue.length) || ('square' !== newValue && 'circle' !== newValue)) {
-                   element.removeClass("square");
-                   element.removeClass("circle");
-                   element.text('Not written a circle or square');
-                   element.addClass('text-danger');
-               } else if (newValue === "square") {
-                   element.addClass("square");
-                   element.removeClass('text-danger');
-                   element.text('');
-               } else if (newValue === 'circle') {
-                   element.addClass("circle");
-                   element.removeClass('text-danger');
-                   element.text('');
-               }
-           })```
-* append case for wheels
-* and set template to ```'<div> <input class="form-control" type="text" ng-model="input"><div>'```
-* bind new element in ```index.html``` using directive
-* other value display statement ```Not written a circle or square``` and color text to red.
 
 Good luck!
