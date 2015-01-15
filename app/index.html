@@ -11,12 +11,22 @@
         <h1>TemplateUrl</h1>
     </div>
     <div>
-        <!--add your script-->
-        <label>Title</label>
-        <input type="text" ng-model="title">
-        <label>Content</label>
-        <input type="text" ng-model="content">
-        <!--add you directive-->
+        <script type="text/ng-template" id="urlTemplate.html">
+            <div>
+                <button ng-click="content()" class="btn btn-info" ng-if="isTitleVisible(title)">
+                    {{title}} </button>
+                <div ng-show="isContentVisible">
+                    <div ng-if="'secret'!==title">The data is: {{data}}</div>
+                    <!--some secret-->
+                    <div class="text-success" ng-if="'secret'===title">Good, work you display this secret</div>
+                </div>
+            </div>
+        </script>
+        <label for="title">Title</label>
+        <input id="title" type="text" ng-model="title">
+        <label for="content">Content</label>
+        <input id="content" type="text" ng-model="content">
+        <url title="{{title}}" data="{{content}}"></url>
     </div>
 </div>
 
