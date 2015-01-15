@@ -1,22 +1,30 @@
-(function () {
+(function ()
+{
   'use strict';
 
   var candyTemplateUrl = angular.module('templateUrl', []);
 
-  candyTemplateUrl.run(function () {
-  });
 
-
-  candyTemplateUrl.directive('url', function () {
+  candyTemplateUrl.directive('url', function ()
+  {
     return {
-      link: function (scope) {
-
+      restrict: 'E',
+      scope: {
+        title: '@',
+        quantity: '@'
+      },
+      templateUrl: 'urlTemplate.html',
+      link: function (scope)
+      {
         scope.isContentVisible = false;
-        scope.isCandyVisible = function (value) {
 
+        scope.isCandyVisible = function (value)
+        {
+          return !(!value || 0 === value.length);
         };
-        scope.content = function () {
-
+        scope.content = function ()
+        {
+          scope.isContentVisible = !scope.isContentVisible;
         };
       }
     };
