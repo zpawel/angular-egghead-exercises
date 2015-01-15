@@ -1,26 +1,30 @@
-##Exercise 27 : resolve vs $routeChangeError
-The goal of this exercise is practise writing directive, factory and controllers
+##Exercise 27 : resolve $routeChangeError
+
+
+##The goal
+The application is to process data from erroneously solved routing from promise
+
+####Requirements
+ * You can NOT change views
+ * Add to resolve promises to routing when path indicated to **propertyOrder.html**
+ * In resolve this promise you should use method *```reject```* with **productCatch**
+ * In main controller you must catch this data from *```$rootScope```*
+ * When *```name is incorrect you should redirect to default page```*.
+
+  ![Incorrect name](images/incorrectName.png "Incorrect name")
+
+ * And when name is correct but *```quantity and price is NOT correct you should display message 'You give wrong data' with class 'alert alert-danger```*
+
+ ![You should\'ve seen this when quantity or price is incorrect](images/incorrect.png "You should\'ve seen this when quantity or price is incorrect")
+
+ * When is all correct you should display *```message 'You give correct data' with class alert alert-success and set cost in rejectProduct [quantity*price] and his name```* (hint:quantity may NOT be a fraction)
+
+  ![You should\'ve seen this when all the data are correct](images/correctData.png "You should\'ve seen this when all the data are correct")
 
 ###Before you start, please refer to:
-* [angularjs-resolve-conventions](https://egghead.io/lessons/angularjs-resolve-conventions)
-* [angularjs-resolve-routechangeerror](https://egghead.io/lessons/angularjs-resolve-routechangeerror)
-
-###Exercise
-* add dependency ```ngRoute``` to your module
-* use ```ng-view``` to routing
-* config ```$routeProvider``` when path is ```/``` display  ```propertyProduct.html``` with controller```catchErrorCtrl```
-* config ```$routeProvider``` when path is ```/order``` display  ```propertyOrder.html```
-* config ```$routeProvider``` when path is ```/property``` display  ```propertyOrder.html```
-* add ```appCtrl``` in ```index.html```
-* in function```error``` create ```defer``` and use method ```reject``` to return ```productCatch```
-* use ```$timeout``` to waiting 2 second
-* in ```appCtrl``` write ```$watch``` to which will look at ```product```
-* save all change to ```productCatch``` use this in ```reject```
-* in ```catchErrorCtrl``` use ```rootScope.$on``` to catch error and data from reject
-* use service ```$location``` to redirect to ```/property```
-* set data to display when ```price``` or ```quantity``` is less 0 or is NOT defined you should set ```cost``` 0 and add class ```alert alert-danger``` to ```message```
-* when all is correct display message ```'You give wrong data'``` when is NOT display message ```'You give correct data'```
-* when is all is correct you display cost [price*quantity] (remember quantity can NOT fraction) and add class ```alert alert-success``` to message
+* [resolve conventions](https://egghead.io/lessons/angularjs-resolve-conventions)
+* [routeChangeError](https://egghead.io/lessons/angularjs-resolve-routechangeerror)
+* [location path](https://docs.angularjs.org/api/ng/service/$location)
 
 
 

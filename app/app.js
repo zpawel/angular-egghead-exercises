@@ -1,22 +1,39 @@
-var provider = angular.module("provider", []);
-
-provider.config(function ($routeProvider)
+(function ()
 {
+    'use strict';
 
-});
+    var provider = angular.module('provider', ['ngRoute']);
 
-var productCatch;
-var appCtrl = provider.controller('catchErrorCtrl', function ($scope)
-{
+    provider.config(function ($routeProvider)
+    {
+        $routeProvider.when('/', {
+            templateUrl: 'propertyProduct.html', controller: 'catchErrorCtrl'
+        });
+        $routeProvider.when('/order', {
+            templateUrl: 'propertyOrder.html'
+        });
+        $routeProvider.when('/displayOrder', {
+            templateUrl: 'propertyOrder.html'
+        });
 
-});
-provider.controller('appCtrl', function ($rootScope, $location, $scope)
-{
-    $scope.rejectProduct = {};
+        $routeProvider.otherwise({
+            redirectTo: '/'
+        });
+    });
 
-});
+    var productCatch;
+    provider.controller('catchErrorCtrl', function ($scope)
+    {
+        $scope.$watch('product', function (newValue)
+        {
+            productCatch = newValue;
+        });
+    });
+    provider.controller('appCtrl', function ($rootScope, $location, $scope)
+    {
+        $scope.rejectProduct = {};
 
-var error = function ($q, $timeout)
-{
+    });
 
-};
+
+})();
