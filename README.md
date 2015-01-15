@@ -1,19 +1,16 @@
 ##Exercise 21 : scope vs $scope
-The goal of this exercise is practise writing directive, factory and controllers
+
+##The goal
+In this application existed two directives on the same view, but in here we encountered the problem.
+When complement one ```input``` automatically completes the second input.
+
+####Requirements
+ * You can NOT change the **templates** directives.
+ * You can NOT change the **index.html**.
+ * You should be able to insert two different values for the inputs and display it by clicking on the corresponding button.
+
 
 ###Before you start, please refer to:
-* [angularjs-scope-vs-scope](https://egghead.io/lessons/angularjs-scope-vs-scope)
-* [angulars-controller-as-syntax/](http://toddmotto.com/digging-into-angulars-controller-as-syntax/)
-
-###Exercise
-* complete directive in **scope.js**
-    * use this ```restrict: "E", replace: true, template: '<div> <input type="text" ng-model="input"></div>'```
-    in  ```unitScope``` directive and ```separateScope```
-* bind your directive in ```index.html``` use ```separateScope```  directive
-*  add to **otherScopeFactory** factory functions : ```set``` and ```get```, which set and get value
-* use watch in function ```link``` to set value from separate scope  ```scope.$watch("input", function (newValue) {});```
-* add to controller ```$scope```
-* complete method ```unitScope``` and ```separateScope``` in controller to add value from unit scope and separate scope
-* in directive ```separateScope``` set ```scope:{}```
+* [scope vs scope](https://egghead.io/lessons/angularjs-scope-vs-scope)
 
 Good luck!

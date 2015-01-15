@@ -3,27 +3,46 @@
 
   var appScope = angular.module('appScope', []);
 
-  appScope.controller('scopeCtrl', [function () {
+  appScope.controller('scopeCtrl', ['$scope', 'simpleFactory', function ($scope, simpleFactory) {
     this.unitScope = function () {
-
+      this.unitScopeValue = $scope.input;
     };
     this.separateScope = function () {
-
+      this.otherScopeValue = simpleFactory.get();
     };
+    $scope.ctrl = this;
   }]);
 
-  appScope.factory('otherScopeFactory', function () {
+  appScope.factory('simpleFactory', function () {
     var valueFromScope;
     return {
       set: function (value) {
-
-      }, get: function () {
-
+        valueFromScope = value;
+      },
+      get: function () {
+        return valueFromScope;
       }
     };
   });
 
-  appScope.directive('unitScope', function () {
-    return {};
+  appScope.directive('unit', function () {
+    return {
+      restrict: 'E',
+      replace: true,
+      template: '<div> <input class="form-group" type="text" ng-model="input"></div>'
+    };
+  });
+
+  appScope.directive('separate', function (simpleFactory) {
+    return {
+      restrict: 'E',
+      replace: true,
+      template: '<div> <input class="form-group" type="text" ng-model="input"></div>',
+      link: function (scope) {
+        scope.$watch('input', function (newValue) {
+          simpleFactory.set(newValue);
+        });
+      }
+    };
   });
 })();
