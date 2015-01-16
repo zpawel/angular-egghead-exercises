@@ -1,33 +1,19 @@
 var myApp = angular.module("myApp", []);
 
-myApp.controller('restrictECtrl', ['$scope', function ($scope)
+myApp.controller('appCtrl', ['$scope', function ($scope)
 {
-    $scope.description = {
-        name: 'restrict E',
-        call: '<restrict-e></restrict-e>'
-    };
-}]);
-
-myApp.controller('restrictACtrl', ['$scope', function ($scope)
-{
-    $scope.description = {
-        name: 'restrict A',
-        call: '<div restrict-a></div>'
-    };
-}]);
-
-myApp.controller('restrictCCtrl', ['$scope', function ($scope)
-{
-    $scope.description = {
-        name: 'restrict C',
-        call: '<div class="restrict-c"></div>'
-    };
-}]);
-
-myApp.directive("restrictE", function ()
-{
-    return {
-        restrict: "E",
-        template: '{{description.name}}: {{description.call}}'
+  $scope.description = {
+    element: {
+      name: 'restrict E',
+      call: '<this element is using restrict E directive>'
+    },
+    attribute: {
+      name: 'restrict A',
+      call: '<this element is using restrict A directive>'
+    },
+    class: {
+      name: 'restrict C',
+      call: '<this element is using restrict C directive>'
     }
-});
+  };
+}]);
