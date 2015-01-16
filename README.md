@@ -1,6 +1,7 @@
 ##Exercise 6: Angular ng-repeat and filtering data
 
-Create ***searchStudent*** filter allows to search the list of students by specified field.
+###The goal
+In this application, you are supposed to create ***searchStudent*** filter allows user to search the list of students by filtering specified field.
 
 ####Requirements
 * you should be able to filter by multiple fields in the same time
@@ -24,5 +25,6 @@ Create ***searchStudent*** filter allows to search the list of students by speci
 ###Before you start, please refer to:
 * [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
 * [angular filter](https://docs.angularjs.org/api/ng/filter/filter)
+
 
 Good luck!
