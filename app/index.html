@@ -4,24 +4,23 @@
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
-
-<body ng-app="templateUrl">
+<body ng-app="dynamicChangeTemplate">
 <div class="container">
     <div class="page-header">
         <h1>TemplateUrl</h1>
 
-        <div class="text-muted">Candies</div>
+        <div class="text-muted">Dynamic change</div>
     </div>
     <div>
         <label for="order">Order:</label>
-        <input id="order" type="text" ng-model="title">
-        <label for="quantity">Quantity</label>
+        <input id="order" type="text" ng-model="order">
+        <label for="quantity">Quantity:</label>
         <input id="quantity" type="number" ng-model="quantity">
-        <url title="{{title}}" quantity="{{quantity}}"></url>
+        <label for="template">Template:</label>
+        <input id="template" type="text" ng-model="template">
+        <url template="{{template}}" order="{{order}}" quantity="{{quantity}}"></url>
     </div>
 </div>
-
-
 <script src="../bower_components/angular/angular.js"></script>
 <script src="templateUrl.js"></script>
 </body>
