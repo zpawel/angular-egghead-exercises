@@ -15,13 +15,14 @@
     </div>
     <div class="col-md-offset-4 col-md-4">
         <label for="name" class="label label-default">Name</label>
-        <input type="text" class="form-control" id="name">
+        <input type="text" class="form-control" id="name" ng-model="name">
 
         <label for="forWhat" class="label label-default">For what</label>
-        <input type="text" class="form-control" id="forWhat" placeholder="For poor pets">
+        <input type="text" class="form-control" id="forWhat" placeholder="For poor pets" ng-model="forWhat">
 
         <money how-many="proposal" for-what="{{forWhat}}">
             <!-- add here h3 tag-->
+            <h3>I'm {{name}}</h3>
             <p>I want to devote: {{proposal | currency}}</p>
         </money>
     </div>

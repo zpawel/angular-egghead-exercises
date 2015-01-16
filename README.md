@@ -22,15 +22,16 @@ The goal of this exercise is use using ng-model, ng-click and transclusion witho
         * **howMany** set to the first element of **proposals** array
         * **toggleContent** function and **isContentVisible** variable
         
-```
+
+
                     scope.isContentVisible = false;
-        
+
                     scope.toggleContent = function ()
                     {
                         scope.isContentVisible = !scope.isContentVisible;
                         scope.takeMyMoney = "Shut up and take my money!"
                     }
-```
+
             
 * complete the template with:
       * **ng-model** directive set to **howMany** in select
