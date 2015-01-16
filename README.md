@@ -1,39 +1,25 @@
 ##Exercise 11 : Understanding isolate scope
-The goal of this exercise is create directive which has its own scope.
+
+You are a owner of a small sea cargo company. Everyday, you are checking the weather reports to make sure the conditions allow your fleet to depart from the port. 
+This is very tiring and you decide to create a simple application that will allow you to automatically check weather conditions and report to the boat.
+
+Local weather monitoring station provide a very simple API with an example how to use it so you don't have to worry about the data.
+
+Moreover, you plan to share your application with others so you need to create it as a directive accepting custom reporting function and conditions message. 
+Every boat captain should also be able to set their boat type, because some boats are not able to withstand heavy rain or wind.
+
+###Requirements
+
+* **shipSender** directive in **Port.js**:
+	* Should be expecting to receive two attributes passed to it's isolate scope: a ***customCheck*** function and ***conditions*** string
+	* In **Check** element (check comments) ng-click directive should be added and invoke **customCheck** (with **boat** model and **conditions** passed as parameters)
+	* Template should assign returning value from **customCheck** to **answer** variable ( ***Hint***: you can assign variable in ng-click directive)
+* Three **shipSender** directive instances added to correct place and with proper parameters to **index.html**(check comments)
+
 
 ###Before you start, please refer to:
 * [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
 * [angularjs-isolate-scope-expression-binding](https://egghead.io/lessons/angularjs-isolate-scope-expression-binding)
 
-
-###Exercise
-* add to ```Shop.js``` file ```shoppingTime``` directive.
-* add to **return** 
- * ```restrict``` with **E** value
- * ```template : '<div class="panel panel-success text-center">' +
-                '<p class="panel-heading"><strong>I want to buy:</strong></p>' +
-                '<div class="panel-body"><input type="text" class="form-control form-group">' +
-                ' <div class="btn btn-success">Buy!</div></div></div>'```
-  * ```scope``` with ```{buy: "&" }```
-
-* add to **input** in ```template``` attribute, **ng-model** directive  set to **product**
-* add to **div** (```<div class="btn btn-success">```) in ```template``` , **ng-click** directive set to```buy``` function 
-* as an argument of ```buy``` function use object with ```newProduct``` property set to variable use in **ng-model** directive
-* add to **ShopCtrl** ```$scope.shopping``` function:
-```
- $scope.shopping = function (product)
-    {
-        if (product == undefined || product == '') {
-            alert("Not entered product");
-        } else {
-            $scope.products.push({name: product});
-            alert("You just buy: '" + product + "' !");
-        }
-    }
- ```
-* in index.html file add previously created directive at indicated line(comment); moreover, specify **buy** attribute there and pass the **shopping** function to it so it would be used by directive(**Hint**: you also need to specify parameter)
-
-* copy all ```<div class="col-md-6" ng-controller="ShopCtrl">...</div>``` 
-below and verify that the components are independent of each other.
 
 Good luck!

@@ -3,27 +3,54 @@
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body ng-app="proverbApp">
-<div class="container" ng-controller="ProverbCtrl">
+<body ng-app="weatherApp">
+<div class="container">
     <div class="page-header">
-        <h1>No gain
-            <small>without pain!</small>
+        <h1>Sea of directives
         </h1>
     </div>
-    <div class="col-md-4 text-center panel-default">
-        <h2 class="panel-heading text-center">@</h2>
+    <div class="col-md-4" ng-controller="portCtrl">
+        <div class="text-center panel-default row">
+            <h2 class="panel-heading text-center">Docks</h2>
+            <div class="col-md-offset-1 col-md-10">
+                <h4 class="text-left">Change conditions:</h4>
+                <select class="form-control form-group" ng-model="currentCondition" ng-options="name for name in availableConditions"></select>
+                <div class="btn btn-default col-md-7" ng-click="addCondition(currentCondition)">Update</div>
+                <div class="btn btn-info col-md-offset-1 col-md-4" ng-click="clearConditions()">Clear</div>
+            </div>
+        </div>
 
-        <h3><!--proverb-one--></h3>
+        <div class="text-center panel-default row">
+            <h2 class="panel-heading text-center">Current conditions</h2>
+            <img ng-if="isCurrently('clear')" src="assets/clear.png">
+            <img ng-if="isCurrently('cloudy')" src="assets/cloudy.png">
+            <img ng-if="isCurrently('heavy rain')" src="assets/heavyrain.png">
+            <img ng-if="isCurrently('stormy')" src="assets/storm.png">
+            <img ng-if="isCurrently('sunny')" src="assets/sunny.png">
+            <img ng-if="isCurrently('windy')" src="assets/windy.png">
+        </div>
     </div>
-    <div class="col-md-8 text-center panel-default">
-        <h2 class="panel-heading">=</h2>
-        <!--proverb-two-->
+    
+    
+    <div class="col-md-offset-1 col-md-7 text-center panel-default" ng-controller="shipCtrl">
+        <div class="text-center panel-default row">
+            <h2 class="panel-heading text-center">Port</h2>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <ship-sender custom-check="checkMyBoat(boat, currentConditions)" conditions="currentConditions"></ship-sender>
+                    <ship-sender custom-check="checkMyBoat(boat, currentConditions)" conditions="currentConditions"></ship-sender>
+                    <ship-sender custom-check="checkMyBoat(boat, currentConditions)" conditions="currentConditions"></ship-sender>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="../bower_components/angular/angular.js"></script>
-<script src="Proverb.js"></script>
+<script src="Docks.js"></script>
+<script src="Port.js"></script>
 </body>
 </html>
