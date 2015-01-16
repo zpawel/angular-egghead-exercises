@@ -1,23 +1,20 @@
 ##Exercise 3 : Sharing data between controllers
 
-The goal of this exercise is to present the data exchange between controllers.
+##The goal
+Controllers often need to communicate and share data. You are given a task to create functionality to share data between two controllers.
+Implement factory that will allow to share data between **LeftCtrl** and **RightCtrl**.
+
+####Requirements
+* factory should return direction property with default value ```"Direction? Left and right!"```
+* all inputs should be binded to the same property and update when you type something either in left or right input
+
+###Results
+![alt text](app/assets/example1.png "First Input")
+![alt text](app/assets/example2.png "Second Input")
 
 ###Before you start, please refer to:
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
 * [angularjs-sharing-data-between-controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers)
 
-
-###Exercise
-* Based on the video **angularjs-the-dot** make changes to the **index.html** file to connect (bind) all three inputs to each other.
-* Comment out the **CENTER** div in **index.html**, which will make typing text into the **left** input will not display a **right** 
-* In **controllers.js** add a ***bind*** module
-* Create a **factory** that returns variable **direction**
-```
-{direction: "Direction? Left and right!"}
-```
-* Based on the video **angularjs-sharing-data-between-controllers** edit controllers **LeftCtrl** and **RightCtrl**
-
-###Completion
-Expected result of this exercise is to display two inputs binded together by a factory variable model with default value.
 
 Good luck!
