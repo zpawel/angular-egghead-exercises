@@ -12,6 +12,6 @@ In this exercise, your challenge is to share information between directives. Imp
 ####Result example
 * when the mouse hovers over the green circle
 
-![alt text](images/greenAlarm.jpg "Green Alarm")
+![alt text](app/assets/greenAlarm.jpg "Green Alarm")
 
 Good luck!
