@@ -8,9 +8,9 @@ Implement factory that will allow to share data between **LeftCtrl** and **Right
 * factory should return direction property with default value ```"Direction? Left and right!"```
 * all inputs should be binded to the same property and update when you type something either in left or right input
 
-####Review
-Application contain unit tests implemented to help you verify results of your work.
-Type ```npm test``` in console to run the tests
+###Results
+![alt text](app/assets/example1.png "First Input")
+![alt text](app/assets/example2.png "Second Input")
 
 ###Before you start, please refer to:
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
