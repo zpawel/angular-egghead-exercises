@@ -12,10 +12,10 @@ Implement functionality that will allow to add (when the mouse hovers over the g
 
 ####Result
 * when the mouse hovers over the green square
-![alt text](images/add.png "Add Petal")
+![alt text](app/assets/add.png "Add Petal")
 
 * when the mouse hovers over the red square
-![alt text](images/remove.png "Remove Petal")
+![alt text](app/assets/remove.png "Remove Petal")
 
 ###Before you start, please refer to:
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
