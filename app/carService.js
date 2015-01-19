@@ -2,11 +2,16 @@
 {
   'use strict';
 
-  var carService = angular.module('carService', []);
+  var carService = angular.module('carService', ['ngRoute']);
 
   carService.config(function ($routeProvider, $provide)
   {
-    // 1
+    $routeProvider.when('/', {
+      templateUrl: 'home.html', controller: 'carPartsCtrl'
+    });
+    $routeProvider.when('/choose/:item', {
+      templateUrl: 'choosePart.html', controller: 'chooseCtrl'
+    });
 
     $provide.provider('listParts', function ()
     {
@@ -23,62 +28,59 @@
       }];
       var set = function (value)
       {
-        //2
-
+        //  complete this method
       };
       var setToTrue = function (value)
       {
-        var tmp;
-        angular.forEach(lists, function (part)
-        {
-          if (value === part.name) {
-            part.enable = true;
-            tmp = part;
-          }
-        });
-        return tmp.enable;
+        //  complete this method
       };
       return {
         $get: function ()
         {
           return {
-            //2
-
+            set: set, setToTrue: setToTrue, lists: lists
           };
         }
       };
     });
-
   });
 
-  carService.controller('carPartsCtrl', function ($scope, listParts, $location)
+  var carPartsCtrl = function (scopeA, list)
   {
-    $scope.lists = listParts.lists;
+    scopeA.$root.view = true;
+    scopeA.lists = list.lists;
     //4
-    $scope.choose = function ()
-    {
-      $location.path('/choose');
-    };
-  });
-  carService.controller('chooseCtrl', function ($scope, $timeout, $injector)
-  {
-    $scope.$root.view = true;
-    $scope.result = false;
-    $scope.toogle = false;
-    $scope.message = 'Wait.......';
-    //3
+    scopeA.data = {lists: scopeA.lists[0].name};
+  };
 
-    $scope.wait = function ()
+
+  carService.controller('carPartsCtrl', carPartsCtrl);
+
+
+  var chooseCtrl = function (scopeB, waitForMe, injector, parameterFromUrl)
+  {
+    scopeB.result = false;
+    scopeB.toogle = false;
+    scopeB.message = 'Wait.......';
+    scopeB.data = parameterFromUrl.item;
+    scopeB.checkNow = function ()
     {
-      $timeout(function ()
+      waitForMe(function ()
       {
-        $injector.invoke(function ()
-        {
-          //3
-          $scope.resultInvoke = 'Please, complete this method.';
-        });
-        $scope.result = true;
-      }, 5000);
+        //here you should use listParts.set()
+
+      }, 10);
     };
-  });
+    scopeB.wait = function ()
+    {
+      waitForMe(function ()
+      {
+        //here you should use listParts.setToTrue()
+
+      }, 600);
+    };
+  };
+
+
+  carService.controller('chooseCtrl', chooseCtrl);
 })();

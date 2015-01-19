@@ -1,29 +1,28 @@
 ##Exercise 31 : Injectors
-The goal of this exercise is dismantle factory to provider
+
+###The goal
+Application was wrote by NOT experienced web developer and he call
+the variable how he want which caused a lot of mistakes and lack of
+appropriate relevant parameters in controllers....we do NOT want to rewrite the application.
+Can you help us??
+
+
+####Requirements
+  * You can NOT change definition the arguments list which were defined can NOT be change in controllers and view.
+  * You have to complete methods **set** and **setToTrue** in service listParts.
+   Method set should available to toggle car parts in list and return this,
+   **setToTrue** should returns true in every time, but data should be saved in correct part
+  * When You click **I can't wait, check it now!** You should call method in **set** in **listParts** (check comments)
+  * When You click **I can wait** You should call method in **setToTrue** in **listParts** (check comments)
+  * You should display *```green```* message *```This part is available and is very cheap```* if part is available .
+  * When part is NOT available You should display *```red```* message *```This part is NOT available is very expensive...```*
+
 
 ###Before you start, please refer to:
-* [angularjs-injectors](https://egghead.io/lessons/angularjs-injectors)
+  * [injectors](https://egghead.io/lessons/angularjs-injectors)
+  * [angular 1.2.16 - $injector](https://code.angularjs.org/1.2.16/docs/api/auto/service/$injector)
+  * [angular.forEach](https://docs.angularjs.org/api/ng/function/angular.forEach)
 
-###Exercise
-1. Routing:
-    * add dependency ```ngRoute``` to your module
-    * use ```ng-view``` to routing
-    * when path is ```/``` display templateUrl ```carParts.html```
-    * when path is ```/choose``` display templateUrl ```choosePart.html``` and add controller ```chooseCtrl```
 
-2. Write in carService.config provider:
-    * based on the method ```setToTrue```, write a method that will set alternately change the status of a selected part of the access
-    * write method ```$get```
-    * and append ```set``` method ```set```
-    * and append ```setToTrue``` method ```setToTrue```
-    * and append ```lists``` variable ```lists```
-
-3. In ```chooseCtrl```
-    * write method ```checkNow``` based method wait and set ```timeout``` to ```10```
-    * write correct condition when ```$scope.data``` and ```$scope.data.part``` is NOT defined and suitable method return true should display ```resultInvoke``` ```"This part is NOT available is very expensive..."```
-    * otherwise display ```resultInvoke 'This part is available and is very cheap"```
-
-4. In ```carPartsCtrl```
-    * set ```data.list``` to ```name``` selected radio button
 
 Good luck!
