@@ -5,7 +5,7 @@ In this application, you are supposed to replace **purr** text fragment in the t
 refactored text inside h3 element(*display board*).
 
 
-####Requirements
+###Requirements
 * **NewWordCtrl** should contain a ***replaceWord()*** assigned to it's scope function
 * **replaceWord()** function should take in three parameters: ***text, word and newWord***. It must replace **word** with a **newWord** in specified **text**
 * the upper *display board*(inside *h3* tag) text value should be taken from the textarea below, refactored by a function **replaceWord()**, with a **word** 
