@@ -1,5 +1,5 @@
 ##Exercise 7 : Angular built in filters
-###The goal
+
 In this application, you are supposed to use ready-made filter options. You start with a ready list of users.
 
 ###Requirements
