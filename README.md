@@ -1,6 +1,5 @@
 ##Exercise 19 : Building Zippy
 
-##The goal
 Application sometimes need transclude directive, we need directive which display values index.html and from template.
 
 ####Requirements
