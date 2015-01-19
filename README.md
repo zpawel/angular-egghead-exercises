@@ -1,6 +1,5 @@
 ##Exercise 3 : Sharing data between controllers
 
-###The goal
 Controllers often need to communicate and share data. You are given a task to create functionality to share data between two controllers.
 Implement factory that will allow to share data between **LeftCtrl** and **RightCtrl**.
 
