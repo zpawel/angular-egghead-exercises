@@ -2,7 +2,7 @@
 ###The goal
 In this application, you are supposed to use ready-made filter options. You start with a ready list of users.
 
-####Requirements
+###Requirements
 * you should be able to sort data by column
 * limit the number of displayed records with the radio choice (default limit should be 15)
 * create and use ***reverseSort*** function that sort the data ascending and descending
