@@ -2,6 +2,7 @@ var app = angular.module('weatherApp');
 
 app.controller("shipCtrl", function ($scope, WeatherConditions)
 {
+//  checkMyBoat function should be used to check if boat is able to depart from port
   $scope.checkMyBoat = function (boat, conditions) {
     switch(conditions) {
       case 'stormy':
@@ -19,19 +20,16 @@ app.controller("shipCtrl", function ($scope, WeatherConditions)
     return false;
   };
   
-  $scope.currentConditions = WeatherConditions.getCurrentConditions();
+//  weatherConditions represent actual conditions API object. Use getCurrentConditions() method to receive current conditions
+  $scope.weatherConditions = WeatherConditions;
 });
 
 app.directive('shipSender', function () {
   return {
-    restrict: 'E',
-    scope: {
-      customCheck: '&',
-      conditions: '@'
-    },
     template: '<div class="ship relative">'
         + '<div class="bubble" ng-if="answer">Set sails!</div>'
-        + '<div class="col-md-offset-1 col-md-10 align-bottom"><select class="form-control" ng-options="item for item in [\'Sloop\', \'Ship\', \'Towboat\', \'Brig\']" ng-model="myBoat"></select>'
-        + '<div class="btn btn-info voffset" ng-click="answer = customCheck({boat: myBoat, currentConditions: conditions})">Check</div></div></div>'
+//        value from the select element below should be used by captain to set boat model and passed as argument to correct function
+        + '<div class="col-md-offset-1 col-md-10 align-bottom"><select class="form-control" ng-options="item for item in [\'Sloop\', \'Ship\', \'Towboat\', \'Brig\']"></select>'
+        + '<div class="btn btn-info voffset">Check<!--check button--></div></div></div>'
   }
 });

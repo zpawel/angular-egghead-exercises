@@ -14,6 +14,7 @@ Every boat captain should also be able to set their boat type, because some boat
 	* Should be expecting to receive two attributes passed to it's isolate scope: a ***customCheck*** function and ***conditions*** string
 	* In **Check** element (check comments) ng-click directive should be added and invoke **customCheck** (with **boat** model and **conditions** passed as parameters)
 	* Template should assign returning value from **customCheck** to **answer** variable ( ***Hint***: you can assign variable in ng-click directive)
+* **weatherConditions** (use correct method as indicated in comment) and **checkMyBoat** function should be passed to **shipSender** directive
 * Three **shipSender** directive instances added to correct place and with proper parameters to **index.html**(check comments)
 
 
