@@ -1,17 +1,12 @@
 ##Exercise 28 : Directive for route handling
-The goal of this exercise is practise writing directive, factory and controllers
+###The goal
+In this application, you are supposed to use $rootScope within an ***error*** directive to detect route change errors and display it.
+
+###Requirements
+* when it detects route change error, you should see a message ***"No, no, no. That is not good way!"***
+* use ````ng-show```` directive to show the error alarm only when you need it.
 
 ###Before you start, please refer to:
 * [angularjs-directive-for-route-handling](https://egghead.io/lessons/angularjs-directive-for-route-handling)
-
-###Exercise
-* add to ```way.js``` file ```error``` directive with ```$rootScope``` as an argument
-* add to directive 
-    * restrict **E**
-    * template ```<div class="text-center alert alert-danger">{{alertMessage}}</div>```
-    * link function with ``` $rootScope.$on``` which intercept a route change error.
-    * inside set ```wrongWay``` variable to **true** and ```alertMessage``` to message: **No, no, no. That is not good way!**
-    * bind **wrongWay** with **ng-show** directive in template
-    * add to ```index.html``` file **error** directive and check how it work
 
 Good luck!
