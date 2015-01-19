@@ -1,6 +1,6 @@
 ##Exercise 30 : Providers
 
-###The goals
+###The goal
 Application displays sentence in which **color** and **number** are set by provider. Your job is replace the **home** factory with the **home** provider.
 
 ###Requirements
