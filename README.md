@@ -1,6 +1,5 @@
 ##Exercise 6: Angular ng-repeat and filtering data
 
-###The goal
 In this application, you are supposed to create ***searchStudent*** filter allows user to search the list of students by filtering specified field.
 
 ###Requirements
