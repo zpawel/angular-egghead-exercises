@@ -1,9 +1,7 @@
 ##Exercise 4 : Defining a method on the scope
 
-###The goal
 In this application, you are supposed to replace **purr** text fragment in the textarea, with a word specified in text input below and display
 refactored text inside h3 element(*display board*).
-
 
 ###Requirements
 * **NewWordCtrl** should contain a ***replaceWord()*** assigned to it's scope function
