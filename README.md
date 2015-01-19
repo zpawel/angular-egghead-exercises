@@ -1,16 +1,18 @@
 ##Exercise 17 : An alternative approach to controllers
-The goal of this exercise is familiarize yourself with alternative approach to controllers
+
+Application is supposed to be using a function assigned to certain controller, not the $scope. You are given a task to implement such functionality according
+to the regulations below.
+
+###Requirements
+
+* **Calc.js** contain ***SumCtrl*** and ***SubCtrl*** controllers
+* **SumCtrl** have ***add*** function assigned to itself, which requires two params and return their value as a sum (a + b)
+* **SubCtrl** have ***subtraction*** function assigned to itself, which requires two params and return their value as subtracted (a - b)
+* Use **add** with **firstNumberSum** and **secondNumberSum** params and display the result in correct header (check comments) when Sum button is clicked
+* Use **subtraction** with **firstNumberSub** and **secondNumberSub** params and display the result in correct header (check comments) when Subtraction button is clicked
 
 ###Before you start, please refer to:
 * [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
-###Exercise
-* add to "Calc.js" file ```SumCtrl``` and ```SubCtrl``` controllers
-* inside **SumCtrl** add  simple **addition** function which adds two numbers and analogously add to ```SubCtrl``` **subtraction** function
-* add to **SumCtrl** on $scope two variables : ```firstNumberSum``` and ```secondNumberSum```, then analogously add to ```SubCtrl``` variables : ```firstNumberSub``` and ```secondNumberSub```. Initialize them exemplary values. 
-* inside each controllers add return **$scope.ctrlName** set to **this**;
-* add to divs below appropriate comments ```SumCtrl``` and ```SubCtrl```
-* add to buttons appropriate function with **ng-click** directive and giv him two number as an argument
-* add to **h3** angular expression with result (remember about controller!)
 
 Good luck!

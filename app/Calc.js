@@ -1,4 +1,4 @@
-var calcApp = angular.module("calcApp", []);
+var calcApp = angular.module('calcApp', []);
 
-<!--add SumCtrl -->
-<!--add SubCtrl -->
+//SumCtrl
+//SubCtrl
