@@ -1,12 +1,9 @@
 ##Exercise 31 : Injectors
-The goal of this exercise is use injector in simple app.
+
+###The goal
+Application displays song details with two modes of singing (sing and fake). Your task is  remove **song** attribute from **SongCtrl** and use injector so that the application behaves in the same way.
 
 ###Before you start, please refer to:
 * [angularjs-injectors](https://egghead.io/lessons/angularjs-injectors)
-
-###Exercise
-* check out how this app works
-* remove **song** attribute from **SongCtrl**
-* use ```$injector``` in ```SongCtrl``` to inject **song** inside controller 
 
 Good luck!
