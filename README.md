@@ -1,28 +1,26 @@
 ##Exercise 29 : Route Life Cycle
-The goal of this exercise is practise route life cycle.
+
+###The goal
+You start with the ready view, where you will find two missions and an object which you can take with you.
+When you select a mission, it should display an alert message for two seconds. Then you will be redirected to the appropriate page of the mission.
+
+###Requirements
+* alert message before route change $scope should be set to ***"I choose home!"*** or ***"I choose forest!***
+* start message when route start change $scope should be set to ***""The mission was started!"***
+* depending on the **space** attribute (received from promise) when route change is success ***mission*** should be set to ***to make dinner*** (when Home)
+   ***light a campfire.*** (when Forest)
+* **message** in controllers should come from **loadData**
+
+###Result
+* when the mission was chosen
+
+![alt text](app/assets/chosenMission.jpg "chosen mission")
+
+* after redirecting
+
+![alt text](app/assets/resultPage.jpg "result page")
 
 ###Before you start, please refer to:
 * [angularjs-route-life-cycle](https://egghead.io/lessons/angularjs-route-life-cycle)
-
-###Exercise
-1. Before route change $scope:
-    * add to **StartCtrl** ```goHome``` function, which
-        * set ```message``` variable on $scope to ```I choose home!```
-        * use ```$timeout``` to delay load path ```/home``` about ```2s```
-    * add to **StartCtrl** ```goForest``` function, which
-        * set ```message``` variable on $scope to ```I choose forest!!```
-        * use ```$timeout``` to delay load path ```/forest``` about ```3s```
-        
-2. When route start change $scope
-    * add to **$rootScope.$on** variable **start**(on $scope) and set to ```The mission was started!```
-
-3. When route change is success
-    * add to **$rootScope.$on** condition: when **space** attribute, which received from promise is
-        * set to **Kitchen** set ```mission``` variable on $scope to ```to make dinner.```
-        * set to **Wood** set ```mission``` variable on $scope to ```light a campfire.```
-        * **hint** :  search ```space``` in **current.local...**
-    
-4. When the next controller takes control
-    * add to **HomeCtrl** and **ForestCtrl** controllers **message** variable and set it to message from **loadData**
 
 Good luck!
