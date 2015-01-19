@@ -6,6 +6,10 @@ In this application, you are supposed to use $rootScope within an ***error*** di
 * when it detects route change error, you should see a message ***"No, no, no. That is not good way!"***
 * use ````ng-show```` directive to show the error alarm only when you need it.
 
+###Result
+
+![alt text](app/assets/goleft.jpg "Go Left")
+
 ###Before you start, please refer to:
 * [angularjs-directive-for-route-handling](https://egghead.io/lessons/angularjs-directive-for-route-handling)
 
