@@ -1,9 +1,9 @@
 ##Exercise 1 : Binding
 
-##The goal
+###The goal
 Application displays three inputs and the artists table. In table, each class attribute of the row is binded to one of the input values by order.
 
-####Requirements
+###Requirements
 * **First place** input value updates class of the first row
 * **Second place** input value updates class of the second row
 * **Third place** input value updates class of the third row
