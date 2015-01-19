@@ -3,11 +3,11 @@
 ###The goal
 In this application, you are supposed to create ***searchStudent*** filter allows user to search the list of students by filtering specified field.
 
-####Requirements
+###Requirements
 * you should be able to filter by multiple fields in the same time
 * the upper input field should search through all categories
  
-####Result example
+###Result example
  * write **Warner** in **First Name** field
 
 | firstName | lastName |age |email|phone|
