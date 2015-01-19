@@ -1,5 +1,5 @@
 ##Exercise 28 : Directive for route handling
-###The goal
+
 In this application, you are supposed to use $rootScope within an ***error*** directive to detect route change errors and display it.
 
 ###Requirements
