@@ -1,10 +1,10 @@
 ##Exercise 3 : Sharing data between controllers
 
-##The goal
+###The goal
 Controllers often need to communicate and share data. You are given a task to create functionality to share data between two controllers.
 Implement factory that will allow to share data between **LeftCtrl** and **RightCtrl**.
 
-####Requirements
+###Requirements
 * factory should return direction property with default value ```"Direction? Left and right!"```
 * all inputs should be binded to the same property and update when you type something either in left or right input
 
