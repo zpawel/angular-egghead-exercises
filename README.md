@@ -1,6 +1,5 @@
 ##Exercise 31 : Injectors
 
-###The goal
 Application displays song details with two modes of singing (sing and fake). Your task is  remove **song** attribute from **SongCtrl** and use injector so that the application behaves in the same way.
 
 ###Before you start, please refer to:
