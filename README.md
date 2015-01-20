@@ -1,30 +1,15 @@
 ##Exercise 32 : Components And Containers
-The goal of this exercise is use directive as a component and container.
+Start work with three "book-about" ready directives (**bookTitle**, **bookDescription**, **bookPages** . Use them as components to achieve the end effect such as in point "Result".
+
+###Requirements
+* **book** directive should be used as a container
+* example book's title: ***"The Da Vinci Code"***
 
 ###Before you start, please refer to:
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
 
-###Exercise
-* inside ```book.js``` file complete ```bookTitle``` directive with:
-    * ```E``` **restrict**
-    * ```title``` in **scope** set to ```@```
-    * angular expression in **template** ```strong``` tag
-    
-* create ```bookDescription``` directive with
-    * ```E``` **restrict**
-    * ```text``` in **scope** set to ```=```
-    *  template ```<div class="jumbotron text-left">{{text}}</div>```
-    
-* add to ```book``` directive 
-    * ```publisher``` in **scope** set to ```@```
-    * angular expression in **template** ```strong``` tag
-    * ```transclude``` property set to true
-    * **ng-transclude** directive  in correct place(check comment)
-      
-* in ```index.html``` file construct a container with a  ```book``` directive
-    * set ```publisher``` to **Doubleday (US)**
-    * add ```bookTitle``` directive with ```title``` set to **The Da Vinci Code**
-    * add ```bookDescription``` directive with ```text``` set to ```description``` inside ```BookCtrl```
-    * add ```bookPages``` directive with ```number``` set to **454**
+###Result
+
+![alt text](app/assets/book.jpg "Book")
 
 Good luck!
