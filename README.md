@@ -1,15 +1,15 @@
-##Exercise 32 : Components And Containers
-Start work with three "book-about" ready directives (**bookTitle**, **bookDescription**, **bookPages** . Use them as components to achieve the end effect such as in point "Result".
+##Exercise 33 : ng-repeat and $index, $event, $log
+You just throw a look at FIFA ranking and discover that all positions unexpectedly disappeared. Fix it. In addition, you would like to know **Where is Poland?** and what is the type of the event when you press the button. 
+As you are very inquisitive man - get all information about MouseEvent without 'console.log'.
 
 ###Requirements
-* **book** directive should be used as a container
-* example book's title: ***"The Da Vinci Code"***
-
-###Before you start, please refer to:
-* [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
+* display event type in ```<strong></strong>``` tag
 
 ###Result
 
-![alt text](app/assets/book.jpg "Book")
+![alt text](app/assets/rank.jpg "Rank")
+
+###Before you start, please refer to:
+* [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
 
 Good luck!
