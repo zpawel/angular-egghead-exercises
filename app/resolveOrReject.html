@@ -1,0 +1,10 @@
+<div>
+    <div class="form-group">
+        <button class="btn btn-success" ng-click="appCtrl.get()"> Get success value</button>
+                <span ng-if="appCtrl.success">
+                    Your success value is: <span class="text-success">{{appCtrl.success}}</span>
+                </span>
+    </div>
+    <resolve-success-promise></resolve-success-promise>
+    <a href="#/" class="btn btn-warning"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+</div>

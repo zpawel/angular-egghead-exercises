@@ -1,0 +1,17 @@
+<div class="text-center ">
+    <div class="form-group">
+        <label for="success" class="label label-danger">Write your value to success:</label>
+
+        <div>
+            <input id="success" ng-model="value.success">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="unSuccess" class="label label-primary">Write your value to un success:</label>
+
+        <div>
+            <input id="unSuccess" ng-model="value.unSuccess">
+        </div>
+    </div>
+    <a href="#/display" class="btn btn-success " ng-click="setCtrl.set(value)"><i class="glyphicon glyphicon-arrow-right"></i> Display value to next page</a>
+</div>
