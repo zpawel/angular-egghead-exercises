@@ -1,15 +1,23 @@
-##Exercise 33 : ng-repeat and $index, $event, $log
-You just throw a look at FIFA ranking and discover that all positions unexpectedly disappeared. Fix it. In addition, you would like to know **Where is Poland?** and what is the type of the event when you press the button. 
-As you are very inquisitive man - get all information about MouseEvent without 'console.log'.
+##Exercise 34 : Experimental "Controller as" Syntax
+Application simulates a phone book. Check out how it works, then use the controller without $scope. Your should get the same effect.
 
 ###Requirements
-* display event type in ```<strong></strong>``` tag
+* use **PhoneCtrl** as ***phone***
 
 ###Result
+* start view
 
-![alt text](app/assets/rank.jpg "Rank")
+![alt text](app/assets/start.jpg "Start position")
+
+* when you press **Give me the phone!** button
+
+![alt text](app/assets/buttonClicked.jpg "button pressed")
+
+* when you press phone image
+
+![alt text](app/assets/phoneClicked.jpg "phone pressed")
 
 ###Before you start, please refer to:
-* [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
+* [angularjs-experimental-controller-as-syntax](https://egghead.io/lessons/angularjs-experimental-controller-as-syntax)
 
 Good luck!

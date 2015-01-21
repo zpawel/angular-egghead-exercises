@@ -5,44 +5,34 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="fifaApp" ng-controller="FifaCtrl">
+<body ng-app="phoneApp" ng-controller="PhoneCtrl">
 <div class="container">
     <div class="page-header">
-        <h1>The FIFA World Ranking
-            <small>Where is Poland?</small>
+        <h1>Call Me
+            <small>Maybe!</small>
         </h1>
     </div>
-    <div>
-        <p>
-            <button class="btn btn-default" ng-click="showPolandRank()">Where is Poland?</button>
-            I just <strong> event type</strong> on the button
-        </p>
+    <div class="col-md-offset-4">
+        <div class="form-group col-md-3">
+            <select class="form-control" ng-model="selectedPerson.name">
+                <option ng-repeat="person in phoneBook">{{person.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" ng-click="showPhone()">
+                <strong ng-hide="phone">Give me the phone!</strong>
+                <strong ng-show="phone">I don't need a phone.</strong>
+            </button>
+        </div>
     </div>
-    <div class="table-responsive">
-        <table class="table table-bordered text-center">
-            <thead>
-            <tr>
-                <th class="text-center">Rank</th>
-                <th class="text-center">Team</th>
-                <th class="text-center">Total Points</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="rank in ranking">
-                <td class="col-md-3"></td>
-                <td class="col-md-3">{{rank.team}}</td>
-                <td class="col-md-3">{{rank.points}}</td>
-            </tr>
-            <tr class="alert-info" ng-show="PolandRank">
-                <td class="col-md-3">41</td>
-                <td class="col-md-3">Poland</td>
-                <td class="col-md-3">680</td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="text-center" ng-click="call()">
+        <div class="form-group btn btn-default" ng-show="phone">
+            <p>{{selectedPerson.number}}</p>
+            <img src="assets/phone.png">
+        </div>
     </div>
 </div>
 <script src="../bower_components/angular/angular.js"></script>
-<script src="fifa.js"></script>
+<script src="phone.js"></script>
 </body>
 </html>
