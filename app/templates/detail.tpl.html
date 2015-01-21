@@ -1,0 +1,46 @@
+<div ng-show="choose">
+    You choose:
+    <div>
+        Country:<span class="text-success"> {{country}}</span>
+    </div>
+    <div>
+        State: <span class="text-success"> {{state}}</span>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                Capital city:
+            </th>
+            <th>
+                Largest city:
+            </th>
+            <th>
+                Population
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                {{choose.capital}}
+            </td>
+            <td>
+                {{choose.largestCity}}
+            </td>
+            <td>
+                {{choose.population}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <strong>Flag:</strong>
+
+                <div>
+                    <img class="flag" ng-src="{{flag}}">
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
