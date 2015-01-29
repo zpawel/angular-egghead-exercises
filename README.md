@@ -1,14 +1,20 @@
-##Exercise 36 : ng-repeat-start
-When you're hungry, you are not yourself. Check out, what your friends keep in the fridge. Your task is to display the name of a friends and the contents of their fridge in a designated place.
+##Exercise 37 : Animation Basics
+Use the angular-animate to create a really scary ghosts. Complete three style.css in accordance with the requirements.
 
 ###Requirements
-* wrap **id** and **name** with ```<p><strong>``` tags
+*  **ghost** should change the visibility of the image within two seconds
+*  **ghost2** should change the size of the image within one second (start animation - increase, leave - decrease)
+*  **ghost3** should change the size and the visibility of the image within three second
 
 ###Result
+* button pressed
 
-![alt text](app/assets/fridgeList.jpg "fridge list")
+![alt text](app/assets/buttonClicked.jpg "Button Clicked")
+
+![alt text](app/assets/result.jpg "Result")
 
 ###Before you start, please refer to:
-* [angularjs-ng-repeat-start](https://egghead.io/lessons/angularjs-ng-repeat-start)
+* [angularjs-animation-basics](https://egghead.io/lessons/angularjs-animation-basics)
+* use ```bower install```, then add **angular-animate.js** to index.html and include dependency in application module
 
 Good luck!
