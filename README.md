@@ -1,20 +1,26 @@
-##Exercise 37 : Animation Basics
-Use the angular-animate to create a really scary ghosts. Complete three style.css in accordance with the requirements.
+##Exercise 38 : Animating With Javascript
+Play with animation. Try to get the effect, such as in Result section.
 
 ###Requirements
-*  **ghost** should change the visibility of the image within two seconds
-*  **ghost2** should change the size of the image within one second (start animation - increase, leave - decrease)
-*  **ghost3** should change the size and the visibility of the image within three second
+* create **widthAnimation** class in **animate.js**
+* enter animation: you should get a blue bar "Download", changing visibility, increasing width, during 4 seconds
+* leave animation: you should get a red bar "Download", changing visibility, decreasing  width, during 2 seconds
 
 ###Result
 * button pressed
 
-![alt text](app/assets/buttonClicked.jpg "Button Clicked")
+![alt text](app/assets/1.jpg)
 
-![alt text](app/assets/result.jpg "Result")
+![alt text](app/assets/2.jpg)
+
+![alt text](app/assets/3.jpg)
+
+![alt text](app/assets/4.jpg)
+
+![alt text](app/assets/5.jpg)
 
 ###Before you start, please refer to:
-* [angularjs-animation-basics](https://egghead.io/lessons/angularjs-animation-basics)
-* use ```bower install```, then add **angular-animate.js** to index.html and include dependency in application module
+* [angularjs-animating-with-javascript](https://egghead.io/lessons/angularjs-animating-with-javascript)
+* use ```bower install```, then add **TweenMax.js** to index.html
 
 Good luck!
