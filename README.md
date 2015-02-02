@@ -1,26 +1,25 @@
-##Exercise 38 : Animating With Javascript
-Play with animation. Try to get the effect, such as in Result section.
+##Exercise 39 : Animating the Angular Way
+Use directive to abstract that view logic cleanly using $animate. You start with a square divided into smaller white squares. 
+Big square should look like a checkerboard and by clicking the "Do you want to play?" button, all fields should change the color on the opposite.
 
 ###Requirements
-* create **widthAnimation** class in **animate.js**
-* enter animation: you should get a blue bar "Download", changing visibility, increasing width, during 4 seconds
-* leave animation: you should get a red bar "Download", changing visibility, decreasing  width, during 2 seconds
+* create **reverseColor** function responsible for switching colors when "Do you want to play?" button was pressed 
+* in **chessboardField** directive you should observe whether the button was clicked, to add or remove class **.field**
 
 ###Result
-* button pressed
+* you start with view
 
 ![alt text](app/assets/1.jpg)
+
+* button was pressed
 
 ![alt text](app/assets/2.jpg)
 
 ![alt text](app/assets/3.jpg)
 
-![alt text](app/assets/4.jpg)
-
-![alt text](app/assets/5.jpg)
+ 
 
 ###Before you start, please refer to:
-* [angularjs-animating-with-javascript](https://egghead.io/lessons/angularjs-animating-with-javascript)
-* use ```bower install```, then add **TweenMax.js** to index.html
+* [angularjs-animating-the-angular-way](https://egghead.io/lessons/angularjs-animating-the-angular-way)
 
 Good luck!
