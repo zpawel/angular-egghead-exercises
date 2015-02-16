@@ -13,7 +13,7 @@
 
     <div class="col-md-3 text-center" ng-repeat="req in ctrl.reqCollection">
         <div class="alert alert-info">{{req.title}}</div>
-        <div class="row btn" ng-click="ctrl.update(req)"><img ng-src="{{req.url}}"></div>
+        <div class="row btn" ng-click="ctrl.update()"><img ng-src="{{req.url}}"></div>
         <p class="panel-heading">{{req.description}}</p>
     </div>
 
@@ -23,7 +23,7 @@
         <label for="title" class="label label-default">Update</label>
         <input type="text" id="title" class="form-control" ng-model="ctrl.requirementCopy.title">
     </div>
-    <div class="btn btn-default" ng-click="ctrl.save()">Save</div>
+    <div class="btn btn-default">Save</div>
 
 </div>
 <script src="../bower_components/angular/angular.js"></script>

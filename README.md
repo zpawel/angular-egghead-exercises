@@ -2,8 +2,8 @@
 Something bad happened to the titles of images. Use angular.copy to updates data when you click on the image.
 
 ###Requirements
-* create **reverseColor** function responsible for switching colors when "Do you want to play?" button was pressed 
-* in **chessboardField** directive you should observe whether the button was clicked, to add or remove class **.field**
+* ***update()*** function should be run when you click on the image
+* ***save()*** function should be run when you click on **Save** button
 
 ###Result
 * you start with
@@ -17,9 +17,7 @@ Something bad happened to the titles of images. Use angular.copy to updates data
 *
 ![alt text](app/assets/afterSave.jpg)
 
- 
-
 ###Before you start, please refer to:
-* [angularjs-animating-the-angular-way](https://egghead.io/lessons/angularjs-animating-the-angular-way)
+* [angularjs-angular-copy-for-deep-copy](https://egghead.io/lessons/angularjs-angular-copy-for-deep-copy)
 
 Good luck!
