@@ -14,7 +14,8 @@ Something bad happened to the titles of images. Use angular.copy to updates data
 
 ![alt text](app/assets/buttonPressed.jpg)
 
-*
+* when you click on **Save** button
+
 ![alt text](app/assets/afterSave.jpg)
 
 ###Before you start, please refer to:
