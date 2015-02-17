@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="reqApp" ng-controller="ReqCtrl as ctrl">
-<div class="container">
+<body>
+<div class="container form-group">
     <div class="page-header">
-        <h1>Requirements analysis</h1>
+        <h1>The Most Famous Paintings
+            <small>in one place</small>
+        </h1>
     </div>
-
-    <div class="col-md-3 text-center" ng-repeat="req in ctrl.reqCollection">
-        <div class="alert alert-info">{{req.title}}</div>
-        <div class="row btn" ng-click="ctrl.update()"><img ng-src="{{req.url}}"></div>
-        <p class="panel-heading">{{req.description}}</p>
+    <div>
+        <ul class="nav nav-justified">
+            <li><a>Paintings Vertical</a></li>
+            <li><a>Start</a></li>
+            <li><a>Paintings Horizontal</a></li>
+        </ul>
     </div>
-
 </div>
-<div class="row form-inline text-center" ng-if="ctrl.updateTitle">
-    <div class="form-group">
-        <label for="title" class="label label-default">Update</label>
-        <input type="text" id="title" class="form-control" ng-model="ctrl.requirementCopy.title">
-    </div>
-    <div class="btn btn-default">Save</div>
+<div class="container"></div>
 
-</div>
 <script src="../bower_components/angular/angular.js"></script>
-<script src="requirements.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="PaintingListCtrl.js"></script>
+<script src="PaintingDetailCtrl.js"></script>
+
 </body>
 </html>
