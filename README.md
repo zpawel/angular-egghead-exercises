@@ -1,24 +1,37 @@
-##Exercise 40 : angular.copy
-Something bad happened to the titles of images. Use angular.copy to updates data when you click on the image.
+##Exercise 51 : $http
+Your task is to use $http service for making requests and handling responses from external web services.
+You start with ready server side:
+* ```get('/songs'...)``` - return list of songs
+* ```get('/favourite_songs'...)``` - return list of favourite songs
+* ```post('/favourite_songs'...)``` - add new favourite song to  **favouriteSongsList**
+* ```delete('/favourite_songs'...)``` - clear list of favourite songs
+
 
 ###Requirements
-* ***update()*** function should be run when you click on the image
-* ***save()*** function should be run when you click on **Save** button
+* don't forget to add to the controller $http service 
+* implement support for queries GET (both) - put data into **songs** and **favouriteSongs** variable
+* complete **addFavouriteSong** and **removeFavouriteSongs** functions
+* when clear button is pressed a list of your favorite songs should be removed
 
 ###Result
-* you start with
+* you start with:
 
-![alt text](app/assets/start.jpg)
+![alt text](app/assets/1.jpg)
 
-* when you click on the image
+* when get request works:
 
-![alt text](app/assets/buttonPressed.jpg)
+![alt text](app/assets/2.jpg)
 
-* when you click on **Save** button
+* add new favourite song
 
-![alt text](app/assets/afterSave.jpg)
+![alt text](app/assets/3.jpg)
+
+###To run server
+* ```npm install```
+* ```cd angular-egghead\app```
+* ```node express.js```
 
 ###Before you start, please refer to:
-* [angularjs-angular-copy-for-deep-copy](https://egghead.io/lessons/angularjs-angular-copy-for-deep-copy)
+* [angularjs-http](https://egghead.io/lessons/angularjs-http)
 
 Good luck!
