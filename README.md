@@ -1,37 +1,27 @@
-##Exercise 51 : $http
-Your task is to use $http service for making requests and handling responses from external web services.
-You start with ready server side:
-* ```get('/songs'...)``` - return list of songs
-* ```get('/favourite_songs'...)``` - return list of favourite songs
-* ```post('/favourite_songs'...)``` - add new favourite song to  **favouriteSongsList**
-* ```delete('/favourite_songs'...)``` - clear list of favourite songs
-
-
+##Exercise 52: transformResponse
+Write function which transform response data from ```https://api.github.com/users``` in accordance with the requirements.
+You start with almost ready **getUser()** function and view, who is responsible for the display the avatar, login, url repository and GitHub user type.
+    
 ###Requirements
-* don't forget to add to the controller $http service 
-* implement support for queries GET (both) - put data into **songs** and **favouriteSongs** variable
-* complete **addFavouriteSong** and **removeFavouriteSongs** functions
-* when clear button is pressed a list of your favorite songs should be removed
+* transform function should return login, type, repository url and avatar url
+* add necessary dependency to **api.js**
 
 ###Result
-* you start with:
+* view
 
 ![alt text](app/assets/1.jpg)
 
-* when get request works:
+* run test from **api.response.spec.js** file
 
-![alt text](app/assets/2.jpg)
-
-* add new favourite song
-
-![alt text](app/assets/3.jpg)
-
-###To run server
+### Test Configuration:
 * ```npm install```
-* ```cd angular-egghead\app```
-* ```node express.js```
+* ```bower install```
+* Run -> Edit Configuration -> Press plus button -> Pick up Node.js
+* set JavaScript file to ```node_modules\karma\bin\karma```
+* set Application parameters to ```start test\karma.conf.js```
 
-###Before you start, please refer to:
-* [angularjs-http](https://egghead.io/lessons/angularjs-http)
+###Before you start:
+* [angularjs-transformresponse](https://egghead.io/lessons/angularjs-transformresponse)
+* run ```bower install``` command
 
 Good luck!

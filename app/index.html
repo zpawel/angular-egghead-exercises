@@ -5,61 +5,46 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="app" ng-controller="AppCtrl as ctrl">
-<div class="container">
+<body ng-app="app">
+<div class="container" ng-controller="controllers.User">
     <div class="page-header">
-        <h1>Requirements analysis</h1>
+        <h1>GitHub Users</h1>
     </div>
-    <div class="col-md-4">
-        <div class="alert alert-info text-center">You might want to listen to:</div>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Artist</th>
-                <th>Title</th>
-                <th>Year</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="song in ctrl.songs">
-                <td>{{song.artist}}</td>
-                <td>{{song.title}}</td>
-                <td>{{song.year}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-8">
-        <form class="form-inline alert alert-info">
-            <div class="form-group">
-                <label class="sr-only" for="artist">Artist</label>
-                <input id="artist" type="text" class="form-control" ng-model="ctrl.favouriteSong.artist" placeholder="Artist"/>
-            </div>
-            <div class="form-group">
-                <label class="sr-only" for="title">Title</label>
-                <input id='title' type="text" class="form-control" ng-model="ctrl.favouriteSong.title" placeholder="Title"/>
-            </div>
-            <div class="btn btn-success" ng-click="ctrl.addFavouriteSong(ctrl.favouriteSong)">Add favourite song</div>
-            <div class="btn btn-danger" ng-click="ctrl.removeFavouriteSongs()">Clear list</div>
-        </form>
+    <table class="table col-md-12">
+        <thead>
+        <tr>
+            <th class="text-center">Avatar</th>
+            <th class="text-center">Login</th>
+            <th class="text-center">Url</th>
+            <th class="text-center">Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="text-center" ng-repeat="user in users">
+            <td>
+                <img ng-src="{{user.avatarUrl}}" width="100"/>
+            </td>
+            <td>
+                <strong>{{user.login}}</strong>
 
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Artist</th>
-                <th>Title</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="song in ctrl.favouriteSongs">
-                <td>{{song.artist}}</td>
-                <td>{{song.title}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+            </td>
+            <td>
+                <a ng-href="{{user.url}}">{{user.url}}</a>
+
+            </td>
+            <td>
+                <span>{{user.type}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="../bower_components/lodash/dist/lodash.js"></script>
+<script type="text/javascript" src="../bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js"></script>
+<script type="text/javascript" src="user-api.js"></script>
+<script type="text/javascript" src="services/api.js"></script>
+<script type="text/javascript" src="services/api-response.js"></script>
+<script type="text/javascript" src="controllers/user.js"></script>
 </body>
 </html>
