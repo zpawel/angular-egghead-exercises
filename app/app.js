@@ -1,0 +1,1 @@
+angular.module('shoes-views', ['shoes-views.women', 'shoes-views.men']);
