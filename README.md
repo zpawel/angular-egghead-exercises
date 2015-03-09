@@ -13,5 +13,7 @@ Implement factory that will allow to share data between **LeftCtrl** and **Right
 
 ###Before you start, please refer to:
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
+* [angularjs-sharing-data-between-controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers)
+
 
 Good luck!
