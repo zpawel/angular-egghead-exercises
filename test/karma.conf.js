@@ -15,13 +15,7 @@ module.exports = function (config)
 
         // list of files / patterns to load in the browser
         files: [
-            'bower_components/angular/angular.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'bower_components/lodash/dist/lodash.js',
-            'bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js',
-            'app/user-api.js',
-            'app/**/*.js',
-            'test/spec/**/*.js'
+            'bower_components/angular/angular.js', 'bower_components/angular-mocks/angular-mocks.js', 'app/app.js', 'app/**/*.js', 'test/spec/**/*.js'
         ],
 
         // list of files / patterns to exclude

@@ -1,17 +1,13 @@
-##Exercise 52: transformResponse
-Write function which transform response data from ```https://api.github.com/users``` in accordance with the requirements.
-You start with almost ready **getUser()** function and view, who is responsible for the display the avatar, login, url repository and GitHub user type.
-    
+##Exercise 58: Testing Controllers With Dependencies
+You start with a ready shop application. Is based on two controllers:
+* **ProductCtrl** with list of products, functions responsible for counting the total price of the order and updating product count
+* **CartCtrl** with two function for adding product to cart and removing product from cart
+Your job is testing **CartCtrl** that uses the functions of **ProductCtrl** 
+  
 ###Requirements
-* transform function should return login, type, repository url and avatar url
-* add necessary dependency to **api.js**
-
-###Result
-* view
-
-![alt text](app/assets/1.jpg)
-
-* run test from **api.response.spec.js** file
+* complete the prepared test cases in **CartCtrl.spec.js** file
+* don't forget to use spies!
+* to not display tests from **ProductCtrl.spec.js** you can add **x** before first describe, like this ```xdescribe```
 
 ### Test Configuration:
 * ```npm install```
@@ -21,7 +17,6 @@ You start with almost ready **getUser()** function and view, who is responsible 
 * set Application parameters to ```start test\karma.conf.js```
 
 ###Before you start:
-* [angularjs-transformresponse](https://egghead.io/lessons/angularjs-transformresponse)
-* run ```bower install``` command
+* [angularjs-testing-controllers-with-dependencies](https://egghead.io/lessons/angularjs-testing-controllers-with-dependencies)
 
 Good luck!
