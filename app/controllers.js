@@ -1,7 +1,11 @@
-function LeftCtrl($scope)
-{
-}
+var app = angular.module('app', []);
 
-function RightCtrl($scope)
+app.controller('LeftCtrl', function LeftCtrl($scope)
 {
-}
+    $scope.enter = {direction: "Oki"};
+});
+
+
+app.controller('RightCtrl', function RightCtrl($scope)
+{
+});
