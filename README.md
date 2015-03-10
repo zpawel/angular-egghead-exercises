@@ -1,26 +1,27 @@
-##Exercise 59: Accessing Data in HTML
-Use your knowledge of the good and the bad practices about accessing Data in HTML and update **transport.js** file.
-There you will find information on the different modes of transport departure (bus, train and plains). You can update **via stop**  bus, add delay trains cancel flights.
+##Exercise 60: Test Simple Binding With Protractor
+Protractor interacts with the application using its element and finder functions. In this application you can increase and decrease temperature. Try to complete two test cases in **index.spec.js** 
 
 ###Requirements
-* remember to add necessary services and controllers (train and bus)
-* avoid using **$scope** and **$rootScope**
-* the application should work the same after changes
+* test plus and minus button behavior
 
-### Result
-* change via stop bus
+###Result
 
 ![alt text](app/assets/1.jpg)
 
-* add train delay
+### Test Configuration:
+* ```npm install -g protractor```
+* ```webdriver-manager update```
+* ```npm install -g httpster```
+* ```bower install```
 
-![alt text](app/assets/2.jpg)
+###Test start
+* you need two terminal windows:
+    * in the first go to the app folder ```cd app``` and run ```httpster``` command
+    * in the second terminal window run tests with ```protractor test/protractor.conf.js```
 
-* cancel flight
-
-![alt text](app/assets/3.jpg)
 
 ###Before you start:
-* [angularjs-accessing-data-in-html](https://egghead.io/lessons/angularjs-accessing-data-in-html)
+* [angularjs-test-simple-binding-with-protractor](https://egghead.io/lessons/angularjs-test-simple-binding-with-protractor)
+* [protractor](http://angular.github.io/protractor/#/)
 
 Good luck!

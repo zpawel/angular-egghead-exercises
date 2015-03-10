@@ -1,105 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="weatherApp">
 <head lang="en">
     <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="app">
-<div class="container">
+<body>
+<div class="container" ng-controller="WeatherCtrl">
+    <div class="page-header">
+        <h1>BBC Weather</h1>
+    </div>
+    <div class="col-md-3">
+        <form>
+            <div class="form-group">
+                <label for="cityId" class="label label-default">City</label>
+                <input type="text" id="cityId" class="form-control" ng-model="newWeather.city">
+            </div>
+            <div class="form-group">
 
-    <!--Bus Timetable-->
+                <label for="tempId" class="label label-default">Temperature</label>
+                <input type="text" id="tempId" class="form-control" ng-model="newWeather.temperature">
+            </div>
+            <div class="form-group">
+
+                <label for="desId" class="label label-default">Describe</label>
+                <input type="text" id="desId" class="form-control" ng-model="newWeather.describe">
+            </div>
+            <div id="addButton" class="btn btn-success" ng-click="addWeather(newWeather)">Add weather</div>
+        </form>
+    </div>
     <div class="col-md-6">
-        <div class="page-header">
-            <h4>Bus Timetable </h4>
-        </div>
-        <table class="table table-condensed">
+        <table id="weatherTable" class="table table-striped table-condensed">
             <thead>
-            <tr class="info">
-                <th>Initial Stop</th>
-                <th>Via Stop</th>
-                <th>Final Stop</th>
-                <th>Departure</th>
-                <th></th>
+            <tr>
+                <th>City</th>
+                <th>Temperature</th>
+                <th>Describe</th>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="bus in busTimetable">
-                <td>{{bus.start}}</td>
-                <td>{{bus.via}}</td>
-                <td>{{bus.stop}}</td>
-                <td>{{bus.departure}}</td>
-                <td>
-                    <div class="btn btn-default btn-sm" ng-click="bus.via = viaStop">Change Via Stop</div>
-                </td>
+            <tr ng-repeat="w in weatherForecast">
+                <td>{{w.city}}</td>
+                <td>{{w.temperature}}</td>
+                <td>{{w.describe}}</td>
             </tr>
             </tbody>
         </table>
-        <label for='via' class="label label-default"> Via Stop </label>
-        <input id='via' class="form-control" type="text" ng-model="viaStop">
-
     </div>
 
-    <!--Train Timetable-->
-    <div class="col-md-6">
+    <div class="col-md-3 text-center">
         <div class="page-header">
-            <h4>Train Timetable </h4>
+            <p>Current temperature</p>
         </div>
-        <table class="table table-condensed">
-            <thead>
-            <tr class="success">
-                <th>Initial Stop</th>
-                <th>Final Stop</th>
-                <th>Departure</th>
-                <th>Delay [min]</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="train in TrainService.trainTimetable">
-                <td>{{train.start}}</td>
-                <td>{{train.stop}}</td>
-                <td>{{train.departure}}</td>
-                <td> {{train.delay}}</td>
-                <td>
-                    <div class="btn btn-default btn-sm" ng-click="TrainService.addDelay(train)"> Add Delay</div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <label for='delay' class="label label-default"> Delay </label>
-        <input id='delay' class="form-control" type="text" ng-model="TrainService.delay">
-    </div>
+        <button id="upButton" type="button" class="btn" ng-click="increaseTemp()">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+        <h1>{{currentTemp + ' °C'}}</h1>
+        <button id="downButton" type="button" class="btn" ng-click="decreaseTemp()">
+            <span class="glyphicon glyphicon-minus"></span>
+        </button>
 
-    <!--Flight Schedule-->
-    <div class="col-md-offset-3 col-md-6" ng-controller='FlightCtrl as flightCtrl'>
-        <div class="page-header">
-            <h4>Flight Schedule </h4>
-        </div>
-        <table class="table table-condensed">
-            <thead>
-            <tr class="active">
-                <th>Airline</th>
-                <th>Destination</th>
-                <th>Scheduled</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="flight in flightSchedule" ng-class="isCancel[$index]">
-                <td>{{flight.airline}}</td>
-                <td>{{flight.destination}}</td>
-                <td>{{flight.scheduled}}</td>
-                <td>
-                    <div class="btn btn-default btn-sm" ng-click="toggleClass($index)"> Cancel</div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 
-<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="transport.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="weather.js"></script>
+
 </body>
 </html>
