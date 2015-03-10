@@ -7,50 +7,99 @@
 
 <body ng-app="app">
 <div class="container">
-    <div class="page-header">
-        <h1>Shopping time
-            <small>again</small>
-        </h1>
-    </div>
-    <div ng-controller="ProductCtrl">
 
-        <div ng-controller="CartCtrl">
-            <div class="col-md-2" ng-repeat="product in productList">
-
-                <div class="list-group-item text-center">
-                    <span class="badge"> {{product.count}}</span>
-                    <img ng-src="{{product.image}}">
-
-                    <p>{{product.name}}</p>
-
-                    <p><strong>{{product.price | currency}}</strong></p>
-
-                    <div class="btn btn-default" ng-click="addToCart(product)">Add to cart</div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel-heading panel-info text-center">
-                    <strong>Total Price: {{totalPrice | currency}}</strong>
-                </div>
-                <div class="panel-body">
-                    <table class="table ">
-
-                        <tr ng-repeat="product in cart track by $index">
-                            <td>{{product.name}}</td>
-                            <td><strong>{{product.price | currency}}</strong></td>
-                            <td><span class="btn glyphicon glyphicon-remove" ng-click="removeFromCart(product)"></span></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+    <!--Bus Timetable-->
+    <div class="col-md-6">
+        <div class="page-header">
+            <h4>Bus Timetable </h4>
         </div>
+        <table class="table table-condensed">
+            <thead>
+            <tr class="info">
+                <th>Initial Stop</th>
+                <th>Via Stop</th>
+                <th>Final Stop</th>
+                <th>Departure</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="bus in busTimetable">
+                <td>{{bus.start}}</td>
+                <td>{{bus.via}}</td>
+                <td>{{bus.stop}}</td>
+                <td>{{bus.departure}}</td>
+                <td>
+                    <div class="btn btn-default btn-sm" ng-click="bus.via = viaStop">Change Via Stop</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <label for='via' class="label label-default"> Via Stop </label>
+        <input id='via' class="form-control" type="text" ng-model="viaStop">
+
+    </div>
+
+    <!--Train Timetable-->
+    <div class="col-md-6">
+        <div class="page-header">
+            <h4>Train Timetable </h4>
+        </div>
+        <table class="table table-condensed">
+            <thead>
+            <tr class="success">
+                <th>Initial Stop</th>
+                <th>Final Stop</th>
+                <th>Departure</th>
+                <th>Delay [min]</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="train in TrainService.trainTimetable">
+                <td>{{train.start}}</td>
+                <td>{{train.stop}}</td>
+                <td>{{train.departure}}</td>
+                <td> {{train.delay}}</td>
+                <td>
+                    <div class="btn btn-default btn-sm" ng-click="TrainService.addDelay(train)"> Add Delay</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <label for='delay' class="label label-default"> Delay </label>
+        <input id='delay' class="form-control" type="text" ng-model="TrainService.delay">
+    </div>
+
+    <!--Flight Schedule-->
+    <div class="col-md-offset-3 col-md-6" ng-controller='FlightCtrl as flightCtrl'>
+        <div class="page-header">
+            <h4>Flight Schedule </h4>
+        </div>
+        <table class="table table-condensed">
+            <thead>
+            <tr class="active">
+                <th>Airline</th>
+                <th>Destination</th>
+                <th>Scheduled</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="flight in flightSchedule" ng-class="isCancel[$index]">
+                <td>{{flight.airline}}</td>
+                <td>{{flight.destination}}</td>
+                <td>{{flight.scheduled}}</td>
+                <td>
+                    <div class="btn btn-default btn-sm" ng-click="toggleClass($index)"> Cancel</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="app.js"></script>
-<script type="text/javascript" src="controllers/ProductCtrl.js"></script>
-<script type="text/javascript" src="controllers/CartCtrl.js"></script>
+<script type="text/javascript" src="transport.js"></script>
 </body>
 </html>
