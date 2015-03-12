@@ -16,7 +16,7 @@ Additionaly, you are supposed to use build-in angular filter to display upper in
 | withoutH  | The Hobbit: The Battle of the Five Armies   | Te obbit: Te Battle of te Five Armies |
 |firstLetterUp|Visit BBC News for up-to-the-minute news, breaking news, video, audio and stories. |Visit Bbc News For Up-To-The-Minute News, Breaking News, Video, Audio And Stories|
 
-###Before you start, please refer to:
+###Before you start
 * [angularjs-filters](https://egghead.io/lessons/angularjs-filters)
 * [docs.angularjs: filter](https://docs.angularjs.org/api/ng/filter)
 * [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
