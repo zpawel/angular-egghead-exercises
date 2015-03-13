@@ -1,12 +1,10 @@
-##Exercise 60: Test Simple Binding With Protractor
-Protractor interacts with the application using its element and finder functions. In this application you can increase and decrease temperature. Try to complete two test cases in **index.spec.js** 
+##Exercise 64: Testing With Protractor Page Objects
+Page Objects abstract the interaction between the browser and functional tests. 
+Create **IndexPage** object that provides API for interacting with the page and test.
 
 ###Requirements
-* test plus and minus button behavior
-
-###Result
-
-![alt text](app/assets/1.jpg)
+* move elements responsible for increase / decrease and display temperature to the **IndexPage** object
+* tests should succeed after refactoring
 
 ### Test Configuration:
 * ```npm install -g protractor```
@@ -21,7 +19,7 @@ Protractor interacts with the application using its element and finder functions
 
 
 ###Before you start:
-* [angularjs-test-simple-binding-with-protractor](https://egghead.io/lessons/angularjs-test-simple-binding-with-protractor)
+* [angularjs-testing-with-protractor-page-objects](https://egghead.io/lessons/angularjs-testing-with-protractor-page-objects)
 * [protractor](http://angular.github.io/protractor/#/)
 
 Good luck!
