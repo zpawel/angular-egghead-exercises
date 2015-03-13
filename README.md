@@ -3,6 +3,7 @@ Protractor interacts with the application using its element and finder functions
 
 ###Requirements
 * test plus and minus button behavior
+* load page before each test case
 
 ###Result
 
