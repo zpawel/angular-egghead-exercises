@@ -3,10 +3,10 @@
 In this application, you are supposed to use ready-made filter options. You start with a ready list of users.
 
 ###Requirements
-* you should be able to sort data by column
 * limit the number of displayed records with the radio choice (default limit should be 15)
+* you should be able to sort data by column
 * create and use ***reverseSort*** function that sort the data ascending and descending
-
+  (take a look at **orderBy** documentation)
 ###Result
 * set limit to **1**
 
