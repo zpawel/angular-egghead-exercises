@@ -2,8 +2,13 @@
     "name": "angular-egghead",
     "version": "0.0.0",
     "dependencies": {
-        "angular": "1.2.16",
-        "bootstrap": "~3.1.1"
+        "angular": "~1.2.16",
+        "bootstrap": "~3.1.1",
+        "angular-resource": "latest",
+        "angular-route": "latest",
+        "lodash": "latest",
+        "async": "~0.2.5",
+        "meld": "latest"
     },
     "devDependencies": {
         "angular-mocks": "1.2.16"
