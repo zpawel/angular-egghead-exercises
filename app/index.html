@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="app">
+<div class="container">
+    <div class="page-header">
+        <h1>Skills</h1>
+    </div>
+    <div class="col-md-8">
+        <pre>
+<xmp>
+    <div class="panel panel-default col-md-2" ng-controller="AppCtrl">
+        <h4>Driver license</h4>
+        <label class="radio-inline">
+            <input type="radio" ng-model="details.licence" value="yes">
+            Yes </label>
+        <label class="radio-inline">
+            <input type="radio" ng-model="details.licence" value="no">
+            No </label>
+
+        <h4>Language</h4>
+
+        <select ng-model="details.language" ng-options="language for language in languages">
+        </select>
+
+        <pre>Licence: {{details.licence}}</pre>
+        <pre>Language: {{details.language}}</pre>
+    </div>
+</xmp>
+     </pre>
+    </div>
+
+    <div class="panel panel-default col-md-4" ng-controller="AppCtrl">
+        <h4>Driver license</h4>
+
+        <label class="radio-inline">
+            <input type="radio" ng-model="details.licence" value="yes">
+            Yes </label>
+        <label class="radio-inline">
+            <input type="radio" ng-model="details.licence" value="no">
+            No </label>
+        <h4>Language</h4>
+
+        <label>
+            <select class="form-control" ng-model="details.language" ng-options="language for language in languages">
+            </select>
+        </label>
+        <pre>Licence: {{details.licence}}</pre>
+        <pre>Language: {{details.language}}</pre>
+    </div>
+</div>
+
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

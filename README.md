@@ -1,25 +1,26 @@
-##Exercise 66: Custom Jasmine Matchers 
-Matcher is a comparison function that takes an actual value and expected value. Create your own matchers to test **addition** function from **CalculatorCtrl**
+##Exercise 67: Accessing Scope from The Console
+Use Chrome Dev Tools console to to programmatically grab scopes and modify data. 
 
 ###Requirements
-* create three matchers in **CalculatorCtrl.spec.js** file :
-    * ***isEvenNumber()*** - checks if the number is an even number
-    * ***isOddNumber()*** - checks if the number is an odd number
-    * ***isGreaterThanTen()*** - checks if the number is greater than 10
+* grab appropriate scope and then: 
+    * change **licence** radio choice to **no** 
+    * change **language** select to **German**
+* selected data should be displayed below the elections
 
 ###Result
-* messages on failure test
+* start view
 
-![alt text](app/assets/test.jpg)
+![alt text](app/assets/1.jpg)
 
-### Test Configuration:
-* ```npm install```
-* ```bower install```
-* Run -> Edit Configuration -> Press plus button -> Pick up Node.js
-* set JavaScript file to ```node_modules\karma\bin\karma```
-* set Application parameters to ```start test\karma.conf.js```
+* correct result
+
+![alt text](app/assets/2.jpg)
+
+* incorrect result
+
+![alt text](app/assets/3.jpg)
 
 ###Before you start, please refer to:
-* [angularjs-custom-jasmine-matchers](https://egghead.io/lessons/angularjs-custom-jasmine-matchers)
+* [angularjs-accessing-scope-from-the-console](https://egghead.io/lessons/angularjs-accessing-scope-from-the-console)
 
 Good luck!
