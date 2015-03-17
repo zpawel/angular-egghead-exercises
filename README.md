@@ -1,33 +1,25 @@
-##Exercise 65: Using $resource for Data Models
-This time, the application simulates the recruitment for swimming lessons. Your task will be implement functionality to add, edit or delete the participant.
+##Exercise 66: Custom Jasmine Matchers 
+Matcher is a comparison function that takes an actual value and expected value. Create your own matchers to test **addition** function from **CalculatorCtrl**
 
 ###Requirements
-* create ***Participant*** provider
-    * using endpoint ```http://localhost:3000/api/participant/:_id```
-    * with ***updateParticipant()*** method
-* complete **ParticipantCtrl** with necessary dependencies
-* create four functions responsible for responsible for adding, editing, deleting:
-    * ***newParticipant()*** - create new participant
-    * ***updateParticipant()*** - update participant data on $scope
-    * ***saveParticipant()*** - add new participant or edit participant if exists
-    * ***deleteParticipant()*** -remove selected participant
-    * participants are storage in **participantList*** variable
-     
-###Result
-    
-  ![alt text](app/assets/1.jpg)
+* create three matchers in **CalculatorCtrl.spec.js** file :
+    * ***isEvenNumber()*** - checks if the number is an even number
+    * ***isOddNumber()*** - checks if the number is an odd number
+    * ***isGreaterThanTen()*** - checks if the number is greater than 10
 
-###Aplication start
-* [install MongoDB](http://docs.mongodb.org/manual/installation/)
+###Result
+* messages on failure test
+
+![alt text](app/assets/test.jpg)
+
+### Test Configuration:
 * ```npm install```
 * ```bower install```
-* you need three terminal windows:
-    * in the first start mongoDB
-    * in the second go to ```/server``` folder and run ```node serer.js```
-    * in the second run ```grunt serve```
-    
+* Run -> Edit Configuration -> Press plus button -> Pick up Node.js
+* set JavaScript file to ```node_modules\karma\bin\karma```
+* set Application parameters to ```start test\karma.conf.js```
 
-###Before you start:
-* [angularjs-using-resource-for-data-models](https://egghead.io/lessons/angularjs-using-resource-for-data-models)
+###Before you start, please refer to:
+* [angularjs-custom-jasmine-matchers](https://egghead.io/lessons/angularjs-custom-jasmine-matchers)
 
 Good luck!
