@@ -1,5 +1,4 @@
 ##Exercise 2 : Controller
-
 Applications often need to display value that user have entered. You are provided with simple view containing title, three inputs and display board. Your task is to
 implement functionality that will allow inputs to be displayed along with the information on the title and board.
 
