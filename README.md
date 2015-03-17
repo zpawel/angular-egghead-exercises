@@ -1,5 +1,4 @@
 ##Exercise 1 : Binding
-
 Application displays three inputs and the artists table. In table, each class attribute of the row is binded to one of the input values by order.
 
 ###Requirements
