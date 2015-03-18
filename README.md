@@ -1,26 +1,22 @@
-##Exercise 67: Accessing Scope from The Console
-Use Chrome Dev Tools console to to programmatically grab scopes and modify data. 
+##Exercise 68: Accessing Services from Console
+Using the Chrome console, you can access your injectable services. Use this knowledge to get around the validation of fields in a form, where you can add your favorite songs
 
 ###Requirements
-* grab appropriate scope and then: 
-    * change **licence** radio choice to **no** 
-    * change **language** select to **German**
-* selected data should be displayed below the elections
+* check in an **app.js** which service is responsible for adding favorite dong
+* add a blank record without artist and title 
+* after performing surgery on your console, refresh the page to see the result
 
 ###Result
-* start view
 
-![alt text](app/assets/1.jpg)
+![alt text](app/assets/1.png)
 
-* correct result
 
-![alt text](app/assets/2.jpg)
+###To run server
+* ```npm install```
+* ```cd angular-egghead\app```
+* ```node express.js```
 
-* incorrect result
-
-![alt text](app/assets/3.jpg)
-
-###Before you start, please refer to:
-* [angularjs-accessing-scope-from-the-console](https://egghead.io/lessons/angularjs-accessing-scope-from-the-console)
+###Before you start:
+* [angularjs-accessing-services-from-the-chrome-console](https://egghead.io/lessons/angularjs-accessing-services-from-the-chrome-console)
 
 Good luck!

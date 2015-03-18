@@ -1,0 +1,4 @@
+#!/bin/sh
+ var $injector = angular.element($0).injector()
+ var songService = $injector.get('songService')
+ songService.add({artist: '', title : ''})
