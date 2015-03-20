@@ -1,10 +1,10 @@
-var snowApp = angular.module("snowApp", []);
+var app = angular.module('app', []);
 
-snowApp.controller("SnowCtrl", function ($scope)
+app.controller('SnowCtrl', function ($scope)
 {
-    <!--snow array-->
-    <!--addPetal function-->
-    <!--removePetal function-->
+//    <!--snow array-->
+//    <!--addPetal function-->
+//    <!--removePetal function-->
 });
 
-<!-- add enter directive-->
+//<!-- add enter directive-->
