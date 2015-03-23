@@ -1,4 +1,6 @@
-var animalApp = angular.module("animalApp", []);
+'use strict';
+
+var animalApp = angular.module('animalApp', []);
 
 animalApp.directive('animal', function ()
 {
@@ -7,7 +9,7 @@ animalApp.directive('animal', function ()
         scope: {
             name: '@'
         },
-        template:'<div class="col-md-4">' +
+        template: '<div class="col-md-4">' +
                 '<h3>{{name}}</h3>' +
                 '<div>' +
                 '<div ng-switch on="name">' +
