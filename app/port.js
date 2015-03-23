@@ -19,6 +19,7 @@ app.controller('shipCtrl', function ($scope, WeatherConditions)
             default:
                 return false;
         }
+        return false;
     };
 
 //  weatherConditions represent actual conditions API object. Use getCurrentConditions() method to receive current conditions
