@@ -1,21 +1,22 @@
-var app = angular.module("boxApp", []);
+'use strict';
+var app = angular.module('boxApp', []);
 
-app.controller("BoxCtrl", function ($scope)
+app.controller('BoxCtrl', function ($scope)
 {
     $scope.showInside = function (size, name, color)
     {
-        alert("My name is : " + name + ". I'm " + size + " and " + color)
-    }
+        alert('My name is : ' + name + '. I am ' + size + ' and ' + color);
+    };
 });
 
-app.directive("box", function ()
+app.directive('box', function ()
 {
     return {
-        restrict: "E",
+        restrict: 'E',
         scope: {
-            color: "=",
-            size: "@",
-            open: "&"
+            color: '=',
+            size: '@',
+            open: '&'
         },
 
         template: '<div class="col-md-4"><div class="panel panel-default">' +
@@ -27,7 +28,7 @@ app.directive("box", function ()
                 '<label for="color" class="label label-default">Color</label>' +
                 '<select id="color" class="form-control"></select></div>' +
                 '<div class="form-group text-center"> ' +
-                '<div class="btn btn-default">Tell me about yourself!</div></div>'+
+                '<div class="btn btn-default">Tell me about yourself!</div></div>' +
                 '<div class="form-group"> ' +
                 '<label for="size" class="label label-default">Size</label>' +
                 '<h3 id="size"></h3>' +
@@ -36,9 +37,9 @@ app.directive("box", function ()
 
         link: function (scope)
         {
-            scope.name = "Box";
-            scope.colors = ["red", "green", "blue"];
+            scope.name = 'Box';
+            scope.colors = ['red', 'green', 'blue'];
             scope.color = scope.colors[0];
         }
-    }
+    };
 });
