@@ -2,7 +2,7 @@
 
 var app = angular.module('app', []);
 
-app.controller('appCtrl', function ($scope)
+app.controller('AppCtrl', function ($scope)
 {
     var sweets = ['Sugar Daddy', 'Nerds', 'Jawbreakers', 'Starburst', 'Milky Way', 'Skittles', 'Jelly Belly'];
     var cakes = ['Banoffee pie', 'Brownie', 'Butter cake', 'Chocolate cake', 'Cupcake', 'Karpatka'];
