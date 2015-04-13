@@ -5,7 +5,7 @@ Implement directive that will allow to set size of box in each form, set color i
 
 ###Requirements
 * use ***size***, ***color***, ***open*** as names of isolated scope properties 
-* color should be set using **<select>**
+* color should be set using **select**
 * **Tell me about yourself!** button should call **showInside** function
 * display size of the box in correct place
 * the size of the displayed box should change - add appropriate attribute to ```ng-style="{\'background-color\':color}"``` 
