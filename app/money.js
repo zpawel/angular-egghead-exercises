@@ -11,7 +11,7 @@
       scope: {
         forWhat: '@', howMany: '='
       },
-      template: '<label for="devote" class="label label-default">How much to devote</label>\n<select ng-model="howMany" id="devote" ng-options="proposal for proposal in proposals" class="form-control form-group"></select>\n<div class="text-center">\n    <button class="btn btn-default">{{forWhat || "For poor pets"}}</button> \n    <div ng-show="isContentVisible">\n        <!--here display values-->\n    </div>\n</div>',
+      template: '<label for="devote" class="label label-default">How much to devote</label>\n<select ng-model="howMany" id="devote" ng-options="proposal for proposal in proposals" class="form-control form-group"></select>\n<div class="text-center">\n    <button class="btn btn-default">{{forWhat || "For poor pets"}}</button>\n    <!--here display content from index.html-->\n    <strong ng-show="isContentVisible">\n        <!--here display message-->\n    </strong>\n</div>',
       link: function (scope)
       {
         scope.proposals = [10, 20, 30, 40, 50, 60];
