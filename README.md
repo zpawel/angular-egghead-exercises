@@ -1,6 +1,6 @@
-##Exercise 17 : An alternative approach to controllers
+##Exercise 17: An alternative approach to controllers
 
-Application is supposed to be using a function assigned to certain controller, not the $scope. You are given a task to implement such functionality according
+An alternative approach to controllers assumes that function should be assigned to controller, not to the $scope. You task is to implement functionality according
 to the regulations below.
 
 ###Requirements
