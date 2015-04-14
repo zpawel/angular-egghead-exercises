@@ -2,36 +2,32 @@
 <html>
 <head lang="en">
     <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="templateUrl">
+<body ng-app="app">
 <div class="container">
     <div class="page-header">
-        <h1>TemplateUrl</h1>
+        <h1>Template is a cool thing</h1>
     </div>
     <div>
-        <script type="text/ng-template" id="urlTemplate.html">
-            <div>
-                <button ng-click="content()" class="btn btn-info" ng-if="isTitleVisible(title)">
-                    {{title}} </button>
-                <div ng-show="isContentVisible">
-                    <div ng-if="'secret'!==title">The data is: {{data}}</div>
-                    <!--some secret-->
-                    <div class="text-success" ng-if="'secret'===title">Good, work you display this secret</div>
-                </div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" ng-model="title" placeholder="Title">
             </div>
-        </script>
-        <label for="title">Title</label>
-        <input id="title" type="text" ng-model="title">
-        <label for="content">Content</label>
-        <input id="content" type="text" ng-model="content">
-        <url title="{{title}}" data="{{content}}"></url>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <input type="text" class="form-control" id="content" ng-model="content" placeholder="Content">
+            </div>
+            <url title="{{title}}" data="{{content}}"></url>
+        </form>
+
     </div>
 </div>
 
 
-<script src="../bower_components/angular/angular.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="templateUrl.js"></script>
 </body>
 </html>
