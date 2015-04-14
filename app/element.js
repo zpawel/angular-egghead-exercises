@@ -1,23 +1,23 @@
-(function () {
-    'use strict';
+'use strict';
 
-    var element = angular.module('elementApp', []);
+var element = angular.module('elementApp', []);
 
-    element.directive('findElement', function () {
-        var element;
+element.directive('findElement', function ()
+{
 
-        var link = function (scope) {
+    //create link function
+    var link = function (scope)
+    {
 
-        };
+    };
 
-        return {
-            restrict: 'E',
-            replace: true,
-            template: '<div> <input class="form-control" type="text" ng-model="input"></div>',
-            compile: function (templateElement) {
+    return {
+        replace: true,
+        template: '<div> <input class="form-control" type="text" ng-model="input"></div>',
+        compile: function (templateElement)
+        {
 
-            }
-        };
-    });
+        }
+    };
+});
 
-})();
