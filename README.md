@@ -7,6 +7,7 @@ In this application, you are supposed to use ready-made filter options. You star
 * you should be able to sort data by column
 * create and use ***reverseSort*** function that sort the data ascending and descending
   (take a look at **orderBy** documentation)
+
 ###Result
 * set limit to **1**
 
