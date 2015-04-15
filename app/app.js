@@ -1,25 +1,19 @@
 (function ()
 {
-  'use strict';
+    'use strict';
 
-  var provider = angular.module('provider', ['ngRoute']);
+    var app = angular.module('app', []);
 
-  provider.config(function ($routeProvider)
-  {
-    //write routing
-    $routeProvider.when('/', {
-      controller: 'routing', templateUrl: 'home.html'
-    });
-  });
+    //add routing
 
-  provider.controller('routing', function ($scope)
-  {
-    $scope.$root.condition = true;
-
-    this.display = function ()
+    app.controller('routeCtrl', function ($scope)
     {
-      this.message = this.message ? '' : 'I came from a controller';
-    };
-    $scope.routing = this;
-  });
+        $scope.$root.condition = true;
+
+        this.display = function ()
+        {
+            this.message = this.message ? '' : 'I came from a routeCtrl';
+        };
+        $scope.routing = this;
+    });
 })();

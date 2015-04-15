@@ -1,18 +1,28 @@
 ##Exercise 24 : $routeProvider
 
+Configure routing to display **home.html** page
 
-##The goal
-Is needed the application that displays **home** page. Configure routing.
+###Requirements
+ * configure the routing to at display **home.html** page with **message** from controller at ***/***
+ * DON'T change **home.html** file and **routeCtrl**
 
+###Result
+* start view
 
-####Requirements
- * Correct added components **ngRoute** from **bower_components** to ```application and module```
- * Configure the routing so that at ***/*** was displayed **home.html** page with **message** from controller,
- * You can NOT change ```home.html and controller in app.js```
+![alt text](app/assets/1.png "1")
+
+* after adding the routing
+
+![alt text](app/assets/2.png "2")
+
 
 ###Before you start, please refer to:
-* [ngView](https://egghead.io/lessons/angularjs-ng-view)
-* and again install bower ```bower install```
-* and please attention **AngularJS 1.2.x Routing Changes: ngRoute** under movie
+* [angularjs-ng-view](https://egghead.io/lessons/angularjs-ng-view)
+
+###ngRoute
+* run ```bower install``` command
+* pay attention on **AngularJS 1.2.x Routing Changes: ngRoute** below the movie
+* add **angular-route.js** from **bower_components** to index.html 
+* add **ngRoute** dependency to application 
 
 Good luck!
