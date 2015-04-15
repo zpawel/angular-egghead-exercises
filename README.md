@@ -1,32 +1,48 @@
 ##Exercise 25 : $routeProvider
 
-##The goal
-Application should displays inputs and their value. Views and controller are ready.
+Use knowledge about elements as **$routeProvider**, **$routeParams** and **redirectTo** to create routing according to the requirements.
+Views and controllers are ready (don't change them).
 
-####Requirements
- * You need configure routing so as to a default page was **home.html**
-
-  ![Default view](images/defaultView.png)
-
- * I must write some value to *```both inputs, only should become redirect```*
- * And I click ```Next step``` should be redirect to **display.html**
-
- ![Default view](images/displayValue.png)
-
- * On this view you should display values from inputs.
- * When I wrote in the *```some input secret I should redirect to secret page```*
-
- ![Default view](images/writeSecret.png)
+###Requirements
+ * default page is **home.html**
+ * **brand** and **capacity** from inputs are used as route params (take a look at home.html **Next step** button)
+ * **Next step** button should redirect to **details.html** page (path should start with **details/**)
+ * if in any field (brand or capacity) is entered word ***secret*** you should redirect to **secret.html** page
+ * **hint** : check that the path of contains the word **secret** (you can split the path)
+ * use in secretPage you can use **homeCtrl**
  
- ![Default view](images/secretPage.png)
+###Results
 
- * You can NOT change views and controller.
+* without routing
+
+![alt text](app/assets/0.png "0")
+
+* after correctly adding the default page
+
+![alt text](app/assets/1.png "1")
+
+* after pressing the "Next step" button
+
+![alt text](app/assets/2.png "2")
+
+![alt text](app/assets/3.png "3")
+
+* after typing the word 'secret' in any field and pressing **Next step** button
+
+![alt text](app/assets/4.png "4")
+
+![alt text](app/assets/5.png "5")
+
+![alt text](app/assets/6.png "6")
+
 
 ###Before you start, please refer to:
-* [routeProvider api](https://egghead.io/lessons/angularjs-routeprovider-api)
-* [routeParams](https://egghead.io/lessons/angularjs-routeparams)
-* [redirectTo](https://egghead.io/lessons/angularjs-redirectto)
-* type ```bower install``` in console to download required dependencies
+* [angularjs-routeprovider-api](https://egghead.io/lessons/angularjs-routeprovider-api)
+* [angularjs-routeparams](https://egghead.io/lessons/angularjs-routeparams)
+* [angularjs-redirectto](https://egghead.io/lessons/angularjs-redirectto)
+
+###ngRoute
+* run ```bower install``` command to download required dependencies
 
 
 Good luck!

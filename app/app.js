@@ -1,18 +1,23 @@
 (function ()
 {
-  'use strict';
+    'use strict';
 
-  var provider = angular.module('provider', ['ngRoute']);
+    var app = angular.module('app', ['ngRoute']);
 
-  provider.config(function ()
-  {
+    // add routing here
 
-  });
+    app.controller('appCtrl', function ($scope, $routeParams)
+    {
+        $scope.$root.condition = true;
+        $scope.brand = $routeParams.brand;
+        $scope.capacity = $routeParams.capacity;
+    });
 
-  provider.controller('appCtrl', function ($scope, $routeParams)
-  {
-    $scope.$root.condition = true;
-    $scope.brand = $routeParams.brand;
-    $scope.capacity = $routeParams.capacity;
-  });
+    app.controller('routeCtrl', function ($scope, $routeParams)
+    {
+        $scope.$root.condition = true;
+        $scope.brand = $routeParams.brand;
+        $scope.brand = $routeParams.brand;
+        $scope.capacity = $routeParams.capacity;
+    });
 })();
