@@ -2,24 +2,52 @@
 <html>
 <head lang="en">
     <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="provider">
-<div class="container">
+<body ng-app="app">
+<div class="container text-center" ng-controller="orderCtrl">
     <div class="page-header">
-        <h1 class="text-left">
-            Exercise promise.
-            <small class="center-block">welcome to our shop.</small>
+        <h1> Welcome to our shop
+            <small>How can we help you?</small>
         </h1>
     </div>
-    <div>
-        <ng-view></ng-view>
-        <h1 class="text-danger text-center" ng-if="!error">Bad redirect move to display page.</h1>
+    <div class="col-md-offset-1 col-md-3">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" ng-model="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" ng-model="quantity" placeholder="Quantity">
+            </div>
+            <div ng-if="added" class="text-success">
+                Successfully added!
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-info" ng-click="addOrder(name,quantity)"><i class="glyphicon glyphicon-plus-sign"></i> Add to order</button>
+            </div>
+        </form>
     </div>
+
+
+    <div class="col-md-offset-1 col-md-6">
+        <table class="table table-bordered">
+            <tr>
+                <th class="text-center">Order</th>
+                <th class="text-center">Quantity</th>
+            </tr>
+            <tr ng-repeat="name in orders.name track by $index">
+                <td> {{name}}</td>
+                <td> {{orders.quantity[$index]}}</td>
+            </tr>
+        </table>
+        <button class="btn btn-success" ng-click="success()"><i class="glyphicon glyphicon-circle-arrow-down"></i> Resolve</button>
+    </div>
+
 </div>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
-<script src="app.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="order.js"></script>
 </body>
 </html>
