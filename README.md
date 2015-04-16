@@ -1,31 +1,39 @@
 ##Exercise 27 : resolve $routeChangeError
 
+The purpose of the application is to process data from erroneously solved routing from promise. When in the order is filled only 'name' filed, **$routeChangeError** should react with error message. 
 
-##The goal
-The application is to process data from erroneously solved routing from promise
+###Requirements
+ * don't change views
+ * create **error** function that use **reject** method on **productCatch**
+ * add **resolve** property to appropriate routing
+ * add **$routeChangeError** to **OrderCtrl**
+ * put all information about product in **rejectProduct**
+ * if **quantity** or **price** are empty:
+    * set **class** on scope to ```alert alert-danger```
+    * set **message** on scope like in **Results**
+    * cost of product should be 0
+ * if **quantity** and **price** are fill:
+     * set **class** on scope to ```alert alert-success```
+     * set **message** on scope like in **Results**
+     * cost of product should be calculated 
 
-####Requirements
- * You can NOT change views
- * Add to resolve promises to routing when path indicated to **propertyOrder.html**
- * In resolve this promise you should use method *```reject```* with **productCatch**
- * In main controller you must catch this data from *```$rootScope```*
- * When *```name is incorrect you should redirect to default page```*.
+###Results
+* start view
 
-  ![Incorrect name](images/incorrectName.png "Incorrect name")
+![alt text](app/assets/1.png "1")
 
- * And when name is correct but *```quantity and price is NOT correct you should display message 'You give wrong data' with class 'alert alert-danger```*
+* **quantity** or **price** are empty
 
- ![You should\'ve seen this when quantity or price is incorrect](images/incorrect.png "You should\'ve seen this when quantity or price is incorrect")
+![alt text](app/assets/2.png "2")
 
- * When is all correct you should display *```message 'You give correct data' with class alert alert-success and set cost in rejectProduct [quantity*price] and his name```* (hint:quantity may NOT be a fraction)
+*  **quantity** and **price** are fill
 
-  ![You should\'ve seen this when all the data are correct](images/correctData.png "You should\'ve seen this when all the data are correct")
+![alt text](app/assets/3.png "3")
 
+![alt text](app/assets/4.png "4")
+ 
 ###Before you start, please refer to:
-* [resolve conventions](https://egghead.io/lessons/angularjs-resolve-conventions)
-* [routeChangeError](https://egghead.io/lessons/angularjs-resolve-routechangeerror)
-* [location path](https://docs.angularjs.org/api/ng/service/$location)
-
-
+* [angularjs-resolve-conventions](https://egghead.io/lessons/angularjs-resolve-conventions)
+* [angularjs-resolve-routechangeerror](https://egghead.io/lessons/angularjs-resolve-routechangeerror)
 
 Good luck!

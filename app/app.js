@@ -2,18 +2,18 @@
 {
     'use strict';
 
-    var provider = angular.module('provider', ['ngRoute']);
+    var app = angular.module('app', ['ngRoute']);
 
-    provider.config(function ($routeProvider)
+    app.config(function ($routeProvider)
     {
         $routeProvider.when('/', {
-            templateUrl: 'propertyProduct.html', controller: 'catchErrorCtrl'
+            templateUrl: 'product.html', controller: 'catchErrorCtrl'
         });
         $routeProvider.when('/order', {
-            templateUrl: 'propertyOrder.html'
+            templateUrl: 'order.html'
         });
         $routeProvider.when('/displayOrder', {
-            templateUrl: 'propertyOrder.html'
+            templateUrl: 'order.html'
         });
 
         $routeProvider.otherwise({
@@ -22,15 +22,20 @@
     });
 
     var productCatch;
-    provider.controller('catchErrorCtrl', function ($scope)
+
+    app.controller('catchErrorCtrl', function ($scope)
     {
+        $scope.product = {name: 'tomato soup'};
+
         $scope.$watch('product', function (newValue)
         {
             productCatch = newValue;
         });
     });
-    provider.controller('appCtrl', function ($rootScope, $location, $scope)
+
+    app.controller('OrderCtrl', function ($rootScope, $location, $scope)
     {
+
         $scope.rejectProduct = {};
 
     });
