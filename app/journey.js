@@ -1,65 +1,56 @@
-var journeyApp = angular.module("journeyApp", ["ngRoute"]);
+'use strict';
 
-journeyApp.config(function ($routeProvider, $locationProvider)
+var journeyApp = angular.module('journeyApp', ['ngRoute']);
+
+journeyApp.config(function ($routeProvider)
 {
     $routeProvider.when('/', {
-        templateUrl: "start.html",
-        controller: "StartCtrl"
+        templateUrl: 'start.html', controller: 'StartCtrl'
     }).when('/home', {
-        templateUrl: 'home.html',
-        controller: "HomeCtrl",
-        resolve: {
+        templateUrl: 'home.html', controller: 'HomeCtrl', resolve: {
             loadData: StartCtrl.loadHome
         }
     }).when('/forest', {
-        templateUrl: 'forest.html',
-        controller: "ForestCtrl",
-        resolve: {
+        templateUrl: 'forest.html', controller: 'ForestCtrl', resolve: {
             loadData: StartCtrl.loadForest
         }
     }).otherwise({
         redirectTo: '/'
-    })
+    });
 });
 
-journeyApp.controller("JourneyCtrl", function ($scope, $rootScope, $route, $location)
+journeyApp.controller('JourneyCtrl', function ($scope, $rootScope)
 {
-    $scope.things = [
-        {name: "basket" },
-        {name: "chicken"},
-        {name: "apples"},
-        {name: "phone"},
-        {name: "matches"}
-    ];
+    $scope.things = [{name: 'basket'}, {name: 'chicken'}, {name: 'apples'}, {name: 'phone'}, {name: 'matches'}];
     $scope.data = {selectedThing: $scope.things[0].name};
 
-    $rootScope.$on("$routeChangeStart", function (event, current, previous, resolve)
+    $rootScope.$on('$routeChangeStart', function ()
     {
-        <!-- set start message-->
+        // set start message
 
     });
-    $rootScope.$on("$routeChangeSuccess", function (event, current, previous, resolve)
+    $rootScope.$on('$routeChangeSuccess', function (event, current)
     {
 
-        if (undefined != current.locals.loadData) {
-            <!-- set mission-->
+        if (undefined !== current.locals.loadData) {
+            // set mission
         }
     });
 });
 
-var StartCtrl = journeyApp.controller("StartCtrl", function ($scope, $route, $location, $timeout)
+var StartCtrl = journeyApp.controller('StartCtrl', function ($scope, $route, $location, $timeout)
 {
-    <!--set alert message-->
+    // set alert message
 });
 
-journeyApp.controller("HomeCtrl", function ($scope, loadData, $template)
+journeyApp.controller('HomeCtrl', function ($scope, loadData)
 {
-    <!-- set controller message-->
+    // set controller message
 });
 
-journeyApp.controller("ForestCtrl", function ($scope, loadData, $template)
+journeyApp.controller('ForestCtrl', function ($scope, loadData)
 {
-    <!-- set controller message-->
+    // set controller message
 });
 
 StartCtrl.loadHome = function ($q, $timeout)
@@ -68,8 +59,7 @@ StartCtrl.loadHome = function ($q, $timeout)
     $timeout(function ()
     {
         defer.resolve({
-            message: "...in the kitchen.",
-            space: "Kitchen"
+            message: '...in the kitchen.', space: 'Kitchen'
         });
     }, 500);
     return defer.promise;
@@ -81,8 +71,7 @@ StartCtrl.loadForest = function ($q, $timeout)
     $timeout(function ()
     {
         defer.resolve({
-            message: "...in the deep, deep wood.",
-            space: "Wood"
+            message: '...in the deep, deep wood.', space: 'Wood'
         });
     }, 500);
     return defer.promise;

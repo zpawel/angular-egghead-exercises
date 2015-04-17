@@ -1,6 +1,5 @@
 ##Exercise 29 : Route Life Cycle
 
-###The goal
 You start with the ready view, where you will find two missions and an object which you can take with you.
 When you select a mission, it should display an alert message for two seconds. Then you will be redirected to the appropriate page of the mission.
 
@@ -14,11 +13,11 @@ When you select a mission, it should display an alert message for two seconds. T
 ###Result
 * when the mission was chosen
 
-![alt text](app/assets/chosenMission.jpg "chosen mission")
+![alt text](app/assets/1.png "1" )
 
 * after redirecting
 
-![alt text](app/assets/resultPage.jpg "result page")
+![alt text](app/assets/2.png "2")
 
 ###Before you start, please refer to:
 * [angularjs-route-life-cycle](https://egghead.io/lessons/angularjs-route-life-cycle)
