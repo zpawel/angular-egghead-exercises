@@ -1,30 +1,32 @@
-var wayApp = angular.module("wayApp", ["ngRoute"]);
+'use strict';
+
+var wayApp = angular.module('wayApp', ['ngRoute']);
 
 wayApp.config(function ($routeProvider) {
     $routeProvider.when('/',
         {
-            templateUrl: "way.html",
-            controller: "WayCtrl"
+            templateUrl: 'way.html',
+            controller: 'WayCtrl'
 
         }).when('/error', {
-            templateUrl: "way.html",
-            controller: "WayCtrl",
+            templateUrl: 'way.html',
+            controller: 'WayCtrl',
             resolve: {
                 loadData: wayApp.error
             }
         }).when('/success', {
-            templateUrl: "rightWay.html",
-            controller: "WayCtrl",
+            templateUrl: 'rightWay.html',
+            controller: 'WayCtrl',
             resolve: {
                 loadData: wayApp.success
             }
-        })
+        });
 });
 
-<!-- add error directive here-->
+// add error directive here
 
-var WayCtrl = wayApp.controller("WayCtrl", function ($scope, $route) {
-    $scope.alertMessage = "You choose the right way! :)";
+var WayCtrl = wayApp.controller('WayCtrl', function ($scope, $route) {
+    $scope.alertMessage = 'You choose the right way! :)';
 });
 
 WayCtrl.error = function ($q, $timeout) {
