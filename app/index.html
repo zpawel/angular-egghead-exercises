@@ -2,21 +2,50 @@
 <html>
 <head lang="en">
     <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="carService">
+<body ng-app="app">
 <div class="container">
     <div class="page-header">
         <h1>Car service.
             <small>Cheap parts.</small>
         </h1>
     </div>
-    <ng-view></ng-view>
-    <h1 class="text-center text-danger" ng-if="!view">You wrong display page use <strong>ng-view</strong></h1>
+    <div ng-controller="carPartsCtrl">
+        <div class="col-md-3 row text-left">
+            <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                You need one thing from the list</p>
+
+            <div class="radio">
+                <ul class="list-unstyled">
+                    <li ng-repeat="list in lists">
+                        <label for="option">{{list.name}} </label>
+                        <input id="option" type="radio" ng-model="data.part" name="part" value="{{list.name}}" required/>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn-default" ng-click="chooseCarPart()">Choose</a>
+        </div>
+        <div class="text-center col-md-5" ng-show="show">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>You choose: <strong class="text-danger">{{carPart}}</strong></p>
+                    <h4>Now please wait a moment...</h4>
+
+                    <div>
+                        <button class="btn btn-danger" ng-click="checkNow()"><i class="glyphicon glyphicon-time"></i> I can't wait, check it now!</button>
+                        <button class="btn btn-success" ng-click="wait()"><i class="glyphicon glyphicon-time"></i> I can wait 3 seconds</button>
+                    </div>
+                    <div ng-class="messageClass" ng-if="result">
+                        <h4>{{resultInvoke}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="carService.js"></script>
 </body>
 </html>
