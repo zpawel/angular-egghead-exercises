@@ -1,28 +1,33 @@
 ##Exercise 31 : Injectors
 
-###The goal
-Application was wrote by NOT experienced web developer and he call
-the variable how he want which caused a lot of mistakes and lack of
-appropriate relevant parameters in controllers....we do NOT want to rewrite the application.
-Can you help us??
+In this simple application - the customer selects the required part of his car and then decides whether to wait for parts or check their availability.
+Implement **checkNow()** and **wait()** function using **$injector** 
 
+###Requirements
+  * if the client decides to wait ( **I can wait 3 seconds** ) use a function that turns all the products available
+  * when button **I can't wait, check it now!** was clicked, it should use a function that returns the 'availability' chosen car part
+  * display **This part is available and is very cheap** message if part is available .
+  * when part is NOT available you should display  **This part is NOT available and is very expensive...** message
 
-####Requirements
-  * You can NOT change definition the arguments list which were defined can NOT be change in controllers and view.
-  * You have to complete methods **set** and **setToTrue** in service listParts.
-   Method set should available to toggle car parts in list and return this,
-   **setToTrue** should returns true in every time, but data should be saved in correct part
-  * When You click **I can't wait, check it now!** You should call method in **set** in **listParts** (check comments)
-  * When You click **I can wait** You should call method in **setToTrue** in **listParts** (check comments)
-  * You should display *```green```* message *```This part is available and is very cheap```* if part is available .
-  * When part is NOT available You should display *```red```* message *```This part is NOT available is very expensive...```*
+###Results
+* start view
 
+![alt text](app/assets/1.png "1")
+
+* choose car part
+
+![alt text](app/assets/2.png "2")
+
+* **I can wait 3 seconds** button clicked always return **This part is available and is very cheap** message
+
+![alt text](app/assets/3.png "3")
+
+* **I can't wait, check it now!** button clicked return message depending on product availability
+
+![alt text](app/assets/4.png "4![alt text](app/assets/3.png "3")
+")
 
 ###Before you start, please refer to:
-  * [injectors](https://egghead.io/lessons/angularjs-injectors)
-  * [angular 1.2.16 - $injector](https://code.angularjs.org/1.2.16/docs/api/auto/service/$injector)
-  * [angular.forEach](https://docs.angularjs.org/api/ng/function/angular.forEach)
-
-
+  * [angularjs-injectors](https://egghead.io/lessons/angularjs-injectors)
 
 Good luck!

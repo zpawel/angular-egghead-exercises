@@ -57,6 +57,7 @@ app.controller('carPartsCtrl', function ($scope, partsList, $timeout, $injector)
     {
         if ($scope.data.part !== undefined) {
             $scope.carPart = $scope.data.part;
+            $scope.returnMessage = '';
             $scope.show = true;
         }
     };
@@ -65,17 +66,7 @@ app.controller('carPartsCtrl', function ($scope, partsList, $timeout, $injector)
     {
         $timeout(function ()
         {
-            //here you should use partsList.set()
-            $injector.invoke(function (partsList)
-            {
-                if ($scope.data && partsList.set($scope.carPart)) {
-                    $scope.messageClass = 'text-success';
-                    $scope.resultInvoke = 'This part is available and is very cheap';
-                } else {
-                    $scope.messageClass = 'text-danger';
-                    $scope.resultInvoke = 'This part is NOT available and is very expensive...';
-                }
-            });
+            //complete function
 
             $scope.result = true;
         }, 10);
@@ -84,14 +75,8 @@ app.controller('carPartsCtrl', function ($scope, partsList, $timeout, $injector)
     {
         $timeout(function ()
         {
-            //here you should use partsList.setToTrue()
-            $injector.invoke(function (partsList)
-            {
-                if ($scope.data && partsList.setToTrue($scope.carPart)) {
-                    $scope.messageClass = 'text-success';
-                    $scope.resultInvoke = 'This part is available and is very cheap';
-                }
-            });
+            //complete function
+
             $scope.result = true;
         }, 1800);
     };
