@@ -5,11 +5,12 @@ Start work with three "book-about" ready directives (**bookTitle**, **bookDescri
 * **book** directive should be used as a container
 * example book's title: ***"The Da Vinci Code"***
 
+###Result
+
+![alt text](app/assets/1.png "1")
+
 ###Before you start, please refer to:
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
 
-###Result
-
-![alt text](app/assets/book.jpg "Book")
 
 Good luck!
