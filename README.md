@@ -1,6 +1,5 @@
 ##Exercise 30 : Providers
 
-###The goal
 Application displays sentence in which **color** and **number** are set by provider. Your job is replace the **home** factory with the **home** provider.
 
 ###Requirements
@@ -9,7 +8,7 @@ Application displays sentence in which **color** and **number** are set by provi
 
 ###Result
 
-![alt text](app/assets/sentence.jpg "Sentence")
+![alt text](app/assets/1.png "1")
 
 ###Before you start, please refer to:
 * [angularjs-providers](https://egghead.io/lessons/angularjs-providers)
