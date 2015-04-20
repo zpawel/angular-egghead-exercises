@@ -1,26 +1,32 @@
-##Exercise 32b : Components and Containers
+##Exercise 32 : Components and Containers
 
-###The goal
-Sometimes in application is written directives which we need them value to be displayed, meanwhile we don't want to move them from HTML file to directive.
+You start with ready **my-container** and **my-component** directives. Use them in **container.html** and **components.html** views according to the requirements.
 
-####Requirements
-  * You should configure routing (default page is **home.html**)
-  * You should complete directives **myContainer** and **myComponent**
-  * You should use class from **style.css** to add ```border``` directives.
+###Requirements
+* when user choose **Component** view:
+    * should see a list of components
+    * the name of the next component consists of: **This directive is simple component** message and **number** from **list** array
+* when user choose **Container** view:
+    * should see a container with the with a list of components 
+    * the name of next component names are such as in **Component** view
 
-  ![Result of the action directive 'myComponent'](images/component.png "Result of the action directive 'myComponent'")
+###Results
 
-  * Component should be add to the list to display, when You click add component.
+* start view
 
-  ![Result of the action directive 'myContainer'](images/container.png "Result of the action directive 'myComponent'")
+![alt text](app/assets/1.png "1")
 
-  * You should use directive 'myComponent' in directive 'myContainer'.
+* container view
 
+![alt text](app/assets/2.png "2")
+
+* components view
+
+![alt text](app/assets/3.png "3")
 
 
 ###Before you start, please refer to:
-  * [components and containers](https://egghead.io/lessons/angularjs-components-and-containers)
 
-
+* [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
 
 Good luck!
