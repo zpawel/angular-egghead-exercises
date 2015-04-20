@@ -6,8 +6,7 @@ As you are very inquisitive man - get all information about MouseEvent without '
 * display event type in ```<strong></strong>``` tag
 
 ###Result
-
-![alt text](app/assets/rank.jpg "Rank")
+![alt text](app/assets/1.png "1")
 
 ###Before you start, please refer to:
 * [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
