@@ -21,7 +21,7 @@ Your job is to practise **ng-repeat** directive with $index, $event and $log.
 
 ![alt text](app/assets/2.png "2")
 
-*
+* log from console
 
 ![alt text](app/assets/3.png "3")
 
