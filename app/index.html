@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <title>AngularJS Tutorials</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body ng-app="phoneApp" ng-controller="PhoneCtrl">
@@ -25,14 +25,16 @@
             </button>
         </div>
     </div>
-    <div class="text-center" ng-click="call()">
-        <div class="form-group btn btn-default" ng-show="phone">
-            <p>{{selectedPerson.number}}</p>
-            <img src="assets/phone.png">
+    <div class="col-md-12">
+        <div class="text-center" ng-click="call()">
+            <div class="form-group btn btn-default" ng-show="phone">
+                <p>{{selectedPerson.number}}</p>
+                <img src="assets/phone.png">
+            </div>
         </div>
     </div>
 </div>
-<script src="../bower_components/angular/angular.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="phone.js"></script>
 </body>
 </html>

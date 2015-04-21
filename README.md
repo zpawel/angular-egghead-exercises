@@ -7,15 +7,15 @@ Application simulates a phone book. Check out how it works, then use the control
 ###Result
 * start view
 
-![alt text](app/assets/start.jpg "Start position")
+![alt text](app/assets/1.png "1")
 
 * when you press **Give me the phone!** button
 
-![alt text](app/assets/buttonClicked.jpg "button pressed")
+![alt text](app/assets/2.png "2")
 
 * when you press phone image
 
-![alt text](app/assets/phoneClicked.jpg "phone pressed")
+![alt text](app/assets/3.png "3")
 
 ###Before you start, please refer to:
 * [angularjs-experimental-controller-as-syntax](https://egghead.io/lessons/angularjs-experimental-controller-as-syntax)
