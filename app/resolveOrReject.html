@@ -1,10 +1,10 @@
-<div>
+<div class="col-md-offset-4 col-md-4 text-center">
     <div class="form-group">
-        <button class="btn btn-success" ng-click="appCtrl.get()"> Get success value</button>
-                <span ng-if="appCtrl.success">
-                    Your success value is: <span class="text-success">{{appCtrl.success}}</span>
-                </span>
+        <button class="btn btn-success" ng-click="get()"> Get success value</button>
+        <p ng-if="success">
+            Your success value is: <span class="text-success">{{success}}</span>
+        </p>
     </div>
     <resolve-success-promise></resolve-success-promise>
-    <a href="#/" class="btn btn-warning"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+    <a href="#/" class="btn btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
 </div>
