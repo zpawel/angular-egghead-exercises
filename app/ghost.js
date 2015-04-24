@@ -1,8 +1,8 @@
-var scaryApp = angular.module("scaryApp", ["ngAnimate"]);
+'use strict';
 
-scaryApp.controller("GhostCtrl", function ()
-{
+var scaryApp = angular.module('scaryApp', ['ngAnimate']);
+
+scaryApp.controller('GhostCtrl', function () {
     this.change = false;
 
 });
-
