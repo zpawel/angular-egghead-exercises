@@ -1,11 +1,10 @@
 {
-  "name": "angular-egghead",
-  "version": "0.0.0",
-  "dependencies": {
-    "angular": "1.2.16",
-    "bootstrap": "~3.1.1",
-    "ui-router": "~0.2.13"
-  },
-  "devDependencies": {},
-  "appPath": "app"
+    "name": "angular-egghead",
+    "version": "0.0.0",
+    "dependencies": {
+        "angular": "1.2.16",
+        "bootstrap": "~3.1.1",
+        "ui-router": "~0.2.13"
+    },
+    "appPath": "app"
 }

@@ -1,6 +1,6 @@
-angular.module('shoes-views.women', ['ui.router']).config(function ($stateProvider)
-{
-    <!-- add women state-->
+'use strict';
+angular.module('shoes-views.women', ['ui.router']).config(function ($stateProvider) {
+//    add women state
 
     $stateProvider.state('app.women.flats', {
         url: '/flats',
@@ -23,8 +23,7 @@ angular.module('shoes-views.women', ['ui.router']).config(function ($stateProvid
             }
         }
     });
-}).controller('womenCtrl', function ($scope)
-{
+}).controller('womenCtrl', function ($scope) {
     $scope.womenFlatsList = [
         {name: 'Born Saffi', image: 'assets/women/flats/1.jpg', price: '388'},
         {name: 'Born Tiffney', image: 'assets/women/flats/2.jpg', price: '388'},

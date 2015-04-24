@@ -1,6 +1,6 @@
 angular.module('shoes-views.men', ['ui.router']).config(function ()
 {
-    <!-- add men state-->
+//    <!-- add men state-->
 
 }).controller('menCtrl', function ($scope)
 {
