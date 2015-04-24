@@ -1,7 +1,8 @@
-var app = angular.module("app", ['ui.router']);
+'use strict';
 
-app.factory("paintingList", function ()
-{
+var app = angular.module('app', ['ui.router']);
+
+app.factory('paintingList', function () {
     return [
         {id: 1, title: 'Mona Lisa', author: 'Leonardo da Vinci', location: 'Louvre', date: '1503–1517', url: '/assets/mona.jpg', frame: 'v'},
         {id: 2, title: 'The Last Supper', author: 'Leonardo da Vinci', location: 'Santa Maria delle Grazie', date: '1495–1498', url: '/assets/last.jpg', frame: 'h'},
