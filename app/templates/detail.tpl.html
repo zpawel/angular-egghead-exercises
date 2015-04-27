@@ -1,21 +1,21 @@
 <div ng-show="choose">
-    You choose:
-    <div>
-        Country:<span class="text-success"> {{country}}</span>
+    <div class="page-header text-center">
+        <strong>You choose</strong>
+
+        <p> Country:<span class="text-success"> {{country}}</span></p>
+
+        <p>State: <span class="text-success"> {{state}}</span></p>
     </div>
-    <div>
-        State: <span class="text-success"> {{state}}</span>
-    </div>
-    <table class="table table-bordered">
+    <table class="table text-center">
         <thead>
         <tr>
-            <th>
-                Capital city:
+            <th class="text-center">
+                Capital city
             </th>
-            <th>
-                Largest city:
+            <th class="text-center">
+                Largest city
             </th>
-            <th>
+            <th class="text-center">
                 Population
             </th>
         </tr>
@@ -29,7 +29,7 @@
                 {{choose.largestCity}}
             </td>
             <td>
-                {{choose.population}}
+                {{choose.population | formatPopulation}}
             </td>
         </tr>
         <tr>

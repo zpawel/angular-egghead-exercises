@@ -1,20 +1,21 @@
-(function ()
-{
-  'use strict';
-  angular.module('countryStateCity').directive('state', function ()
-  {
-    return {
-      restrict: 'E',
-      scope: {},
-      replace:true,
-      transclude: true,
-      controller: 'stateCtrl as stateCtrl',
-      require: '^country',
-      templateUrl: 'templates/state.tpl.html',
-      link: function (scope)
-      {
-
-      }
-    };
-  });
+(function () {
+    'use strict';
+    angular.module('countryStateCity').directive('state', function () {
+        return {
+            restrict: 'E',
+            scope: {},
+            replace: true,
+            controller: 'stateCtrl as stateCtrl',
+            templateUrl: 'templates/state.tpl.html',
+            link: function (scope, element, attrs, countryCtrl) {
+                scope.$watch(function () {
+                    return countryCtrl.chooseCountry;
+                }, function (newValue) {
+                    if (newValue) {
+                        scope.country = newValue;
+                    }
+                });
+            }
+        };
+    });
 })();

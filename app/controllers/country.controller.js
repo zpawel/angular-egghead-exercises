@@ -1,8 +1,6 @@
-(function ()
-{
-  'use strict';
-  angular.module('countryStateCity').controller('countryCtrl', function (storage)
-  {
-    this.country = storage.getListCountry();
-  });
+(function () {
+    'use strict';
+    angular.module('countryStateCity').controller('countryCtrl', function (storage) {
+        this.country = storage.getListCountry();
+    });
 })();
