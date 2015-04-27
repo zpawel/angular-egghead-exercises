@@ -1,8 +1,11 @@
 {
-    "name": "egghead-exercises",
-    "description": "Angular training",
-    "version": "0.0.0",
-    "dependencies": {},
+    "name": "angular-egghead",
+    "description": "angular training",
+    "dependencies": {
+        "body-parser": "^1.12.0",
+        "cors": "^2.5.3",
+        "express": "^4.12.0"
+    },
     "devDependencies": {
         "grunt": "~0.4.2",
         "grunt-contrib-jshint": "~0.8.0",
@@ -17,6 +20,10 @@
     },
     "engines": {
         "node": ">=0.10.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/aniaw/angular-egghead.git"
     },
     "scripts": {
         "start": "grunt karma:dev",
