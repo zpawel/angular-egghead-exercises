@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-  <title>AngularJS Tutorials</title>
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<!--here add controller-->
-<body ng-app="start" >
-<div class="container">
-  <div class="page-header">
-    <h1>Exercise
-      <small>ng-repeat-start and ng-repeat-end</small>
-    </h1>
-  </div>
-  <!--here add ng-view-->
-  <h1 class="text-danger text-center" ng-if="!error">You don't use <strong>ng-view</strong></h1>
+<body ng-app="app">
+<div class="container" ng-controller="ViewCtrl as view">
+    <div class="page-header">
+        <h1>ng-repeat-start
+            <small> and ng-repeat-end</small>
+        </h1>
+    </div>
+    <div class="col-md-offset-4 col-md-4">
+        <table class="table table-hover text-center">
+            <tr class="alert-success">
+                <th class="text-center">First name</th>
+                <th class="text-center">Last name</th>
+            </tr>
+            <!--here add ng-repeat-start -->
+            <tr>
+                <!--here display name and lastName-->
+            </tr>
+            <!--hera add ng-repeat-end  -->
+            <tr>
+                <td colspan="2" ng-if="user.enable">
+                    <!--here display country-->
+                    Country: <span class="text-success"> {{user.country}}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="start.js"></script>
 </body>
 </html>
