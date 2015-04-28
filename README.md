@@ -14,7 +14,7 @@ The goal of this exercise is practise ng-repeat-start
 
 * click at user
 
-![alt text](app/assets/1.png, "1")
+![alt text](app/assets/2.png, "2")
 
 
 ###Before you start, please refer to:
