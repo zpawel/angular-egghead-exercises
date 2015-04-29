@@ -12,19 +12,19 @@ Create navigation to a page that contains information about the most popular pai
 ###Result
 * you start with
 
-![alt text](app/assets/1.jpg)
+![alt text](app/assets/1.png)
 
 * paintings list
 
-![alt text](app/assets/1.1.jpg)
+![alt text](app/assets/2.png)
 
 * horizontal paintings details
 
-![alt text](app/assets/2.jpg)
+![alt text](app/assets/3.png)
 
 * vertical paintings details
 
-![alt text](app/assets/3.jpg)
+![alt text](app/assets/4.png)
 
 
 ###Before you start, please refer to:
