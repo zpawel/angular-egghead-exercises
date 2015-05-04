@@ -4,9 +4,9 @@ Configure **Gruntfile.js** in accordance with the requirements. You start with r
 
 ###Requirements
 You should use grunt to 
-    * detect errors and potential problems in your JavaScript code
-    * run test
-    * find your components and injects them directly into the index.html file 
+   * detect errors and potential problems in your JavaScript code
+   * run test
+   * find your components and injects them directly into the index.html file 
         
 ###Results
 * **grunt jshint** command result
