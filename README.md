@@ -14,7 +14,6 @@ When it comes to bootstrap component, should be injected only part of the CSS. R
 You start with ready `grunt serve` task (you can use it to start browser in live reload mode).
 
 ###Results
-
 * **grunt jshint** command result
 
 ```
