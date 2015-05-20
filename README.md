@@ -8,8 +8,11 @@ Grunt and Grunt plugins are installed and managed via `npm`, the Node.js package
 
 ##Goal
 You goal is to install and load npm task to:
+
  * detect errors and potential problems in your JavaScript code located in app folder (`grunt-contrib-jshint`),
+
  * run tests (`grunt-karma`) located in test folder, 
+
  * find your components, install via bower and injects them directly into the `index.html` file (`grunt-wiredep`)
  
 When it comes to bootstrap component, should be injected only part of the CSS. Remember that, you can't manually modify `index.html` file.
