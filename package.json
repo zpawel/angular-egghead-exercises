@@ -1,6 +1,6 @@
 {
   "name": "angular-egghead",
-  "description": "angular training",
+  "description": "grunt training",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -15,9 +15,5 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/aniaw/angular-egghead.git"
-  },
-  "scripts": {
-    "start": "grunt karma:dev",
-    "test": "grunt karma:unit"
   }
 }
