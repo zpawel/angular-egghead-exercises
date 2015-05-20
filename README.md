@@ -7,7 +7,7 @@ Grunt and Grunt plugins are installed and managed via `npm`, the Node.js package
 
 
 ##Goal
-You goal is to install and load npm task to:
+You goal is install and load npm task to:
 
  * detect errors and potential problems in your JavaScript code located in app folder (`grunt-contrib-jshint`),
 
