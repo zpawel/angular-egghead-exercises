@@ -1,14 +1,17 @@
 ## Grunt configuration
 
 Grunt is a task-based command line build tool for JavaScript projects. 
-You can use Grunt to automate minification, compilation, unit testing, linting, etc - take a look at [gruntjs.com](http://gruntjs.com/).
+You can use Grunt to automate minification, compilation, unit testing, linting... - take a look at [gruntjs.com](http://gruntjs.com/)
 
 Grunt and Grunt plugins are installed and managed via `npm`, the Node.js package manager.
+
 
 ##Goal
 You goal is to install and load npm task to detect errors and potential problems in your JavaScript code located in app folder (`grunt-contrib-jshint`),
 run tests (`grunt-karma`) located in test folder, find your components, install via bower and injects them directly into the `index.html` file (`grunt-wiredep`)
-When it comes to bootstrap component, should be injected only part of the CSS.
+When it comes to bootstrap component, should be injected only part of the CSS. Remember that, you can't manually modify `index.html` file.
+
+You start with ready `grunt serve` task (you can use it to start browser in live reload mode).
 
 ###Results
 
@@ -53,15 +56,23 @@ Done, without errors.
 * **.js** file added
 
 ```
+...
 <script src="bower_components/jquery/dist/jquery.js"></script>
-
 <script src="bower_components/angular/angular.js"></script>
+
+<script src="mouse.js"></script>
+</body>
+</html>
 ```
 
 * **.css** file add
 ```
+...
+<title>AngularJS Tutorials</title>
 
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+...
 ```
 
 ###Before you start, please refer to:
