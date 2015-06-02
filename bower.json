@@ -1,9 +1,9 @@
 {
-    "name": "angular-egghead",
-    "description": "angular training",
-    "dependencies": {
-        "angular": "1.2.16",
-        "bootstrap": "~3.1.1"
-    },
-    "appPath": "app"
+  "name": "angular-egghead",
+  "description": "angular training",
+  "dependencies": {
+    "angular": "1.2.16",
+    "bootstrap": "3.1.1"
+  },
+  "appPath": "app"
 }
