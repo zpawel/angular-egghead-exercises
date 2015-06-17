@@ -6,19 +6,21 @@
 </head>
 
 <body ng-app="app">
-<div class="container">
-    <div class="page-header row"></div>
+<div class="container text-center">
+    <div class="page-header">
+        <h1>Share data </h1>
+    </div>
     <div class="row">
         <div class="col-md-4">
             <label>
-                <input type="text" class="form-control" maxlength="10">
+                <input id="left" type="text" class="form-control" maxlength="10">
             </label>
 
             <h3 class="well-sm bg-warning">{{direction || "LEFT"}}</h3>
         </div>
         <div class="col-md-offset-4 col-md-4">
             <label>
-                <input type="text" class="form-control" maxlength="10">
+                <input id="right" type="text" class="form-control" maxlength="10">
             </label>
 
             <h3 class="well-sm bg-success">{{direction || "RIGHT"}}</h3>
