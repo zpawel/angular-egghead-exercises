@@ -15,7 +15,7 @@ parameter set to the value from *word input* and **newWord** set as *"purr"*
 
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially:
+You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
 
 ```
 npm install
@@ -25,13 +25,13 @@ npm install
 bower install
 ```
 
-To start the application run:
+To start the application run:=
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals:
+To start cucumber tests, run sequentially in separate terminals
 
 ```
 npm start
@@ -41,7 +41,7 @@ npm start
 grunt test
 ```
 
-To start unit test run:
+To start unit test run
 
 ```
 grunt karma
