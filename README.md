@@ -20,13 +20,13 @@ Examples of results:
 
 * type **female** into search inputinput
 
-| Id | User Name | Full Name        | Gender |
-|----|-----------|------------------|--------|
-| 5  | swatson4  | Shirley Watson   | Female |
-| 8  | mbanks7   | Martha Banks     | Female |
-| 11 | eturnera  | Elizabeth Turner | Female |
-| 14 | aboydd    | Angela Boyd      | Female |
-| 15 | mbanks7   |Frances Armstrong | Female |
+| Id | User Name  | Full Name        | Gender |
+|----|------------|------------------|--------|
+| 5  | swatson4   | Shirley Watson   | Female |
+| 8  | mbanks7    | Martha Banks     | Female |
+| 11 | eturnera   | Elizabeth Turner | Female |
+| 14 | aboydd     | Angela Boyd      | Female |
+| 15 | farmstronge|Frances Armstrong | Female |
 
 
 ##Setup
