@@ -1,13 +1,13 @@
-##Exercise 9 : Directives 
+#Exercise 9 : Directives 
 
+##Summary
 Application require you to change element behavior based on specific event. You are supposed to write four directives that bind events to two provided canvas. 
-
 
 When you move your mouse over the provided circle(check comments) bootstrap class should be added, on the other hand when you leave the area it should be 
 removed back. Secondly, when you double click square it should add provided class to the square and when you single click - it should be removed. Please be aware
 that you should be able to pass specified bootstrap class as argument to the directive.
 
-###Requirements
+##Goals
 * ***enter*** directive that return a **function** (check videos) inside and binds **mouseenter** event
 * **enter** directive should add class provided as attribute in **index.html** when **mouseenter** is fired
 
@@ -28,8 +28,28 @@ that you should be able to pass specified bootstrap class as argument to the dir
 * ***bg-danger*** passed as an attribute to enter directive
 * ***bg-info*** passed as an attribute to dblClickOn directive
 
-###Results
-![alt text](app/assets/example.png "Circle & Square")
+##Setup
+You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start unit test, run
+
+```
+grunt karma
+```
 
 ###Before you start, please refer to:
 * [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
