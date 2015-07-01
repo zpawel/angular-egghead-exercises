@@ -36,15 +36,12 @@ To start the application run
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals
-
-```
-npm start
-```
-
+To run the tests you need to run (in a separate terminal) the application and command
+ 
 ```
 grunt test
 ```
+
 
 ###Before you start, please refer to:
 * [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
