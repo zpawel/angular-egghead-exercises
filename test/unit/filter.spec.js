@@ -1,7 +1,7 @@
-'use strict';
-
 describe('user', function ()
 {
+    'use strict';
+
     var scope;
 
     beforeEach(module('app'));

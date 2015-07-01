@@ -46,11 +46,7 @@ To start the application run
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals
-
-```
-npm start
-```
+To start cucumber tests, run sequentially in separate terminals the application and command
 
 ```
 grunt test
