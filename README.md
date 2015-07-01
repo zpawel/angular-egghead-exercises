@@ -25,7 +25,7 @@ npm install
 bower install
 ```
 
-To start the application run:=
+To start the application, run
 
 ```
 grunt serve
@@ -37,7 +37,7 @@ To start cucumber tests, run sequentially in separate terminals the application 
 grunt test
 ```
 
-To start unit test run
+To start unit test, run
 
 ```
 grunt karma
