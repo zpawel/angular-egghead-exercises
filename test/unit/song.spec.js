@@ -1,5 +1,7 @@
 describe('song', function ()
 {
+    'use strict';
+
     var scope;
     var song;
     var oldWord;
