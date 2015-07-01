@@ -1,7 +1,7 @@
-'use strict';
-
 describe('user', function ()
 {
+    'use strict';
+
     var element;
     var scope;
     var hero;
@@ -13,7 +13,8 @@ describe('user', function ()
     beforeEach(inject(function ($rootScope, $compile)
     {
         element =
-                angular.element('<div class="col-sm-offset-2 col-sm-2"><hero></hero></div><div class="col-sm-2"><superhero></superhero></div><div class="col-sm-2"><hero></hero></div>');
+                angular.element('<div class="col-sm-offset-2 col-sm-2">' +
+                        '<hero></hero></div><div class="col-sm-2"><superhero></superhero></div><div class="col-sm-2"><hero></hero></div>');
 
         scope = $rootScope;
         $compile(element)(scope);
