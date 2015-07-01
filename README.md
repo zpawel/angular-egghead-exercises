@@ -22,20 +22,16 @@ npm install
 bower install
 ```
 
-To start the application run:
+To start the application, run
 
 ```
 grunt serve
 ```
 
-To start tests, run sequentially in separate terminals:
-
+To run the tests you need to run (in a separate terminal) the application and command
+ 
 ```
-npm start
-```
-
-```
-npm test
+grunt test
 ```
 
 ###Before you start, please refer to:
