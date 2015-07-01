@@ -1,7 +1,7 @@
-'use strict';
-
 describe('directives', function ()
 {
+    'use strict';
+
     var circle;
     var square;
     var $scope;

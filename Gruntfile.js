@@ -12,9 +12,10 @@ module.exports = function (grunt)
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-karma');
+
     require('load-grunt-tasks')(grunt);
 
-    grunt.loadNpmTasks('grunt-protractor-webdriver');
     var config = {
         app: 'app'
     };
@@ -50,42 +51,10 @@ module.exports = function (grunt)
                 }
             }
         },
-        protractor_webdriver: {
-            driver: {
-                options: {}
-            }
-        },
-        protractor: {
-            options: {
-                configFile: 'tests/config.js',
-                keepAlive: false,
-                noColor: false
-            },
-            chrome: {
-                options: {
-                    args: {
-                        browser: 'chrome'
-                    }
-                }
-            },
-            firefox: {
-                options: {
-                    args: {
-                        browser: 'firefox'
-                    }
-                }
-            },
-            phantomjs: {
-                options: {
-                    args: {
-                        browser: 'phantomjs'
-                    }
-                }
-            }
-        },
+
         karma: {
             unit: {
-                configFile: 'tests/karma.conf.js'
+                configFile: 'test/karma.conf.js'
             }
         }
     });
@@ -96,13 +65,6 @@ module.exports = function (grunt)
             'connect:livereload', 'watch'
         ]);
     });
-    grunt.registerTask('test', [
-        'protractor:chrome'
-    ]);
-
-    grunt.registerTask('test:phantomjs', [
-        'protractor_webdriver', 'protractor:phantomjs'
-    ]);
 
     grunt.registerTask('default', ['serve']);
 };
