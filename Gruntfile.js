@@ -12,6 +12,8 @@ module.exports = function (grunt)
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-karma');
+
     require('load-grunt-tasks')(grunt);
 
     var config = {
@@ -52,7 +54,7 @@ module.exports = function (grunt)
 
         karma: {
             unit: {
-                configFile: 'tests/karma.conf.js'
+                configFile: 'test/karma.conf.js'
             }
         }
     });
