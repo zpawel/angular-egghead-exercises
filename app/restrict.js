@@ -2,7 +2,7 @@
 
 var app = angular.module('app', []);
 
-app.controller('appCtrl', ['$scope', function ($scope)
+app.controller('AppCtrl', ['$scope', function ($scope)
 {
     $scope.description = {
         element: {

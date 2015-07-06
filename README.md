@@ -7,16 +7,41 @@ provide a working example.
 
 ###Requirements
 
-* ***restrictE*** directive restricted to the element and with template set to the example data as follows: ```'{{description.element.name}}: {{description.element.call}}'```
-Please bear in mind that required data is already defined in **appCtrl** controller
+* ***restrictE*** directive restricted to the element and with template set to the example data as follows: `'{{description.element.name}}: {{description.element.call}}'`
+Please bear in mind that required data is already defined in **AppCtrl** controller
 * ***restrictA*** directive restricted to the attribute and with template pattern exactly like in **restrictE** directive(but use description.attribute property)
 * ***restrictC*** directive restricted to the class and with template pattern exactly like in **restrictE** directive(but use description.class property)
-* ***restrictM*** directive restricted to the comment. Moreover, in the directive body *```alert("directive M: working...");```* should be added.
+* ***restrictM*** directive restricted to the comment. Moreover, in the directive body *`alert('directive M: working...");`* should be added.
 * **index.html** should be updated with example directive usages(check comments)
 
 ###Before you start, please refer to:
 * [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
 * [restrictions](https://docs.angularjs.org/guide/directive)
+
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+
+To start unit test, run
+
+```
+grunt karma
+```
+
 
 
 Good luck!
