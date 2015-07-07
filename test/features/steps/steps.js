@@ -16,20 +16,6 @@ module.exports = function () {
         browser.get('/#' + url).then(callback);
     });
 
-    function clearAndType(webElement, text) {
-        text = text.replace(/\\n/g, protractor.Key.ENTER);
-        return webElement.getAttribute('type').then(function (type) {
-            if ('date' !== type) {
-                return webElement.clear().then(function () {
-                    return webElement.sendKeys(text);
-                });
-            } else {
-                return webElement.sendKeys(text);
-            }
-        });
-    }
-
-
     function selectOption(item, input) {
         var desiredOption = null;
         return input.all(protractor.By.tagName('option')).getWebElements().then(function (options) {
