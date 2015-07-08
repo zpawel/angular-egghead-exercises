@@ -1,4 +1,4 @@
-var alarmApp = angular.module('alarmApp', []);
+var app = angular.module('app', []);
 
 //<!--add alarm directive-->
 //<!--add red directive-->
