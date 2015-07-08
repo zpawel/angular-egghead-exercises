@@ -1,4 +1,4 @@
-describe('user', function () {
+describe('restrict', function () {
     'use strict';
 
     var window;
