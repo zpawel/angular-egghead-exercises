@@ -14,4 +14,27 @@ Implement functionality that will allow to add (when the mouse hovers over the g
 ###Before you start, please refer to:
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
+
 Good luck!
