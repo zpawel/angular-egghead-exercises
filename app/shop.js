@@ -29,7 +29,7 @@ app.directive('orderComponent', function ()
 {
     var template = '<div class="panel panel-success text-center"><p class="panel-heading"><strong>I want to buy:</strong></p><div class="panel-body">' +
             '<select class="form-control form-group"><!--select element--></select>' +
-            '<div class="btn btn-success"><!--the bottom div-->Buy!</div></div></div>';
+            '<div id="buyButton" class="btn btn-success"><!--the bottom div-->Buy!</div></div></div>';
     return {
         template: template
     };

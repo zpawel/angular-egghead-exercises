@@ -1,5 +1,6 @@
-##Exercise 12 : Isolate Scope "@", "="
+#Exercise 12 : Isolate Scope "@", "="
 
+##Summary
 Application that you are provided with is used for handling simple orders from customers. It includes simple list of products available for ordering
 as well as basic functions. 
 
@@ -11,7 +12,7 @@ Assuming that you need to pass custom order function(that accepts product as a p
 you are asked to create ***orderComponent*** directive with isolate scope and use it to allow user to order from **sweets** and **cakes** categories.
 
 
-###Requirements
+##Goals
 
 * Edit **orderComponent** element directive so that it would have **products** field and **buy** function passed as attributes in correct 
 format(directive should have isolate scope)
@@ -19,18 +20,35 @@ format(directive should have isolate scope)
     * ```<select>``` element(check comment) should be instantiated from **products** array(as options)
     * ```<select>``` element model should have be available only on the directive scope and be set to first element of the **products** array as default
     * the bottom div element(check comment) should have **buy** function invocation binded on click (with ```<select>``` element model passed as argument)
-* **index.html** must contain two separate order components for **sweets** and **cakes** products(they are already included on **appCtrl** scope, 
+* **index.html** must contain two separate order components for **cakes** and **sweets** products(they are already included on **appCtrl** scope, 
 check comments to place them correctly)
 * Both **orderComponent** instances in **index.html** should use **buyProduct** function(already included on **appCtrl** scope, expects product as argument)
 
-
-###Results
-
-![alt text](app/assets/example.png "Order Application")
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
-* [angularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
+* [ngularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
 
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
 
 Good luck!
