@@ -58,7 +58,7 @@
         return {
             restrict: 'E', scope: {
                 a: '@', b: '@', solve: '&'
-            }, template: ' <div class="btn btn-info" ng-click="solve({a : a, b: b})">Multiple</div>'
+            }, template: ' <div id="multiButton" class="btn btn-info" ng-click="solve({a : a, b: b})">Multiple</div>'
 
         };
     });
@@ -68,7 +68,7 @@
         return {
             restrict: 'A', scope: {
                 a: '@', b: '@', solve: '&'
-            }, template: '<div class="btn btn-default" ng-click="solve({a : a, b: b})">Divide</div>'
+            }, template: '<div id="divideButton" class="btn btn-default" ng-click="solve({a : a, b: b})">Divide</div>'
         };
     });
 })();
