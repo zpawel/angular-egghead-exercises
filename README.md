@@ -1,17 +1,42 @@
-##Exercise 17: An alternative approach to controllers
+#Exercise 17: An alternative approach to controllers
 
+##Summary
 An alternative approach to controllers assumes that function should be assigned to controller, not to the $scope. You task is to implement functionality according
 to the regulations below.
 
-###Requirements
+##Goals
 
-* **Calc.js** contain ***SumCtrl*** and ***SubCtrl*** controllers
-* **SumCtrl** have ***add*** function assigned to itself, which requires two params and return their value as a sum (a + b)
-* **SubCtrl** have ***subtraction*** function assigned to itself, which requires two params and return their value as subtracted (a - b)
-* Use **add** with **firstNumberSum** and **secondNumberSum** params and display the result in correct header (check comments) when Sum button is clicked
-* Use **subtraction** with **firstNumberSub** and **secondNumberSub** params and display the result in correct header (check comments) when Subtraction button is clicked
+* `Calc.js` should contain `SumCtrl` and `SubCtrl` controllers
+* `SumCtrl` should has `add` function assigned to itself, which requires two params and assigns the result to `sum` variable
+* similarly `SubCtrl` but should assigns the result to `sub` variable
+* each controller should have two variables (`firstNumber`, `secondNumber`) initialized values **12** and **1**
+* use `add`  and `subtraction` function and display the result in correct header (check comments)
 
-###Before you start, please refer to:
+
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start unit test, run
+
+```
+grunt karma
+```
+
+##Before you start, please refer to:
 * [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
 
