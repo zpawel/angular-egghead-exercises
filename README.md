@@ -1,37 +1,44 @@
-##Exercise 20 : angular.element
+#Exercise 20 : angular.element
 
-Write a directive which, depending on the entered values will change the class specified in directive input.
+##Summary
+Write a directive which, depending on the entered values and will change the class specified in directive input.
 
-###Requirements
+##Goals
+ 
  * directive should be restricted as element.
+ * use **h4** header tag as an angular element
  * the directive should react to any change in **input**.
- * when the **input** value is set to: *circle* or *square*, element class should be changed respectively on a ```circle``` or ```square```.
- * in other cases, it should display a red message *```You did not enter "circle" or "square"```* (using **text-danger** class).
- * to add class to element use **addClass('className')** function
- * to remove class from element use **removeClass('className')** function
- * to add text to element use **text(''someText')** function
-
-###Results
-
-* start view
-
-![alt text](app/assets/1.png "1")
-
-* written some text
-
-![alt text](app/assets/2.png "2")
-
-* written 'circle'
-
-![alt text](app/assets/3.png "3")
-
-* written 'square'
-
-![alt text](app/assets/4.png "4")
+    * when the **input** value is set to: *circle* or *square*, element class should be changed respectively on a `circle` or `square`.
+    * in other cases, it should display a red message *`You did not enter *circle* or *square*`* (using **text-danger** class).
+ 
+To add class to element use **addClass('className')** function, to remove class use **removeClass('className')** and to add text use **text(''someText')**.
 
 ###Before you start, please refer to:
 * [angularjs-angular-element](https://egghead.io/lessons/angularjs-angular-element)
 * [angularjs-the-basics-of-scope-watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
+
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
 
 Good luck!

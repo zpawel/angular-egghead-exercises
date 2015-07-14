@@ -13,7 +13,7 @@ element.directive('findElement', function ()
 
     return {
         replace: true,
-        template: '<div> <input class="form-control" type="text" ng-model="input"></div>',
+        template: '<div> <input class="form-control" type="text" ng-model="input" placeholder="Write circle or square"></div>',
         compile: function (templateElement)
         {
 
