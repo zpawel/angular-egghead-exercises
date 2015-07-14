@@ -17,7 +17,7 @@
                     <label>Value from unit scope</label>
                     <unit></unit>
                 </div>
-                <button class="btn btn-success" ng-click="ctrl.unitScope()">Value from unit scope</button>
+                <button id="unitButton" class="btn btn-success" ng-click="ctrl.unitScope()">Value from unit scope</button>
                 <div class="text-success">{{ctrl.unitScopeValue}}</div>
             </div>
             <div class="col-md-4">
@@ -25,7 +25,7 @@
                     <label>Value from separate scope</label>
                     <separate></separate>
                 </div>
-                <button class="btn btn-success" ng-click="ctrl.separateScope()">Value from separate scope</button>
+                <button id="separateButton" class="btn btn-success" ng-click="ctrl.separateScope()">Value from separate scope</button>
                 <div class="text-danger">{{ctrl.otherScopeValue}}</div>
             </div>
         </div>

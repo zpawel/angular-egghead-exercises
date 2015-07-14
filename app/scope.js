@@ -34,7 +34,7 @@
     appScope.directive('unit', function ()
     {
         return {
-            restrict: 'E', replace: true, template: '<div> <input class="form-control"type="text" ng-model="input"></div>'
+            restrict: 'E', replace: true, template: '<div> <input id="unit" class="form-control" type="text" ng-model="input"></div>'
         };
     });
 
@@ -43,7 +43,8 @@
         return {
             restrict: 'E',
             replace: true,
-            template: '<div> <input class="form-control" type="text" ng-model="input"></div>', link: function (scope)
+            template: '<div> <input id="separate" class="form-control" type="text" ng-model="input"></div>',
+            link: function (scope)
             {
                 scope.$watch('input', function (newValue)
                 {
