@@ -1,7 +1,7 @@
 #Exercise 20 : angular.element
 
 ##Summary
-Write a directive which, depending on the entered values and will change the class specified in directive input.
+Write a directive which, depending on the entered values will change the class specified in directive input.
 
 ##Goals
  
