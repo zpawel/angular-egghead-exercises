@@ -1,28 +1,37 @@
-##Exercise 22 : templateUrl
+#Exercise 22 : templateUrl
 
+##Summary
 Directive **url** has a big template, try resolve this problem by moving it to another file.
 
-###Requirements
- * you can NOT change functionality directive
- * you can NOT change exist properties in directive
+##Goals
+ * don't change functionality directive or exist properties in directive
+ * create `urlTemplate.html` file for `url` directive template
+ * after refactoring all tests should pass
 
-###Results
-application should work the same as before the change
-
-* type tex in **title**
-
-![alt text](app/assets/1.png "1")
-
-* type text in **content**, click the button
-
-![alt text](app/assets/2.png "2")
-
-* type ***secret*** in **title** field
-
-![alt text](app/assets/3.png "3")
-
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-templateurl](https://egghead.io/lessons/angularjs-templateurl)
+
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
 
 Good luck!
