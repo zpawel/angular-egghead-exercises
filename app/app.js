@@ -6,14 +6,18 @@
 
     //add routing
 
-    app.controller('routeCtrl', function ($scope)
+    app.controller('RouteCtrl', function ($scope)
     {
         $scope.$root.condition = true;
+        this.buttonName = 'Click to show!';
 
         this.display = function ()
         {
-            this.message = this.message ? '' : 'I came from a routeCtrl';
+            this.message = this.message ? '' : 'I came from a controller';
+            this.buttonName = this.message === '' ? 'Click to show!' : 'Click to hide!';
+
         };
         $scope.routing = this;
     });
+
 })();
