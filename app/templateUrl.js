@@ -6,11 +6,11 @@
     app.run(function ()
     {
         var template = [];
-        template[0] = '<div>Default template:</div>\n<h3>{{order}} x {{quantity}}</h3>';
+        template[0] = '<div id="default"><div>Default template:</div><h3 id="templateContent">{{order}} x {{quantity}}</h3></div>';
         template[1] =
-                '<div>Button template:</div>\n<div>\n    <h3 ng-click="content()" class="btn btn-default">Click to see the order</h3>\n    <div ng-show="isContentVisible">\n        <h3 ng-if="quantity > 1" class="form-group">Your order: {{quantity}} {{order}}s</h3>\n        <h3 ng-if="quantity == 1" class="form-group">Your order: {{quantity}} {{order}}</h3>\n    </div>\n</div>';
+                '<div id="button"><div>Button template:</div>\n<div>\n    <h3 ng-click="content()" id="buttonTemplate"  class="btn btn-default">Click to see the order</h3>\n    <div ng-show="isContentVisible">\n        <h3 id="buttonContent" ng-if="quantity > 1" class="form-group">Your order: {{quantity}} {{order}}s</h3>\n        <h3 ng-if="quantity == 1" class="form-group">Your order: {{quantity}} {{order}}</h3>\n    </div>\n</div></div>';
         template[2] =
-                '<h4>Table template:</h4>\n<table class="table table-bordered">\n    <thead>\n    <tr>\n        <th class="text-center">Order</th>\n        <th class="text-center">Quantity</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>{{order}}</td>\n        <td>{{quantity}}</td>\n    </tr>\n    </tbody>\n</table>';
+                '<div id="table"><h4>Table template:</h4>\n<table id="tableContent" class="table table-bordered">\n    <thead>\n    <tr>\n        <th class="text-center">Order</th>\n        <th class="text-center">Quantity</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr>\n        <td>{{order}}</td>\n        <td>{{quantity}}</td>\n    </tr>\n    </tbody>\n</table></div>';
     });
 
     app.controller('urlCtrl', function ($scope)
@@ -41,9 +41,7 @@
         };
 
         return {
-            restrict: 'E',
-            replace: true,
-            scope: {
+            restrict: 'E', replace: true, scope: {
                 order: '@', quantity: '@'
             }, link: link
         };
