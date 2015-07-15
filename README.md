@@ -1,4 +1,4 @@
-##Exercise 24 : $routeProvider
+##Exercise 24 : ng-view
 
 ##Summary
 AngularJS's ngView is a directive that complements the $route service by including the rendered template of the current route into the main layout (typically the index.html) file.
