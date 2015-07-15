@@ -1,4 +1,4 @@
-##Exercise 24 : ng-view
+#Exercise 24 : ng-view
 
 ##Summary
 AngularJS's ngView is a directive that complements the $route service by including the rendered template of the current route into the main layout (typically the index.html) file.
@@ -8,7 +8,7 @@ Your task will be to set up routing in this simple application.
  * configure the routing to display `home.html` page with `message` from controller at `/` path
  * DON'T change `home.html` file and `RouteCtrl`
 
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-ng-view](https://egghead.io/lessons/angularjs-ng-view)
 
 ##Setup
