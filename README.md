@@ -27,5 +27,27 @@ You start with three ready template:
 * [$compile](https://code.angularjs.org/1.2.16/docs/api/ng/service/$compile)
 * [$watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
 
 Good luck!
