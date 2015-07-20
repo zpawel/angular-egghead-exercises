@@ -26,7 +26,8 @@
                 Successfully added!
             </div>
             <div class="btn-group">
-                <button class="btn btn-info" ng-click="addOrder(name,quantity)"><i class="glyphicon glyphicon-plus-sign"></i> Add to order</button>
+                <button id="addButton" class="btn btn-info" ng-click="addOrder(name,quantity)"><i class="glyphicon glyphicon-plus-sign"></i> Add to order
+                </button>
             </div>
         </form>
     </div>
@@ -34,16 +35,20 @@
 
     <div class="col-md-offset-1 col-md-6">
         <table class="table table-bordered">
+            <thead>
             <tr>
                 <th class="text-center">Order</th>
                 <th class="text-center">Quantity</th>
             </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="name in orders.name track by $index">
                 <td> {{name}}</td>
                 <td> {{orders.quantity[$index]}}</td>
             </tr>
+            </tbody>
         </table>
-        <button class="btn btn-success" ng-click="success()"><i class="glyphicon glyphicon-circle-arrow-down"></i> Resolve</button>
+        <button id="resolveButton" class="btn btn-success" ng-click="success()"><i class="glyphicon glyphicon-circle-arrow-down"></i> Resolve</button>
     </div>
 
 </div>
