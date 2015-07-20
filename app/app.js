@@ -7,13 +7,13 @@
     app.config(function ($routeProvider)
     {
         $routeProvider.when('/', {
-            templateUrl: 'product.html', controller: 'catchErrorCtrl'
+            templateUrl: 'views/product.html', controller: 'catchErrorCtrl'
         });
         $routeProvider.when('/order', {
-            templateUrl: 'order.html'
+            templateUrl: 'views/order.html'
         });
         $routeProvider.when('/displayOrder', {
-            templateUrl: 'order.html'
+            templateUrl: 'views/order.html'
         });
 
         $routeProvider.otherwise({
@@ -37,6 +37,13 @@
     {
 
         $scope.rejectProduct = {};
+
+        $scope.class = 'alert alert-danger';
+        $scope.message = 'You give wrong data';
+
+        $scope.class = 'alert alert-success';
+        $scope.message = 'You give correct data';
+
 
     });
 
