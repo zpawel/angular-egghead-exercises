@@ -41,10 +41,12 @@ module.exports = function ()
     {
         expect(fragments(name)().getAttribute('type')).to.eventually.have.string(nameClass).and.notify(callback);
     });
-    this.Then(/^the id element "([^"]*)" should contain the text "([^"]*)"$/, function (id, text, callback) {
+    this.Then(/^the id element "([^"]*)" should contain the text "([^"]*)"$/, function (id, text, callback)
+    {
         expect(element(by.id(id)).getText()).to.eventually.equal(text).and.notify(callback);
     });
-    this.Then(/^the css element "([^"]*)" should contain the text "(.*)"$/, function (cssClass, text, callback) {
+    this.Then(/^the css element "([^"]*)" should contain the text "(.*)"$/, function (cssClass, text, callback)
+    {
         expect(element(by.css(cssClass)).getText()).to.eventually.equal(text).and.notify(callback);
     });
     this.Then(/^pause$/, function (callback)
