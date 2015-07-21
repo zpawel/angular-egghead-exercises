@@ -48,20 +48,6 @@ module.exports = function ()
         });
     });
 
-    this.Then(/^I should see "([^"]*)" text in "([^"]*)"$/, function (text, element, callback)
-    {
-        expect(fragments(element)().getText()).to.eventually.equal(text).and.notify(callback);
-    });
-
-    this.Then(/^I should not see "([^"]*)" image$/, function (message, callback)
-    {
-        expect(fragments(message)().isPresent()).to.become(false).and.notify(callback);
-    });
-    this.Then(/^I should see "([^"]*)" image$/, function (message, callback)
-    {
-        expect(fragments(message)().isPresent()).to.become(true).and.notify(callback);
-    });
-
     this.Then(/^I should see "([^"]*)" in "([^"]*)" column in row "(\d+)" of "([^"]*)" table$/, function (expectedText, columnName, row, table, callback) {
         row = parseInt(row, 10);
         var rowElement = fragments(table)().element(by.css('tbody tr:nth-of-type(' + row + ')'));
