@@ -1,23 +1,39 @@
-##Exercise 28 : Directive for route handling
+#Exercise 28 : Directive for route handling
 
-In this application, you are supposed to use $rootScope within an ***error*** directive to detect route change errors and display it.
+##Summary
+In this application, you are supposed to use $rootScope within an `error` directive to detect route change errors and display it with `alertMessage`.
 
-###Requirements
-* when it detects route change error, you should see a message ***"No, no, no. That is not good way!"***
-* use ````ng-show```` directive to show the error alarm only when you need it.
+##Goals
+* when it detects route change error, you should see a message `No, no, no. That is not good way!` above than buttons, inside red alert (use `alert 
+alert-danger` bootstrap class)
+* use `ng-if` directive to display the error alarm only when you need it.
 
-###Results
-
-* when you **dont' move** and **go left**
-
-![alt text](app/assets/1.png "1")
-
-* when you **go right** 
-
-![alt text](app/assets/2.png "2")
-
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-directive-for-route-handling](https://egghead.io/lessons/angularjs-directive-for-route-handling)
+
+
+##Setup
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+```
+grunt test
+```
+
 
 Good luck!

@@ -5,17 +5,17 @@ var wayApp = angular.module('wayApp', ['ngRoute']);
 wayApp.config(function ($routeProvider) {
     $routeProvider.when('/',
         {
-            templateUrl: 'way.html',
+            templateUrl: 'views/way.html',
             controller: 'WayCtrl'
 
         }).when('/error', {
-            templateUrl: 'way.html',
+            templateUrl: 'views/way.html',
             controller: 'WayCtrl',
             resolve: {
                 loadData: wayApp.error
             }
         }).when('/success', {
-            templateUrl: 'rightWay.html',
+            templateUrl: 'views/rightWay.html',
             controller: 'WayCtrl',
             resolve: {
                 loadData: wayApp.success
