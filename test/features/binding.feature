@@ -29,3 +29,4 @@ Feature: Bind class from inputs to table records
     Then The element "records.firstRecord" should have class "info"
     Then The element "records.secondRecord" should have class "success"
     Then The element "records.thirdRecord" should have class "danger"
+

@@ -1,7 +1,9 @@
-##Exercise 1 : Binding
+#Exercise 1 : Binding
+
+##Summary
 Application displays three inputs and the artists table. In table, each class attribute of the row is binded to one of the input values by order.
 
-###Requirements
+##Goals
 * **First place** input value updates class of the first row
 * **Second place** input value updates class of the second row
 * **Third place** input value updates class of the third row
@@ -13,4 +15,27 @@ Application displays three inputs and the artists table. In table, each class at
 ### + Bonus task
 Try to connect input fields with columns of the table.
 
+##Setup
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially:
+ 
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
+ 
+ To start the application, run
+ 
+ ```
+ grunt serve
+ ```
+ 
+To start cucumber tests, run sequentially in separate terminals the application and command
+
+ ```
+ grunt test
+ ```
+ 
 Good luck!
