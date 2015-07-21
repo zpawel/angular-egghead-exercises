@@ -58,6 +58,16 @@ module.exports = function ()
         expect(fragments(element)().getText()).to.eventually.equal(text).and.notify(callback);
     });
 
+    this.Then(/^I should not see "([^"]*)" image$/, function (message, callback)
+    {
+        expect(fragments(message)().isPresent()).to.become(false).and.notify(callback);
+    });
+    this.Then(/^I should see "([^"]*)" image$/, function (message, callback)
+    {
+        expect(fragments(message)().isPresent()).to.become(true).and.notify(callback);
+    });
+
+
     this.Then(/^pause$/, function (callback)
     {
         browser.pause();
