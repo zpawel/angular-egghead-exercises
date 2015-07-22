@@ -15,13 +15,13 @@
         </div>
     </div>
 
-    <div class="text-center">
-        <button class="alert alert-danger" ng-click="goHome()"><strong>Mission 1: Home</strong></button>
-        <button class="alert alert-danger" ng-click="goForest()"><strong>Mission 2: Forest</strong></button>
+    <div id="alertMessage" class="alert alert-success text-center" ng-show="alertMessage" role="alert">
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        {{alertMessage}}
     </div>
 
-    <div class="alert alert-success text-center" ng-show=message role="alert">
-        <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        {{message}}
+    <div class="text-center">
+        <button id="homeButton" class="alert alert-info" ng-click="goHome()"><strong>Mission 1: Home</strong></button>
+        <button id="forestButton" class="alert alert-danger" ng-click="goForest()"><strong>Mission 2: Forest</strong></button>
     </div>
 </div>

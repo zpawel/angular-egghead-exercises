@@ -5,13 +5,13 @@ var journeyApp = angular.module('journeyApp', ['ngRoute']);
 journeyApp.config(function ($routeProvider)
 {
     $routeProvider.when('/', {
-        templateUrl: 'start.html', controller: 'StartCtrl'
+        templateUrl: 'views/start.html', controller: 'StartCtrl'
     }).when('/home', {
-        templateUrl: 'home.html', controller: 'HomeCtrl', resolve: {
+        templateUrl: 'views/home.html', controller: 'HomeCtrl', resolve: {
             loadData: StartCtrl.loadHome
         }
     }).when('/forest', {
-        templateUrl: 'forest.html', controller: 'ForestCtrl', resolve: {
+        templateUrl: 'views/forest.html', controller: 'ForestCtrl', resolve: {
             loadData: StartCtrl.loadForest
         }
     }).otherwise({
