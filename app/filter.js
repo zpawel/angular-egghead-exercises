@@ -2,6 +2,14 @@
 var app = angular.module('app', []);
 
 //add quote filter
+app.filter('quote', function(){
+
+    return function(citation){
+
+        return citation.quote();
+    }
+
+})
 //add withoutH filter
 //add firsLetterUp filter
 
