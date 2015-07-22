@@ -8,11 +8,11 @@ Views and controllers are ready.
  * default page is `home.html`
  * `brand` and `capacity` from inputs are used as route params (take a look at home.html `Next step` button)
  * `Next step` button should redirect to `details.html` page (path should start with `details/`), 
- * `Back step` button should redirect to `details.html` page (path should start with `details/`), 
+ * `Back step` button should redirect to `details.html` page, 
  * entered word `secret` into `brand` or `capacity` field and you should be direct to `secret.html` page
  * **hint** : check that the path of contains the word `secret` (you can split the path)
 
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-routeprovider-api](https://egghead.io/lessons/angularjs-routeprovider-api)
 * [angularjs-routeparams](https://egghead.io/lessons/angularjs-routeparams)
 * [angularjs-redirectto](https://egghead.io/lessons/angularjs-redirectto)
