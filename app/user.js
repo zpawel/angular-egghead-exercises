@@ -30,4 +30,18 @@ app.controller('UserCtrl', function ($scope, Users)
 {
     $scope.users = Users;
     $scope.limit = 15;
+
+    $scope.predicate = 'name';
+    $scope.reverse = true;
+    $scope.reverseSort = function(predicate) {
+        if ($scope.predicate === predicate) {
+            $scope.reverse = !$scope.reverse;
+        } else {
+            $scope.reverse = false;
+        }
+        $scope.predicate = predicate;
+    };
+
+
+
 });
