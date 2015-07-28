@@ -6,14 +6,17 @@ var homeApp = angular.module('homeApp', []);
 // add homeApp.config 
 
 // remove factory 
-homeApp.factory('home', function() {
+homeApp.factory('Home', function() {
+    var exampleNum = 67;
     return {
         color: 'red',
-        number: (Math.floor((Math.random() * 100) + 1))
+        number: exampleNum % 2 ? 100 : 99
     };
 });
 
-homeApp.controller('HomeCtrl', function ($scope, home) {
-        $scope.color = home.color;
-        $scope.number = home.number;
+homeApp.controller('HomeCtrl', function (Home)
+{
+    var ctrl = this;
+    ctrl.color = Home.color;
+    ctrl.number = Home.number;
 });

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app="homeApp" ng-controller="HomeCtrl">
+<body ng-app="homeApp" ng-controller="HomeCtrl as home">
 <div class="container">
     <div class="page-header">
         <h1>Home.
@@ -13,8 +13,7 @@
         </h1>
     </div>
     <div class="col-md-offset-2 col-md-8 text-center">
-        <h3 class="alert alert-info ">My dream house is <strong>{{color}}</strong> and his number is
-            <strong>{{number}}.</strong></h3>
+        <h3 class="alert alert-info ">My dream house is <strong>{{home.color}}</strong> and his number is <strong>{{home.number}}.</strong></h3>
     </div>
 
 </div>
