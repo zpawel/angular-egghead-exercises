@@ -2,7 +2,7 @@
 
 var songApp = angular.module('songApp', []);
 
-songApp.factory('song', function ()
+songApp.factory('Song', function ()
 {
     return {
         author: 'Gotye feat. Kimbra', title: 'Somebody That I Used To Know', sing: function ()
@@ -15,10 +15,11 @@ songApp.factory('song', function ()
     };
 });
 
-songApp.controller('SongCtrl', function ($scope, song)
+songApp.controller('SongCtrl', function (Song)
 {
-    $scope.author = song.author;
-    $scope.title = song.title;
-    $scope.sing = song.sing();
-    $scope.fake = song.fake();
+    var ctrl = this;
+    ctrl.author = Song.author;
+    ctrl.title = Song.title;
+    ctrl.sing = Song.sing();
+    ctrl.fake = Song.fake();
 });
