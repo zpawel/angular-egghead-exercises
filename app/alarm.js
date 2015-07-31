@@ -1,47 +1,55 @@
 var app = angular.module('app', []);
 
-//<!--add alarm directive-->
-app.directive('alarm', function(){
+app.controller("AppCtrl", function($scope) {
+
+    $scope.addRed = function () {
+        alert("Alarm red!")
+    },
+        $scope.addYellow = function () {
+            alert("Alarm yellow!")
+        },
+        $scope.addGreen = function () {
+            alert("Alarm green!")
+        }
+}),
+
+
+    app.directive("alarm", function(){
+        return{
+            restrict: 'A',
+            scope: {
+                addRed: '&',
+                addYellow: '&',
+                addGreen: '&',
+            },
+        }
+    });
+
+app.directive("red", function(){
     return{
-        controller: function(){
-            addCollorRed=function(){
-               alert('ColorRed alarm!')
+        link: function(scope, element){
+            element.bind("click", function(){
+                scope.addRed();
+            })
+        }
+    }
+}),
+
+    app.directive("yellow", function(){
+        return{
+            link: function(scope, element){
+                element.bind("dblclick", function(){
+                    scope.addYellow();
+                })
             }
-            addCollorYellow=function(){
-                alert('ColorYellow alarm!')
+        }
+    }),
+    app.directive("green", function(){
+        return{
+            link: function(scope, element){
+                element.bind("mouseenter", function(){
+                    scope.addGreen();
+                })
             }
-            addCollorGreen=function(){
-                alert('ColorGreen alarm!')
-            }
         }
-
-    }
-})
-//<!--add red directive-->
-app.directive('red', function(){
-    return{
-        link: function addCollorRed(){
-
-        }
-
-    }
-})
-//<!--add yellow directive-->
-app.directive('yellow', function(){
-    return{
-        link: function addCollorYellow(){
-
-        }
-
-    }
-})
-//<!--add green directive-->
-app.directive('green', function(){
-    return{
-        link: function addCollorGreen(){
-
-        }
-
-
-    }
-})
+    });

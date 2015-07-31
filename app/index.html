@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body ng-app="app">
+<body ng-app="app" ng-controller="AppCtrl">
 <div class="container">
     <div class="page-header">
         <h1>Alarm!!!
@@ -20,12 +20,12 @@
 
         <div>
             <div class="panel panel-body panel-default text-center">
-                <red></red>
-                <div class="circle bg-danger col-md-offset-4" ></div>
-                <yellow></yellow>
-                <div class="circle bg-warning col-md-offset-4"></div>
-                <green></green>
-                <div class="circle bg-success col-md-offset-4"></div>
+                <!--use red directive below-->
+                <div class="circle bg-danger col-md-offset-4" alarm red></div>
+                <!--use yellow directive below-->
+                <div class="circle bg-warning col-md-offset-4" alarm yellow></div>
+                <!--use green directive below-->
+                <div class="circle bg-success col-md-offset-4" alarm green></div>
             </div>
         </div>
     </div>
