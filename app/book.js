@@ -4,8 +4,8 @@ var bookApp = angular.module('bookApp', []);
 bookApp.controller('BookCtrl', function ($scope)
 {
     $scope.description = 'While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call' +
-    ' in the dead of the night. The elderly curator of the Louvre has been murdered inside the museum,' +
-    ' his body covered in baffling symbols. As Langdon and gifted French...';
+            ' in the dead of the night. The elderly curator of the Louvre has been murdered inside the museum,' +
+            ' his body covered in baffling symbols. As Langdon and gifted French...';
 
 });
 
