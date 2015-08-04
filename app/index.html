@@ -12,34 +12,38 @@
             <small>Cheap parts.</small>
         </h1>
     </div>
-    <div ng-controller="carPartsCtrl">
+    <div ng-controller="CarCtrl as car">
         <div class="col-md-offset-2 col-md-3 row text-left">
             <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 You need one thing from the list</p>
 
             <div class="radio">
                 <ul class="list-unstyled">
-                    <li ng-repeat="list in lists">
+                    <li ng-repeat="list in car.lists">
                         <label for="option">{{list.name}}
-                            <input id="option" type="radio" ng-model="data.part" name="part" value="{{list.name}}" required/>
+                            <input id="option" type="radio" ng-model="car.data.part" name="part" value="{{list.name}}" required/>
                         </label>
                     </li>
                 </ul>
             </div>
-            <a class="btn btn-default" ng-click="chooseCarPart()">Choose</a>
+            <a id="chooseButton" class="btn btn-default" ng-click="car.chooseCarPart()">Choose</a>
         </div>
-        <div class="col-md-5" ng-show="show">
+        <div class="col-md-5" ng-if="car.show">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <p>You choose: <strong class="text-danger">{{carPart}}</strong></p>
+                    <p>You choose: <strong class="text-danger">{{car.carPart}}</strong></p>
                     <h4>Now please wait a moment...</h4>
 
-                    <div>
-                        <button class="btn btn-danger" ng-click="checkNow()"><i class="glyphicon glyphicon-time"></i> I can't wait, check it now!</button>
-                        <button class="btn btn-success" ng-click="wait()"><i class="glyphicon glyphicon-time"></i> I can wait 3 seconds</button>
+                    <div class="panel-body">
+                        <button id="checkNowButton" class="btn btn-danger" ng-click="car.checkNow()"><i class="glyphicon glyphicon-time"></i> I can't wait,
+                            check it now!
+                        </button>
+                        <button id="waitButton" class="btn btn-success" ng-click="car.wait()"><i class="glyphicon glyphicon-time"></i> I can wait 3
+                            seconds
+                        </button>
                     </div>
-                    <div ng-if="result">
-                        <h4>{{returnMessage}}</h4>
+                    <div ng-if="car.result">
+                        <h4>{{car.returnMessage}}</h4>
                     </div>
                 </div>
             </div>

@@ -47,37 +47,38 @@ app.provider('partsList', function ()
     };
 });
 
-app.controller('carPartsCtrl', function ($scope, partsList, $timeout, $injector)
+app.controller('CarCtrl', function (partsList, $timeout)
 {
-    $scope.lists = partsList.lists;
-    $scope.data = {lists: $scope.lists[0].name};
-    $scope.result = false;
+    var ctrl = this;
+    ctrl.lists = partsList.lists;
+    ctrl.data = {lists: ctrl.lists[0].name};
+    ctrl.result = false;
 
-    $scope.chooseCarPart = function ()
+    ctrl.chooseCarPart = function ()
     {
-        if ($scope.data.part !== undefined) {
-            $scope.carPart = $scope.data.part;
-            $scope.returnMessage = '';
-            $scope.show = true;
+        if (ctrl.data.part !== undefined) {
+            ctrl.carPart = ctrl.data.part;
+            ctrl.returnMessage = '';
+            ctrl.show = true;
         }
     };
 
-    $scope.checkNow = function ()
+    ctrl.checkNow = function ()
     {
         $timeout(function ()
         {
             //complete function
 
-            $scope.result = true;
+            ctrl.result = true;
         }, 10);
     };
-    $scope.wait = function ()
+    ctrl.wait = function ()
     {
         $timeout(function ()
         {
             //complete function
 
-            $scope.result = true;
+            ctrl.result = true;
         }, 1800);
     };
 });
