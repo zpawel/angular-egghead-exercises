@@ -12,4 +12,27 @@ title, description and number of pages (in this order)
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
 
 
+##Setup
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ 
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
+ 
+ To run the application:
+ 
+ ```
+ grunt serve
+ ```
+ 
+To run cucumber tests:
+
+ ```
+ grunt test
+ ```
+ 
 Good luck!
