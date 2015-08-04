@@ -2,11 +2,12 @@
 
 var fifaApp = angular.module('fifaApp', []);
 
-// log
+//log
 
-fifaApp.controller('FifaCtrl', function ($scope)
+fifaApp.controller('FifaCtrl', function ()
 {
-    $scope.ranking = [{
+    var ctrl = this;
+    ctrl.ranking = [{
         team: 'Germany', points: 1725
     }, {
         team: 'Argentina', points: 1583
@@ -18,11 +19,11 @@ fifaApp.controller('FifaCtrl', function ($scope)
         team: 'Netherlands', points: 1374
     }];
 
-    $scope.PolandRank = false;
+    ctrl.PolandRank = false;
 
-    $scope.showPolandRank = function ()
+    ctrl.showPolandRank = function ()
     {
-        $scope.PolandRank = $scope.PolandRank ? false : true;
+        ctrl.PolandRank = !ctrl.PolandRank;
     };
 
 });
