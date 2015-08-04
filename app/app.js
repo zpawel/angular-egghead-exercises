@@ -18,8 +18,12 @@
             })
             .when('/inputs/:brand/:capacity', {
                 redirectTo: function (routeParams, path, search) {
-                    if (routeParams.brand === 'secret' || routeParams.capacity === 'secret')
+                    if (routeParams.brand === 'secret' || routeParams.capacity === 'secret') {
                         return '/' + 'secret';
+                    }
+                    else {
+                        return '/' + 'details';
+                    }
                 }
             })
             .when('/inputs/secret',
