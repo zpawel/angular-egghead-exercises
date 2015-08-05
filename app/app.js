@@ -4,15 +4,14 @@ var app = angular.module('app', ['ngRoute']);
 
 app.config(function ($routeProvider)
 {
-    // 1
     $routeProvider.when('/', {
-        templateUrl: 'home.html', controller: 'chooseCtrl'
+        templateUrl: 'views/home.html', controller: 'chooseCtrl'
     });
     $routeProvider.when('/container', {
-        templateUrl: 'container.html', controller: 'chooseCtrl'
+        templateUrl: 'views/container.html', controller: 'chooseCtrl'
     });
     $routeProvider.when('/components', {
-        templateUrl: 'components.html', controller: 'chooseCtrl'
+        templateUrl: 'views/components.html', controller: 'chooseCtrl'
     });
 
     $routeProvider.otherwise('/');
