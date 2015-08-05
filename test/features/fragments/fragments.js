@@ -31,10 +31,8 @@ var fragments = function (text)
         bookTitleContent: element.bind(null, by.css('book book-title strong')),
         bookDescription: element.bind(null, by.css('book book-description')),
         bookDescriptionContent: element.bind(null, by.css('book book-description div')),
-        bookDescriptionOrder: element.bind(null, by.css('book book-description div')),
         bookPages: element.bind(null, by.css('book book-pages')),
-        bookPagesContent: element.bind(null, by.css('book book-pages span')),
-        bookPagesOrder: element.bind(null, by.css('book book-pages'))
+        bookPagesContent: element.bind(null, by.css('book book-pages span'))
     };
 
     return byString(mapping, text);
