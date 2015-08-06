@@ -1,48 +1,53 @@
-(function () {
+(function ()
+{
     'use strict';
 
     var app = angular.module('app', ['ngRoute']);
 
     // add routing here
-    app.config(function ($routeProvider) {
-        $routeProvider
-            .when('/',
+    app.config(function ($routeProvider){
+        $routeProvider.when('/',
             {
                 templateUrl: 'views/home.html',
-                controller: 'appCtrl'
+                controller: 'homeCtrl'
             })
             .when('/details/:brand/:capacity',
             {
                 templateUrl: 'views/details.html',
                 controller: 'routeCtrl'
             })
-            .when('/inputs/:brand/:capacity', {
-                redirectTo: function (routeParams, path, search) {
-                    if (routeParams.brand === 'secret' || routeParams.capacity === 'secret') {
+            .when('/inputs/:brand/:capacity',
+            {
+                redirectTo: function(routeParams,path,search){
+                    var secret = path.split('/').indexOf('secret');
+                    if(secret !==-1){
                         return '/' + 'secret';
                     }
+                    else if(routeParams.brand && routeParams.capacity){
+                        return '/' + 'details'+'/'+routeParams.brand+'/'+routeParams.capacity;
+                    }
                     else {
-                        return '/' + 'details';
+                        return '/';
                     }
                 }
-            })
-            .when('/inputs/secret',
+            }).when('/secret',
             {
                 templateUrl: 'views/secret.html',
                 controller: 'routeCtrl'
+            }).otherwise({
+                redirectTo: '/'
             })
-
     })
 
-    app.controller('appCtrl', function ($scope, $routeParams) {
+    app.controller('homeCtrl', function ($scope)
+    {
         $scope.$root.condition = true;
-        $scope.brand = $routeParams.brand;
-        $scope.capacity = $routeParams.capacity;
+        $scope.car = {brand: 'Ferrari', capacity: 3.5};
     });
 
-    app.controller('routeCtrl', function ($scope, $routeParams) {
+    app.controller('routeCtrl', function ($scope, $routeParams)
+    {
         $scope.$root.condition = true;
-        $scope.brand = $routeParams.brand;
         $scope.brand = $routeParams.brand;
         $scope.capacity = $routeParams.capacity;
     });
