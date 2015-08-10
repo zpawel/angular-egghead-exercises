@@ -47,7 +47,7 @@ app.provider('partsList', function ()
     };
 });
 
-app.controller('CarCtrl', function (partsList, $timeout)
+app.controller('CarCtrl', function (partsList, $timeout , $injector)
 {
     var ctrl = this;
     ctrl.lists = partsList.lists;
@@ -67,18 +67,35 @@ app.controller('CarCtrl', function (partsList, $timeout)
     {
         $timeout(function ()
         {
-            //complete function
+            $injector.invoke(function(){
+                if(partsList.set(ctrl.carPart)){
+                    ctrl.returnMessage = 'This part is available and is very cheap';
+                }
+                else{
+                    ctrl.returnMessage = 'This part is NOT available and is very expensive...'
+                }
+                ctrl.result = true;
+            })
 
-            ctrl.result = true;
         }, 10);
     };
     ctrl.wait = function ()
     {
+
+        //complete function
+
         $timeout(function ()
         {
-            //complete function
+            $injector.invoke(function(){
+                if (ctrl.lists !== undefined){
+                    ctrl.lists.enable = true;
+                    if(ctrl.lists.enable === true){
+                        ctrl.returnMessage = 'This part is available and is very cheap';
+                    }
+                }
+                ctrl.result = true;
+            })
 
-            ctrl.result = true;
         }, 1800);
     };
 });
