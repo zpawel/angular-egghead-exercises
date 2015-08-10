@@ -1,9 +1,10 @@
-##Exercise 33b: ng-repeat and $index, $event, $log
+#Exercise 33b: ng-repeat and $index, $event, $log
 
+##Summary
 Your job is to practise **ng-repeat** directive with $index, $event and $log.
 
-###Requirements
-* display all the elements from the **list**
+##Goals
+* display all elements from the **list** as button 
 * list items should be numbered from 1
 * use **$index** as **id** 
 * add appropriate class to buttons (use **addClass()** function)
@@ -11,22 +12,31 @@ Your job is to practise **ng-repeat** directive with $index, $event and $log.
 * after pressing the **'Show log** button, you should be redirected to **checkLog.html** page
 * on **checkLog.html** page you should see **log** in console (update **display** function, don't use **console.log**)
 
-###Results
-
-* when button **Do nothing** is clicked
-
-![alt text](app/assets/1.png "1")
-
-* when button **Show log** is clicked
-
-![alt text](app/assets/2.png "2")
-
-* log from console
-
-![alt text](app/assets/3.png "3")
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
 
+##Setup
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ 
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
+ 
+ To run the application:
+ 
+ ```
+ grunt serve
+ ```
+ 
+To run cucumber tests:
 
+ ```
+ grunt test
+ ```
+ 
 Good luck!
+

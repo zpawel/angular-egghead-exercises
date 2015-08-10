@@ -5,10 +5,10 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function ($routeProvider)
 {
     $routeProvider.when('/', {
-        templateUrl: 'displayLog.html'
+        templateUrl: 'views/displayLog.html'
     });
     $routeProvider.when('/check', {
-        templateUrl: 'checkLog.html'
+        templateUrl: 'views/checkLog.html'
     });
     $routeProvider.otherwise('/');
 });
