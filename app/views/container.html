@@ -1,7 +1,11 @@
 <div class="col-md-offset-4 col-md-4">
     <h3 class="text-info">You choose <strong class="text-success">container</strong></h3>
 
-    <div class="form-group">
+    <div class="form-group" >
+        <my-container title="Component">
+
+            <my-component name="This directive is simple component {{number}}" ng-repeat="number in list"></my-component>
+        </my-container>
         <!--add directive-->
     </div>
     <div class="btn-group">
