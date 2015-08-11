@@ -5,10 +5,10 @@ var app = angular.module('simpleExercise', ['ngRoute']);
 app.config(function ($routeProvider, $provide)
 {
     $routeProvider.when('/', {
-        templateUrl: 'home.html', controller: 'SetCtrl as setCtrl'
+        templateUrl: 'views/home.html', controller: 'SetCtrl as setCtrl'
     });
     $routeProvider.when('/display', {
-        templateUrl: 'resolveOrReject.html', controller: 'AppCtrl as appCtrl'
+        templateUrl: 'views/resolveOrReject.html', controller: 'AppCtrl as appCtrl'
     });
     $routeProvider.otherwise('/');
 
@@ -35,7 +35,7 @@ app.config(function ($routeProvider, $provide)
     });
 });
 
-app.controller('SetCtrl', function ($scope,promises)
+app.controller('SetCtrl', function ($scope, promises)
 {
     $scope.set = function (value)
     {
@@ -46,7 +46,7 @@ app.controller('SetCtrl', function ($scope,promises)
 });
 
 
-app.controller('AppCtrl', function ($scope,promises)
+app.controller('AppCtrl', function ($scope, promises)
 {
     $scope.get = function ()
     {
@@ -57,7 +57,7 @@ app.controller('AppCtrl', function ($scope,promises)
     };
 });
 
-app.controller('UnSuccessCtrl', function ($scope,promises)
+app.controller('UnSuccessCtrl', function ($scope, promises)
 {
     $scope.getUnSuccess = function ()
     {
