@@ -59,41 +59,47 @@ app.directive('bus', function () {
 app.directive('audi', function () {
     return {
         restrict: 'E',
+        require: ['^car', '^vehicle'],
         link: function (scope, element, attrs, ctrls) {
             scope.speed = 80;
             scope.setSpeed = function (speed) {
-//                scope.driveSpeed
-            };
-            scope.isClicked = function () {
+                scope.driveSpeed = ctrls[1].drive(speed, 'car');
+//            ctrls[0].emergencyBrake("");
+//            };
+                scope.isClicked = function () {
 
-            };
+                };
+            }
         },
         template: '<div class="col-md-4">' +
             '<input class="form-control" type="number" ng-model="speed"></div>' +
             '<div class="btn-group"><button class="btn btn-default" ng-click="setSpeed(speed)">Drive!</button>' +
-            '<button class="btn btn-default">Emergency brake!</button></div><h3></h3>'
+            '<button class="btn btn-default">Emergency brake!</button></div><h3>{{driveSpeed}}</h3>'
 
     };
+
 });
 
 app.directive('jelcz', function () {
     return {
         restrict: 'E',
+        require: ['^bus', '^vehicle'],
         controller: function () {
         },
         link: function (scope, element, attrs, ctrls) {
             scope.speed = 12;
             scope.setSpeed = function (speed) {
-//                scope.driveSpeed
+                scope.driveSpeed = ctrls[1].drive(speed, 'bus');
+
             };
 
-            scope.isClicked = function () {
-
+            scope.isClicked = function (alarm) {
+                ctrls[1].alarm();
             };
         },
         template: '<div class="col-md-4"><input class="form-control" type="number" ng-model="speed"></div>' +
             '<div class="btn-group"><button class="btn btn-default" ng-click="setSpeed(speed)">Drive!</button>' +
-            '<button class="btn btn-default">Emergency brake!</button></div><h3></h3>'
+            '<button ng-click="isClicked()" class="btn btn-default">Emergency brake!</button></div><h3>{{driveSpeed}}</h3>'
 
     };
 });
