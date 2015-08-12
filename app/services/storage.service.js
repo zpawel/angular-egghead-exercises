@@ -4,17 +4,18 @@
         var getListCountry = function () {
             return ['USA', 'Australia'];
         };
-        var getListState = function () {
+        var getListState = function (country) {
             var listState = {
                 USA: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho',
-                    'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-                    'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
-                    'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia',
-                    'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'],
+                      'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+                      'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+                      'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia',
+                      'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'],
                 Australia: ['South Australia', 'Western Australia', 'New South Wales', 'Queensland', 'Tasmania', 'Victoria']
             };
+            return listState[country];
         };
-        var getDetails = function () {
+        var getDetails = function (country, state) {
             var listDetails = {
                 USA: {
                     Alabama: {capital: 'Montgomery', largestCity: 'Birmingham', population: null},
@@ -67,7 +68,7 @@
                     'West Virginia': {capital: 'Charleston', largestCity: 'Charleston', population: 1854304},
                     Wisconsin: {capital: 'Madison', largestCity: 'Milwaukee', population: 5742713},
                     Wyoming: {capital: 'Cheyenne', largestCity: 'Cheyenne', population: 582658},
-                    flag: 'countryFlags/usa.jpg'
+                    flag: 'assets/countryFlags/usa.jpg'
                 }, Australia: {
                     'South Australia': {capital: 'Adelaide', largestCity: 'Adelaide', population: null},
                     'Western Australia': {capital: 'Perth', largestCity: 'Perth', population: 2163200},
@@ -75,9 +76,10 @@
                     'Queensland': {capital: 'Brisbane', largestCity: ' Brisbane', population: 4279400},
                     'Tasmania': {capital: 'Hobart', largestCity: 'Hobart', population: null},
                     'Victoria': {capital: 'Melbourne', largestCity: 'Melbourne', population: 5297600},
-                    flag: 'countryFlags/australia.png'
+                    flag: 'assets/countryFlags/australia.png'
                 }
             };
+            return listDetails[country][state];
         };
         return {
             getListCountry: getListCountry,

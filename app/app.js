@@ -1,13 +1,17 @@
-(function () {
+(function ()
+{
     'use strict';
-    angular.module('countryStateCity', ['ngRoute']).config(function ($routeProvider, $filterProvider) {
+    angular.module('countryStateCity', ['ngRoute']).config(function ($routeProvider, $filterProvider)
+    {
         $routeProvider.when('/', {
             templateUrl: 'home.html'
         });
         $routeProvider.otherwise('/');
 
-        $filterProvider.register('formatPopulation', function () {
-            return function (population) {
+        $filterProvider.register('formatPopulation', function ()
+        {
+            return function (population)
+            {
                 if (!population) {
                     return 'I don\'t have data on this topic';
                 }
