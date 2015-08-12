@@ -3,6 +3,7 @@
     angular.module('countryStateCity').directive('detail', function () {
         return {
             restrict: 'E',
+            require: ['^country', '^state'],
             scope: {},
             replace: true,
             controller: 'detailsCtrl as detailsCtrl',

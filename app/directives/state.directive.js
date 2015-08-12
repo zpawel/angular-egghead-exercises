@@ -3,6 +3,8 @@
     angular.module('countryStateCity').directive('state', function () {
         return {
             restrict: 'E',
+            require: '^country',
+            transclude: true,
             scope: {},
             replace: true,
             controller: 'stateCtrl as stateCtrl',
