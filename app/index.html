@@ -13,21 +13,23 @@
     </div>
     <div class="col-md-offset-4 col-md-4">
         <table class="table table-hover text-center">
+            <thead>
             <tr class="alert-success">
                 <th class="text-center">First name</th>
                 <th class="text-center">Last name</th>
             </tr>
-            <!--here add ng-repeat-start -->
-            <tr>
+            </thead>
+            <tbody>
+            <tr><!--here add ng-repeat-start -->
                 <!--here display name and lastName-->
             </tr>
-            <!--hera add ng-repeat-end  -->
-            <tr>
+            <tr><!--hera add ng-repeat-end  -->
                 <td colspan="2" ng-if="user.enable">
                     <!--here display country-->
                     Country: <span class="text-success"> {{user.country}}</span>
                 </td>
             </tr>
+            </tbody>
         </table>
     </div>
 </div>

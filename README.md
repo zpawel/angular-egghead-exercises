@@ -1,23 +1,37 @@
-##Exercise 36b: ng-repeat-start
-The goal of this exercise is practise ng-repeat-start
+#Exercise 36b: ng-repeat-start
 
-###Requirements 
+##Summary
+Use ng-repeat-start/end directives to displays users list.
+
+##Goals
 * don't change table structure
-* use ng-repeat-start directive to achieve the effect as in section
-* check out comments
+* when you click any user - you should see extra row with user's country information
+* when you click any user twice - information about user's country should show and hide
 
-###Results
-
-* start view
-
-![alt text](app/assets/1.png "1")
-
-* click at user
-
-!![alt text](app/assets/2.png "2")
-
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-ng-repeat-start](https://egghead.io/lessons/angularjs-ng-repeat-start)
 
+##Setup
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ 
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
+ 
+ To run the application:
+ 
+ ```
+ grunt serve
+ ```
+ 
+To run cucumber tests:
+
+ ```
+ grunt test
+ ```
+ 
 Good luck!

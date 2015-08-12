@@ -30,7 +30,6 @@
         this.users = UsersList;
         this.toggle = function (index)
         {
-            //complete function
             this.users.list[index].enable = !this.users.list[index].enable;
         };
     });
